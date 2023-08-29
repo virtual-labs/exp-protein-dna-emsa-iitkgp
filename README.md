@@ -1,24 +1,46 @@
+
 ## Introduction
 
 
-<b>Discipline | <b>Fill your discipline name here
+<div align="center">
+<img src="experiment/images/iitkgp.png" width="10%">
+</div>
+
+<b>Discipline | <b>School of Bioscience
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> Experimental Biochemistry
+<b> Experiment|     <b> Protein-DNA interaction analysis by electrophoretic mobilty shift assay (EMSA) and experiment number 8
+
+
 
 ### About the Experiment 
 
-Fill a brief description of this experiment here
+The interaction of proteins with nucleic acids (DNA, RNA) is central to the control of many cellular processes including DNA replication, recombination and repair, transcription, and viral assembly. One important technique for studying gene regulation and determining protein–nucleic acid interactions is the electrophoretic mobility shift assay (EMSA). An advantage of studying protein–nucleic acid interactions by an electrophoretic assay is the ability to resolve complexes of different stoichiometry or conformation. Another major advantage is that the source of the nucleic acids and proteins may be a crude nuclear or whole cell extract, in vitro transcription product or a purified preparation. EMSA can be used qualitatively to identify sequence-specific, DNA or RNA-binding proteins (such as transcription factors) in crude lysates and, in conjunction with mutagenesis, to identify the important binding sequences within the upstream regulatory region of a given gene. EMSA can also be utilized quantitatively to measure thermodynamic and kinetic parameters such as dissociation constant.
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+### Subject Matter Experts
+
+<b>Name of Developer | <b> Prof. Soumya De 
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b>  IIT Kharagpur
+<b> Email id|     <b>  somde@iitkgp.ac.in
+<b> Department |  School of Bioscience
+
+<b>Name of Developer | <b>  Prof. Dibyendu Samanta 
+:--|:--|
+<b> Institute | <b>  IIT Kharagpur
+<b> Email id|     <b>  dibyendu.samanta@iitkgp.ac.in
+<b> Department |  School of Bioscience
+
+### Developer and Integration Engineer
+
+SrNo | Name  | Department| Institute| 
+:--|:--|:--|:--|
+1 | **Prakriti Dhang** |  Department of Mechanical Engineering | IIT Kharagpur |
+
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
-:--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+SrNo | Name | Designation | Department| Institute| 
+:--|:--|:--|:--|:--|
+1 | **Aakanksha** | Research Scholar | School of Bioscience | IIT Kharagpur |
+
