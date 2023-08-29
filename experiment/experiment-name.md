@@ -1,1 +1,1 @@
-## Amplification of DNA sequence using Polymerase Chain Reaction (PCR)
+## Protein-DNA interaction analysis by electrophoretic mobilty shift assay (EMSA)
