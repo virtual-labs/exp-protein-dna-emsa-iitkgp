@@ -9,7 +9,7 @@ The electrophoretic mobility shift assay (EMSA), or gel shift assay is a simple 
 EMSA based on the principle that the rate of migration of the complex of DNA and protein is slower than single DNA fragment or double stranded oligonucleotide during a nondenaturing polyacrylamide gel. Besides, the kinetic analysis of EMSA is another basic theory to underlying the method. The protein (P), binding to a unique site on a DNA (D), will form a complex PD, in equilibrium with the free components:
 
 
-<equation>
+$$ P + D  \ \underset{kd}{\stackrel{ka}{\rightleftharpoons}} \ PD $$
 
 
 
@@ -31,8 +31,8 @@ There are also some limitations of EMSA assay. Firstly, weak interaction or rapi
 5.	**Visualization of the protein-DNA complexes:** The labeled DNA fragments are visualized using autoradiography, fluorescence or chemiluminescence, and the presence of shifted bands (protein-DNA complexes) is detected.
 6.	**Characterization of the protein-DNA complexes:** The binding specificity, affinity, stoichiometry, and stability of the protein-DNA complexes can be determined by EMSA by using specific competitors, mutants or antibodies.
 
-<div ">
-<img src="images/.png" width="10%">
+<div align="center">
+<img src="images/emsa.png" width="40%">
 </div>
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
