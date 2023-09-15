@@ -31,16 +31,10 @@ The interaction of proteins with nucleic acids (DNA, RNA) is central to the cont
 <b> Email id|     <b>  dibyendu.samanta@iitkgp.ac.in
 <b> Department |  School of Bioscience
 
-### Developer and Integration Engineer
-
-SrNo | Name  | Department| Institute| 
-:--|:--|:--|:--|
-1 | **Prakriti Dhang** |  Department of Mechanical Engineering | IIT Kharagpur |
-
-
-### Contributors List
+### Contributors List 
 
 SrNo | Name | Designation | Department| Institute| 
 :--|:--|:--|:--|:--|
-1 | **Aakanksha** | Research Scholar | School of Bioscience | IIT Kharagpur |
+1 | **Prakriti Dhang** | Developer and Integration Engineer| Department of Mechanical Engineering | IIT Kharagpur |
+2 | **Aakanksha** | Research Scholar | School of Bioscience | IIT Kharagpur |
 
