@@ -1,5 +1,8 @@
 /* You CSS goes in here */
 
+.card{
+    margin-bottom: 10px;
+}
 .img-container {
     position: relative;
     display: inline-block;
@@ -19,7 +22,150 @@
     position: absolute;
     width: 20%;
     top:120%;
-    left: 5%
+    left: 5%;
+}   
+
+#icebucket {
+    position: absolute;
+    width: 15%;
+    top: 20%;
+    left: 76%
+}
+
+
+#tube{
+    position: absolute;
+    width: 5%;
+    top:11.5%;
+    left:81%;
+    display: none;
+}
+
+#icetray {
+    position: absolute;
+    width: 40%;
+    top:180%;
+    left: -5%;
+    z-index: -10;
+
+}
+
+
+
+
+#protein{
+
+    position: absolute;
+    width: 25%;
+    top:10%;
+    left:50%;
+   
+
+}
+#myCanvass1{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:169%;
+    left: 9.6%;
+}
+
+#myCanvass2{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:169%;
+    left: 11.4%;
+}
+#myCanvass3{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:169%;
+    left: 13.2%;
+}
+#myCanvass4{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:169%;
+    left: 15%;
+}
+#myCanvass5{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:169%;
+    left: 16.8%;
+}
+
+#myCanvass6{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:169%;
+    left: 18.6%;
+}
+
+
+#myCanvass11{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:170%;
+    left: 9.6%;
+}
+
+#myCanvass21{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:170%;
+    left: 11.4%;
+}
+#myCanvass31{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:170%;
+    left: 13.2%;
+}
+#myCanvass41{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:170%;
+    left: 15%;
+}
+#myCanvass51{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:170%;
+    left: 16.8%;
+}
+
+#myCanvass61{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:170%;
+    left: 18.6%;
+}
+
+
+#uvmachine{
+    position: absolute;
+    width: 30%;
+    top:200%;
+    left: 40%;
+}
+#output{
+    position: absolute;
+    width: 10%;
+    top:250%;
+    left: 50%;
+    z-index: 10;
 }
 
 /* Connect negative -negative  , positive-positive*/
@@ -171,3 +317,20 @@ path,
     cursor: pointer;
 }
 
+#myCanvasuv1{
+    position: absolute;
+    width: 15%;
+    height:120%;
+    top: 230%;
+    left: 41%;
+    display: block;
+}
+#myCanvasuv2 {
+    position: absolute;
+    width: 14%;
+    height:120%;
+    top: 230%;
+    left: 55%;
+    display: block;
+    rotate:180deg;
+}
