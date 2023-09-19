@@ -139,10 +139,7 @@ prepare_posv = function (elId) {
             e3 = prepare_negv("cd3"), // negative in voltage meter
             e4 = prepare_posv("cd4"); // positive in case
 
-          /*   e3 = prepare_posv("cd5"), // negative in voltage meter
-            e4 = prepare_negv("cd6"); // positive in case
- */
-            
+           
            // instance.connect({ source: e1, target: e3 });
            // instance.connect({ source: e2, target: e4 });
           
@@ -151,7 +148,7 @@ prepare_posv = function (elId) {
      instance.bind("click", function (connection, originalEvent)
      {
 		  
-        if ((((connection.sourceId=='cd1' && connection.targetId=='cd4') || (connection.sourceId=='cd4' && connection.targetId=='cd1') )&& alert("Delete positive connection ?"))) {
+        if ((((connection.sourceId=='cd1' && connection.targetId=='cd4') || (connection.sourceId=='cd4' && connection.targetId=='cd1')) && alert("Delete positive connection ?"))) {
            instance.deleteConnection(connection);
            
         }
