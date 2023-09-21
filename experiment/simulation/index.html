@@ -24,7 +24,7 @@ Developer: Prakriti Dhang
 
 
 		<div class="row ">
-			<div class="col-md-6">
+			<div class="col-md-5">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Instructions
@@ -32,15 +32,19 @@ Developer: Prakriti Dhang
 
 					<div class="card-body">
 						<ol id="inst1">
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-
+							<li>Click on " Click to Start the Experiment" button.</li>
+							<li> Next click on checkboxes of step 1 and click on "Annealing fluorescently-labelled DNA probe" button. </li>
+							<li>Next click on all the checkbox in step 2 and click on "Prepare Protien Sample" button.</li>
+							<li>Now, select correct components from the dropdown for mixing of protein sample.</li>
+							<li>Click on "Incubate in ice bucket" button.</li>
+							<li>Next click on "Run the gel in electrophoresis buffer" button.</li>
+							<li>Now, connect the negative wire of electrophorersis
+								chamber to negative of voltage meter and
+								positive wire of electrophorersis chamber to positive wire of voltage meter.</li>
+							<li>Now click on "V" and "+" sign to set the voltage between 100 V and 120 V.</li>
+							<li> Click on the run icon button to run the gel. The sample will move from negative to
+								positive side. It will stop once it reaches the positive end.</li>
+							<li> Click on "Visualize the protein-DNA" under UV light</li>
 						</ol>
 					</div>
 				</div>
@@ -50,16 +54,14 @@ Developer: Prakriti Dhang
 					</div>
 
 					<div class="card-body">
-						<p class="fs-5" id="action">The fluorescently-labelled DNA probe is prepared by annealing the
-							complementary oligonucleotides in thermocycler. The probe is purified by gel electrophoresis
-							and quantified by UV spectroscopy. </p>
+						<p class="fs-5" id="action"> </p>
 					</div>
 				</div>
 			</div>
 			<!--/div>
 
 		<div class="row "-->
-			<div class="col-md-6">
+			<div class="col-md-7">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Input Panels
@@ -72,96 +74,100 @@ Developer: Prakriti Dhang
 									<button class="btn btn-success" type="button" id="start" data-bs-toggle="modal"
 										data-bs-target="#exampleModal">Click to
 										Start the Experiment</button>
+									<button class="btn btn-warning" type="button" id="start" style="float: right;"
+										onclick="restartexp()" data-bs-toggle="modal"
+										data-bs-target="#exampleModal">Re-Do the Experiment</button>
 								</td>
 							</tr>
 							<tr>
-								<td class="fs-5">Step 1</td>
-								
+								<td class="fs-6">Step 1</td>
+
 								<td>
-									
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
-											Fluorescently-labelled single stranded DNA 
+
+									<div id="opta" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt11" onclick="dna1()">
+										<label class="form-check-label" for="opt11">
+											Fluorescently-labelled single stranded DNA
 										</label>
 									</div>
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
-											Unlabelled single stranded DNA 
+									<div id="optb" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt12" onclick="dna2()">
+										<label class="form-check-label" for="opt12">
+											Unlabelled single stranded DNA
 										</label>
 									</div><button class="btn btn-primary " type="button" id="sampleprep"
-										onclick="annealing_dna()">
-										Annealing fluorescently-labelled DNA probe </button></td>
+										onclick="annealing_dna()" disabled>
+										Annealing fluorescently-labelled DNA probe </button>
+								</td>
 							</tr>
 
 							<tr>
-								<td class="fs-5">Step 2  </td>
-								<td><label class="fs-5"> Select all the component for preparing 1 x binding buffer: </label>
+								<td class="fs-6">Step 2 </td>
+								<td><label class="fs-6"> Select all the component for 1 x binding buffer: </label>
 									<br>
-									<div id="opta" class="form-check form-check-inline fs-5">
+									<div id="opta" class="form-check form-check-inline fs-6">
 										<input class="form-check-input" type="checkbox" value="" id="opt1">
 										<label class="form-check-label" for="opt1">
 											10 mM Tris (pH 7.8)
 										</label>
 									</div>
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
+									<div id="optb" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt2">
+										<label class="form-check-label" for="opt2">
 											100 mM KCl
 										</label>
 									</div>
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
+									<div id="optc" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt3">
+										<label class="form-check-label" for="opt3">
 											6 mM MgCl2
 										</label>
 									</div>
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
+									<div id="optd" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt4">
+										<label class="form-check-label" for="opt4">
 											1 mM EDTA
 										</label>
 									</div>
 
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
+									<div id="opte" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt5">
+										<label class="form-check-label" for="opt5">
 											50% glycerol
 										</label>
 									</div>
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
+									<div id="optf" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt6">
+										<label class="form-check-label" for="opt6">
 											2 mM BME
 										</label>
 									</div>
 
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
-											0.01 mg/ml BSA 
+									<div id="optg" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt7">
+										<label class="form-check-label" for="opt7">
+											0.01 mg/ml BSA
 										</label>
 									</div>
-									<div id="opta" class="form-check form-check-inline fs-5">
-										<input class="form-check-input" type="checkbox" value="" id="opt1">
-										<label class="form-check-label" for="opt1">
+									<div id="opth" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt8">
+										<label class="form-check-label" for="opt8">
 											0.02% NP-40
 										</label>
 									</div>
 
-<br>
+									<br>
 
 
-									<button class="btn btn-primary " type="button" id="sampleprep"
-										onclick="sample_prep()">
+									<button class="btn btn-primary " type="button" id="samplebprep"
+										onclick="sample_prep()" disabled>
 										Prepare Protien Sample</button>
 								</td>
 							</tr>
 							<tr>
-								<td class="fs-5">Step 3</td>
+								<td class="fs-6">Step 3</td>
 								<td>
-									<select id="step3" class="form-select m-2 fs-5 " aria-label="Default select example"
+									<select id="step3" class="form-select m-2 fs-6 " aria-label="Default select example"
 										onchange="sample_mix()">
 										<option value="0" selected>Mixing of protein sample </option>
 										<option value="1">Fluorescently labelled DNA</option>
@@ -176,28 +182,28 @@ Developer: Prakriti Dhang
 								</td>
 							</tr>
 							<tr>
-								<td class="fs-5">Step 4</td>
+								<td class="fs-6">Step 4</td>
 								<td>
 
 									<button class="btn btn-primary " type="button" id="samplemix"
-										onclick="ice_bucket()">
+										onclick="ice_bucket()" disabled>
 										Incubate in ice bucket</button>
 								</td>
 							</tr>
 
 							<tr>
-								<td class="fs-5">Step 5</td>
+								<td class="fs-6">Step 5</td>
 								<td>
-									<button class="btn btn-primary " type="button" id="rungel" onclick="run_gel()">
+									<button class="btn btn-primary " type="button" id="rungel" onclick="run_gel()" disabled>
 										Run the gel in electrophoresis buffer</button>
 								</td>
 							</tr>
 
 							<tr>
-								<td class="fs-5">Step 6</td>
+								<td class="fs-6">Step 6</td>
 								<td>
 									<button class="btn btn-primary" type="button" id="viewsample"
-										onclick="view_sample_UVlight()"> Visualize the protein-DNA </button>
+										onclick="view_sample_UVlight()" disabled> Visualize the protein-DNA </button>
 
 								</td>
 							</tr>
@@ -231,18 +237,33 @@ Developer: Prakriti Dhang
 						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
 						<img src="./images/setup.png" class="img-fluid" id="setup">
 						<img src="./images/ice_tray.png" class="img-fluid" id="icetray">
-						<img src="./images/protein.png" class="img-fluid" id="protein">
+						<img src="./images/protein.png" class="img-fluid" id="protein" style="display: none;">
 						<img src="./images/ice_bucket.png" class="img-fluid" id="icebucket">
 						<img src="./images/tube.png" class="img-fluid" id="tube">
 
+
+						<img src="./images/dna2.png" class="img-fluid" id="dna2">
+						<img src="./images/dna1.png" class="img-fluid" id="dna1">
+						<img src="./images/empty_tube.png" class="img-fluid" id="emptytube">
+
+						<img src="./images/dnastrand.png" class="img-fluid" id="dnastrand">
+						<img src="./images/proteinsample.png" class="img-fluid" id="proteinsample">
+						<img src="./images/lbuffer.png" class="img-fluid" id="lbuffer">
+						<img src="./images/dnastrand.png" class="img-fluid" id="dnastrand1">
+						<img src="./images/proteinsample.png" class="img-fluid" id="proteinsample1">
+						<img src="./images/lbuffer.png" class="img-fluid" id="lbuffer1">
 
 
 						<div id="cd1"></div>
 						<div id="cd2"></div>
 						<div id="cd3"></div>
 						<div id="cd4"></div>
-						<!-- <div id="cd5"></div>
-<div id="cd6"></div> -->
+						<div id="cd5"></div>
+                        <div id="cd6"></div> 
+						<div id="cd7"></div>
+                        <div id="cd8"></div> 
+						<div id="cd9"></div>
+                        <div id="cd10"></div> 
 
 						<canvas id="myCanvass1" style="border:1px solid #999999;"></canvas>
 						<canvas id="myCanvass2" style="border:1px solid #999999;"></canvas>
@@ -266,7 +287,7 @@ Developer: Prakriti Dhang
 
 
 						<img src="./images/uv-machine.png" class="img-fluid" id="uvmachine">
-						<img src="./images/output.png" class="img-fluid" id="output">
+						<img src="./images/output.png" class="img-fluid" id="output" style="display: none;">
 						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
 						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
 
@@ -341,35 +362,6 @@ Developer: Prakriti Dhang
 
 
 
-		/* Sideview text */
-		const canvastxt = document.getElementById('sideviewcasetext');
-
-		// Check if the browser supports the canvas element
-		if (canvastxt.getContext) {
-			// Get the 2D drawing context
-			const ctxtxt = canvastxt.getContext('2d');
-
-			// Set font properties
-			ctxtxt.font = 'bold 60px Arial'; // You can adjust the font weight, size and family
-
-			// Set text properties
-			ctxtxt.fillStyle = 'black'; // Text color
-			ctxtxt.textAlign = 'center'; // Text alignment (centered horizontally)
-			ctxtxt.textBaseline = 'middle'; // Text baseline (centered vertically)
-
-			// Define the text to be displayed
-			const text = 'Side view';
-
-			// Get the position to place the text (in this case, centered on the canvas)
-			const x = canvastxt.width / 2;
-			const y = canvastxt.height / 2;
-
-			// Draw the text on the canvas
-			ctxtxt.fillText(text, x, y);
-		} else {
-			// Canvas not supported, provide a fallback or error message
-			console.log('Canvas is not supported in this browser.');
-		}
 
 
 	</script>

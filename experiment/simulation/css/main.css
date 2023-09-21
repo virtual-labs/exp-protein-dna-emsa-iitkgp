@@ -51,6 +51,82 @@
 }
 
 
+#dna2{
+    position: absolute;
+    width: 20%;
+    top:10%;
+    left: 40%;
+    display:none;
+}
+
+
+#dna1{
+    position: absolute;
+    width: 16.7%;
+    top:57%; /* 57 to 27 */
+    left: 44.1%;
+    display:none;
+}
+
+
+
+#emptytube{
+    position: absolute;
+    width: 12%;
+    top:20%; /* 57 to 27 */
+    left: 44.1%;
+    display:none;
+}
+
+#dnastrand{
+    position: absolute;
+    width: 2.5%;
+    top:50%;
+    left: 49.5%;
+    display:none;
+}
+
+#proteinsample{
+    position: absolute;
+    width: 1.2%;
+    top:70%;
+    left: 49.5%;
+    display:none;
+}
+
+#lbuffer{
+    position: absolute;
+    width: 1%;
+    top:80%;
+    left: 50%;
+    display:none;
+}
+
+#dnastrand1{
+    position: absolute;
+    width: 2.5%;
+    top:65%;
+    left: 49.5%;
+    display:none;
+}
+
+#proteinsample1{
+    position: absolute;
+    width: 1.2%;
+    top:55%;
+    left: 50%;
+    display:none;
+}
+
+#lbuffer1{
+    position: absolute;
+    width: 1%;
+    top:70%;
+    left: 51%;
+    display:none;
+}
+
+
 
 
 #protein{
@@ -157,13 +233,13 @@
 #uvmachine{
     position: absolute;
     width: 30%;
-    top:200%;
+    top:130%;
     left: 40%;
 }
 #output{
     position: absolute;
     width: 10%;
-    top:250%;
+    top:185%;
     left: 50%;
     z-index: 10;
 }
@@ -240,20 +316,48 @@
     left: 9.5%;
 
 }
-/* #cd5 {
+ #cd5 {
     position: absolute;
     width: 0.8%;
-    top: 69.8%;
+    top: 69.5%;
     left: 7.4%;
 }
 
 #cd6 {
     position: absolute;
     width: 0.8%;
-    top: 69.8%;
+    top: 69.5%;
     left: 9.5%;
-} */
+}
 
+#cd7 {
+    position: absolute;
+    width: 1%;
+    top: 30.5%;
+    left: 24.3%;
+}
+
+#cd8 {
+    position: absolute;
+    width: 1%;
+    top:30.5%;
+    left: 26.5%;
+
+}
+
+#cd9 {
+    position: absolute;
+    width: 0.8%;
+    top: 69.5%;
+    left: 24.4%;
+}
+
+#cd10 {
+    position: absolute;
+    width: 0.8%;
+    top: 69.5%;
+    left: 26.6%;
+}
 
 path,
 .jtk-endpoint {
@@ -284,6 +388,7 @@ path,
     left: 12%;
     z-index: 10;
     cursor: pointer;
+    display: none;
 }
 
 #cvp{
@@ -294,6 +399,7 @@ path,
     left: 21.52%;
     z-index: 10;
     cursor: pointer;
+    display: none;
 }
 
 
@@ -305,6 +411,7 @@ path,
     left: 21.5%;
     z-index: 10;
     cursor: pointer;
+    display: none;
 }
 
 #crun{
@@ -315,13 +422,14 @@ path,
     left: 15.2%;
     z-index: 10;
     cursor: pointer;
+    display: none;
 }
 
 #myCanvasuv1{
     position: absolute;
     width: 15%;
     height:120%;
-    top: 230%;
+    top: 163%;
     left: 41%;
     display: block;
 }
@@ -329,7 +437,7 @@ path,
     position: absolute;
     width: 14%;
     height:120%;
-    top: 230%;
+    top: 163%;
     left: 55%;
     display: block;
     rotate:180deg;
