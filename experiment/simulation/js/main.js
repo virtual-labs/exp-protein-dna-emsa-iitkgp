@@ -1,4 +1,15 @@
-//Your JavaScript goes in here
+/* 
+
+Lab name: Experimental Biochemistry
+Exp name: Protein-DNA interaction analysis by electrophoretic mobilty shift assay (EMSA)
+File name: main.js
+Developer: Prakriti Dhang
+
+
+*/
+
+
+
 function restartexp(){
   location.reload();
 }
@@ -41,7 +52,7 @@ function annealing_dna(){
 
   if((checkBox1.checked == true)&& (checkBox2.checked == true)){
   document.getElementById("action").innerHTML="The fluorescently-labelled DNA probe is prepared by annealing the complementary oligonucleotides in thermocycler. The probe is purified by gel electrophoresis and quantified by UV spectroscopy.";
- 
+ window.scrollBy(0,100);
   var imgdnas1= document.getElementById("dna1");
   var orgtop = 57; /* initial position */
   clearInterval(imgdna1);
@@ -170,14 +181,15 @@ function ice_bucket(){
 function run_gel(){
   document.getElementById("action").innerHTML="	Running the gel in electrophoresis buffer between 100 and 120 volts until the dye front reaches the bottom of the gel in dark conditions as DNA is fluorescently labelled.";
   document.getElementById('cvt').style.display="block";
-  document.getElementById('cvp').style.display="block";
-  document.getElementById('cvn').style.display="block";
+ 
   document.getElementById('crun').style.display="block";
 
 }
 
 function txtvolt(){
     const canvas = document.getElementById('textvoltimer');
+    document.getElementById('cvp').style.display="block";
+  
   var volt = 0;
   // Check if the browser supports the canvas element
 
@@ -209,7 +221,8 @@ var volt = 10;
 function txtvoltp(){
     const canvas = document.getElementById('textvoltimer');
 
-
+    document.getElementById('cvn').style.display="block";
+   
     // Get the 2D drawing context
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
