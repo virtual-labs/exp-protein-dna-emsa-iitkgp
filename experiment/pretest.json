@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "How many types of nucleic acids are present in the living systems?",
+      "question": "1. How many types of nucleic acids are present in the living systems?",
       "answers": {
         "a": "One",
         "b": "Two",
@@ -14,7 +14,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Which of the following most accurately describes the central dogma of biology?",
+      "question": "2. Which of the following most accurately describes the central dogma of biology?",
       "answers": {
         "a": "DNA to protein to RNA",
         "b": "Protein to RNA to DNA",
@@ -26,7 +26,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Fill in the blanks, DNA is _______stranded while RNA is _______stranded",
+      "question": "3. Fill in the blanks, DNA is _______stranded while RNA is _______stranded",
       "answers": {
         "a": "Single, single",
         "b": "Single, double",
@@ -38,7 +38,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "DNA is the genetic material of the living systems that",
+      "question": "4. DNA is the genetic material of the living systems that",
       "answers": {
         "a": "Stores information and passes to next generation",
         "b": "It is more stable than RNA",
@@ -50,7 +50,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "How many components are present in the basic unit of DNA?",
+      "question": "5. How many components are present in the basic unit of DNA?",
       "answers": {
         "a": "One",
         "b": "Two",
@@ -62,7 +62,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "EMSA stands for?",
+      "question": "6. EMSA stands for?",
       "answers": {
         "a": "Electrophoretic mobility shift assay",
         "b": "Electrophoresis mobility shift assay",
@@ -74,7 +74,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "EMSA technique used for the interaction of the ",
+      "question": "7. EMSA technique used for the interaction of the ",
       "answers": {
         "a": "DNA with the proteins",
         "b": "RNA with the proteins",
@@ -86,7 +86,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "EMSA can determine the",
+      "question": "8. EMSA can determine the",
       "answers": {
         "a": "Binding affinity of the nucleic acid-protein",
         "b": "Can determine sequence specificity of the nucleic acid-protein interaction sites",
@@ -98,7 +98,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "For performing EMSA what type of gel should be used?",
+      "question": "9. For performing EMSA what type of gel should be used?",
       "answers": {
         "a": "Non-denaturing SDS-PAGE",
         "b": "Denaturing SDS-PAGE",
@@ -110,7 +110,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "n an EMSA experiment free DNA is separated from the protein-DNA complexes in a native gel by which following principle?",
+      "question": "10. In an EMSA experiment free DNA is separated from the protein-DNA complexes in a native gel by which following principle?",
       "answers": {
         "a": "Molecular weight",
         "b": "Charge",

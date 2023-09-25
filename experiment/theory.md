@@ -32,7 +32,7 @@ There are also some limitations of EMSA assay. Firstly, weak interaction or rapi
 6.	**Characterization of the protein-DNA complexes:** The binding specificity, affinity, stoichiometry, and stability of the protein-DNA complexes can be determined by EMSA by using specific competitors, mutants or antibodies.
 
 <div align="center">
-<img src="images/emsa.png" width="40%">
+<img src="images/emsa.png" width="50%">
 </div>
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
