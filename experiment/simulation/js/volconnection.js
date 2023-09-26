@@ -103,9 +103,11 @@ jsPlumb.ready(function () {
         createDisc = function () {
             var d = document.createElement("div");
             d.className = "bigdot";
+           
             document.getElementById("animation-demo").appendChild(d);
             var id = '' + ((new Date().getTime()));
             d.setAttribute("id", id);
+           
             var w = screen.width - 162, h = screen.height - 162;
             var x = (5 * w) + Math.floor(Math.random() * (10 * w));
             var y = (5 * h) + Math.floor(Math.random() * (10 * h));
