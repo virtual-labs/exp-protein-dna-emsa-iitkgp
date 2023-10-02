@@ -16,7 +16,9 @@ Developer: Prakriti Dhang
     display: inline-block;
 }
 
-
+.div-inline{
+    display: inline;
+}
 
 #voltagetimer {
     position: relative;
@@ -35,7 +37,7 @@ Developer: Prakriti Dhang
 
 #icebucket {
     position: absolute;
-    width: 15%;
+    width: 30%;
     top: 20%;
     left: 76%
 }
@@ -57,6 +59,104 @@ Developer: Prakriti Dhang
     z-index: -10;
 
 }
+#trisbuffer{
+    position: absolute;
+    width: 7%;
+    top:11.5%;
+    left:50%;
+    display: none;
+}
+
+#tubedila{
+    position: absolute;
+    width: 3.5%;
+    top:50%;
+    left:40%;
+    display: none;
+}
+
+#tubedilb{
+    position: absolute;
+    width: 3.5%;
+    top:50%;
+    left:44%;
+    display: none;
+}
+
+
+#tubedilc{
+    position: absolute;
+    width: 3.5%;
+    top:50%;
+    left:48%;
+    display: none;
+}
+#tubedild{
+    position: absolute;
+    width: 3.5%;
+    top:50%;
+    left:52%;
+    display: none;
+}
+#tubedile{
+    position: absolute;
+    width: 3.5%;
+    top:50%;
+    left:56%;
+    display: none;
+}
+
+/* #tubedilf{
+    position: absolute;
+    width: 3.5%;
+    top:50%;
+    left:60%;
+    display: none;
+} */
+
+/* incubate in ice*/
+
+#tubeicea{
+    position: absolute;
+    width: 3.2%;
+    top:50%;
+    left:83.5%;
+    display: none;
+}
+
+#tubeiceb{
+    position: absolute;
+    width: 3.2%;
+    top:55%;
+    left:86.2%;
+    display: none;
+}
+
+#tubeicec{
+    position: absolute;
+    width: 3.2%;
+    top:50%;
+    left:89%;
+    display: none;
+}
+#tubeiced{
+    position: absolute;
+    width: 3.2%;
+    top:55%;
+    left:92%;
+    display: none;
+}
+
+#tubeicee{
+    position: absolute;
+    width: 3.2%;
+    top:49%;
+    left:95%;
+    display: none;
+}
+
+
+
 
 
 #dna2{

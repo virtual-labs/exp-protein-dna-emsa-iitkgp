@@ -75,7 +75,7 @@ else{
 }
 }
 
-function sample_prep(){
+function buffer_prep(){
   var checkBox1 = document.getElementById("opt1");
   var checkBox2 = document.getElementById("opt2");
   var checkBox3 = document.getElementById("opt3");
@@ -85,7 +85,7 @@ function sample_prep(){
   var checkBox7 = document.getElementById("opt7");
   var checkBox8 = document.getElementById("opt8");
 
-  if((checkBox1.checked == true)&& (checkBox2.checked == true)&& (checkBox3.checked == true)&& (checkBox4.checked == true)&& (checkBox5.checked == true)&& (checkBox6.checked == true)&& (checkBox7.checked == true)&& (checkBox8.checked == true)){
+  if((checkBox1.checked == true)&& (checkBox2.checked == true)&& (checkBox3.checked == true)&& (checkBox4.checked == true)&& (checkBox5.checked == true)&& (checkBox6.checked == true)){
   document.getElementById("protein").style.display="block";
   document.getElementById("dna1").style.display="none";
   document.getElementById("dna2").style.display="none";
@@ -106,7 +106,7 @@ var samplemix = document.getElementById("step3");
 
   }
 
-  if (samplemix.options[samplemix.selectedIndex].value == 1) {
+  if (samplemix.options[samplemix.selectedIndex].value == 4) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the correct component ";
      document.getElementById("emptytube").style.display="block";
@@ -117,7 +117,7 @@ var samplemix = document.getElementById("step3");
  
    }
 
-   if (samplemix.options[samplemix.selectedIndex].value == 2) {
+   if (samplemix.options[samplemix.selectedIndex].value == 3) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the correct component  ";
      document.getElementById("proteinsample").style.display="block";
@@ -126,16 +126,18 @@ var samplemix = document.getElementById("step3");
      document.getElementById("protein").style.display="none";
  
    }
-   if (samplemix.options[samplemix.selectedIndex].value == 3) {
+   if (samplemix.options[samplemix.selectedIndex].value == 1) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the incorrect component  ";
      document.getElementById("protein").style.display="none";
+    
  
    }
-   if (samplemix.options[samplemix.selectedIndex].value == 4) {
+   if (samplemix.options[samplemix.selectedIndex].value == 2) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the correct component  ";
      document.getElementById("protein").style.display="none";
+     document.getElementById("emptytube").style.display="block";
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 5) {
@@ -153,19 +155,43 @@ var samplemix = document.getElementById("step3");
      document.getElementById("protein").style.display="none";
  
    }
-   if (samplemix.options[samplemix.selectedIndex].value == 7) {
-    // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
-     document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the correct component  ";
-     document.getElementById("protein").style.display="none";
- 
-   }
+   
 
 
  }
+function sample_dilutionA(){
+  document.getElementById('tubeicea').style.display="block";
+}
+function sample_dilutionB(){
+  document.getElementById('tubeiceb').style.display="block";
+}
+function sample_dilutionC(){
+  document.getElementById('tubeicec').style.display="block";
+}
+function sample_dilutionD(){
+  document.getElementById('tubeiced').style.display="block";
+}
+function sample_dilutionE(){
+  document.getElementById('tubeicee').style.display="block";
+}
+
+
+
+
 
 
 function ice_bucket(){
-  document.getElementById('tube').style.display="block";
+  //document.getElementById('tube').style.display="block";
+  document.getElementById('tubeicea').style.display="block";
+  document.getElementById('tubeiceb').style.display="block";
+  document.getElementById('tubeicec').style.display="block";
+  document.getElementById('tubeiced').style.display="block";
+  document.getElementById('tubeicee').style.display="block";
+  document.getElementById('tubedila').style.display="none";
+  document.getElementById('tubedilb').style.display="none";
+  document.getElementById('tubedilc').style.display="none";
+  document.getElementById('tubedild').style.display="none";
+  document.getElementById('tubedile').style.display="none";
   document.getElementById("lbuffer").style.display="none";
   document.getElementById("proteinsample").style.display="none";
   document.getElementById("dnastrand").style.display="none";
@@ -177,6 +203,16 @@ function ice_bucket(){
   document.getElementById("action").innerHTML="Incubating in ice for 20-30 minutes to allow the protein-DNA complex to form.";
 
 }
+
+function tris_buffer(){
+  document.getElementById("trisbuffer").style.display="block";
+}
+
+
+function addtribuffer(){
+
+}
+
 
 function run_gel(){
   document.getElementById("action").innerHTML="	Running the gel in electrophoresis buffer between 100 and 120 volts until the dye front reaches the bottom of the gel in dark conditions as DNA is fluorescently labelled.";
