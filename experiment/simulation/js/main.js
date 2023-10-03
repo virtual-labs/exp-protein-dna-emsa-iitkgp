@@ -45,6 +45,7 @@ function dna1() {
   } else {
     // image display "none";
     alert("Check the checkbox for Fluorescently-labelled single stranded DNA" );
+    document.getElementById("dna2").style.display="none";
   }
 }
 
@@ -58,6 +59,7 @@ function dna2() {
   } else {
     // image display "none";
     alert("Check the checkbox for Unlabelled single stranded DNA" );
+    document.getElementById("dna1").style.display="none";
   }
 }
 
@@ -117,7 +119,7 @@ function buffer_prep(){
   document.getElementById("tube").style.display="block";
   document.getElementById("dna1").style.display="none";
   document.getElementById("dna2").style.display="none";
-  document.getElementById("action").innerHTML="Preparing the protein sample by diluting it in binding buffer to the desired concentration.";
+  document.getElementById("action").innerHTML="Preparing the 1x binding buffer to the desired concentration.";
   document.getElementById("step3").disabled=false;
   document.getElementById("buffer").disabled=true;
 
@@ -266,6 +268,7 @@ function ice_bucket(){
 
 function tris_buffer(){
   document.getElementById("trisbuffer").style.display="block";
+  document.getElementById("action").innerHTML="Filling up the electrophoresis chamber with Tris-borate ETDA buffer.";
 
 }
 
@@ -320,6 +323,7 @@ function sample_sampleA(){
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptitee").style.display="none";
   document.getElementById('loadsampleb').style.pointerEvents="auto";
+  document.getElementById("action").innerHTML="Loading sample A to the first well.";
 
   const canvassdrop1 = document.getElementById('myCanvass1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
@@ -416,6 +420,7 @@ function sample_sampleB(){
   document.getElementById("peptitec").style.display="none";
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptitee").style.display="none";
+  document.getElementById("action").innerHTML="Loading sample B to the second well.";
 
   const canvassdrop2 = document.getElementById('myCanvass2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
@@ -507,7 +512,7 @@ function sample_sampleC(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptitee").style.display="none";
-
+  document.getElementById("action").innerHTML="Loading sample C to the third well.";
 
  
   const canvassdrop3 = document.getElementById('myCanvass3');
@@ -601,6 +606,7 @@ function sample_sampleD(){
   document.getElementById("peptitec").style.display="none";
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitee").style.display="none";
+  document.getElementById("action").innerHTML="Loading sample D to the fourth well.";
 
   const canvassdrop4 = document.getElementById('myCanvass4');
   const ctxsdrop4 = canvassdrop4.getContext('2d');
@@ -693,7 +699,7 @@ function sample_sampleE(){
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("rungel").disabled=false;
-  
+  document.getElementById("action").innerHTML="Loading sample E to the fifth well.";
   
   const canvassdrop5 = document.getElementById('myCanvass5');
   const ctxsdrop5 = canvassdrop5.getContext('2d');
