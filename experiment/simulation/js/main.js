@@ -15,8 +15,23 @@ function restartexp(){
 }
 
 function start(){
-document.getElementById("sampleprep").disabled=false;
+document.getElementById("anneal").disabled=false;
 document.getElementById("start").disabled=true;
+document.getElementById("icetray").removeAttribute("onclick");
+document.getElementById("topcover").removeAttribute("onclick");
+document.getElementById("opt11").disabled=false;
+document.getElementById("opt12").disabled=false;
+//document.getElementById('dilutesamplea').style.pointerEvents="none";
+document.getElementById('dilutesampleb').style.pointerEvents="none";
+  document.getElementById('dilutesamplec').style.pointerEvents="none";
+  document.getElementById('dilutesampled').style.pointerEvents="none";
+  document.getElementById('dilutesamplee').style.pointerEvents="none";
+
+  document.getElementById('loadsamplea').style.pointerEvents="none";
+  document.getElementById('loadsampleb').style.pointerEvents="none";
+  document.getElementById('loadsamplec').style.pointerEvents="none";
+  document.getElementById('loadsampled').style.pointerEvents="none";
+  document.getElementById('loadsamplee').style.pointerEvents="none";
 }
 
 
@@ -26,6 +41,7 @@ function dna1() {
   if (checkBox1.checked == true){
     //image display block
     document.getElementById("dna2").style.display="block";
+    window.scrollBy(0,60);
   } else {
     // image display "none";
     alert("Check the checkbox for Fluorescently-labelled single stranded DNA" );
@@ -38,6 +54,7 @@ function dna2() {
   if (checkBox2.checked == true){
     //image display block
     document.getElementById("dna1").style.display="block";
+    window.scrollBy(0,60);
   } else {
     // image display "none";
     alert("Check the checkbox for Unlabelled single stranded DNA" );
@@ -60,7 +77,18 @@ function annealing_dna(){
   function frame1() {
     if (orgtop == 27) { /* moves to 27 top positon*/
       clearInterval(imgdna1); /* stops to 27 postion*/
-      document.getElementById("samplebprep").disabled=false;
+      document.getElementById("buffer").disabled=false;
+      document.getElementById("opt1").disabled=false;
+      document.getElementById("opt2").disabled=false;
+      document.getElementById("opt3").disabled=false;
+      document.getElementById("opt4").disabled=false;
+      document.getElementById("opt5").disabled=false;
+      document.getElementById("opt6").disabled=false;
+      document.getElementById("opt7").disabled=false;
+      document.getElementById("opt8").disabled=false;
+      document.getElementById("anneal").disabled=true;
+
+
     } else {
       orgtop--; 
       imgdnas1.style.top = orgtop + '%'; 
@@ -86,10 +114,13 @@ function buffer_prep(){
   var checkBox8 = document.getElementById("opt8");
 
   if((checkBox1.checked == true)&& (checkBox2.checked == true)&& (checkBox3.checked == true)&& (checkBox4.checked == true)&& (checkBox5.checked == true)&& (checkBox6.checked == true)){
-  document.getElementById("protein").style.display="block";
+  document.getElementById("tube").style.display="block";
   document.getElementById("dna1").style.display="none";
   document.getElementById("dna2").style.display="none";
   document.getElementById("action").innerHTML="Preparing the protein sample by diluting it in binding buffer to the desired concentration.";
+  document.getElementById("step3").disabled=false;
+  document.getElementById("buffer").disabled=true;
+
   }
   else{
     alert("Check all the components to prepare 1x binding buffer");
@@ -112,7 +143,7 @@ var samplemix = document.getElementById("step3");
      document.getElementById("emptytube").style.display="block";
      document.getElementById("dnastrand").style.display="block";
      document.getElementById("dnastrand1").style.display="block";
-     document.getElementById("protein").style.display="none";
+     document.getElementById("tube").style.display="none";
      document.getElementById("samplemix").disabled=false;
  
    }
@@ -123,27 +154,27 @@ var samplemix = document.getElementById("step3");
      document.getElementById("proteinsample").style.display="block";
      document.getElementById("emptytube").style.display="block";
      document.getElementById("proteinsample1").style.display="block";
-     document.getElementById("protein").style.display="none";
+     document.getElementById("tube").style.display="none";
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 1) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the incorrect component  ";
-     document.getElementById("protein").style.display="none";
+     document.getElementById("tube").style.display="none";
     
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 2) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the correct component  ";
-     document.getElementById("protein").style.display="none";
+     document.getElementById("tube").style.display="none";
      document.getElementById("emptytube").style.display="block";
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 5) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the incorrect component  ";
-     document.getElementById("protein").style.display="none";
+     document.getElementById("tube").style.display="none";
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 6) {
@@ -152,7 +183,8 @@ var samplemix = document.getElementById("step3");
      document.getElementById("emptytube").style.display="block";
      document.getElementById("lbuffer").style.display="block";
      document.getElementById("lbuffer1").style.display="block";
-     document.getElementById("protein").style.display="none";
+     document.getElementById("tube").style.display="none";
+     document.getElementById("samplebprep").disabled = false;
  
    }
    
@@ -160,19 +192,37 @@ var samplemix = document.getElementById("step3");
 
  }
 function sample_dilutionA(){
-  document.getElementById('tubeicea').style.display="block";
+  document.getElementById('tubedila').style.display="block";
+  document.getElementById('tube').style.display="none";
+  document.getElementById('dilutesampleb').style.pointerEvents="auto";
+  document.getElementById("lbuffer").style.display="none";
+  document.getElementById("proteinsample").style.display="none";
+  document.getElementById("dnastrand").style.display="none";
+  document.getElementById("lbuffer1").style.display="none";
+  document.getElementById("proteinsample1").style.display="none";
+  document.getElementById("dnastrand1").style.display="none";
+  document.getElementById("emptytube").style.display="none";
+  
 }
 function sample_dilutionB(){
-  document.getElementById('tubeiceb').style.display="block";
+  document.getElementById('tubedilb').style.display="block";
+  document.getElementById('tube').style.display="none";
+  document.getElementById('dilutesamplec').style.pointerEvents="auto";
 }
 function sample_dilutionC(){
-  document.getElementById('tubeicec').style.display="block";
+  document.getElementById('tubedilc').style.display="block";
+  document.getElementById('tube').style.display="none";
+  document.getElementById('dilutesampled').style.pointerEvents="auto";
 }
 function sample_dilutionD(){
-  document.getElementById('tubeiced').style.display="block";
+  document.getElementById('tubedild').style.display="block";
+  document.getElementById('tube').style.display="none";
+  document.getElementById('dilutesamplee').style.pointerEvents="auto";
 }
 function sample_dilutionE(){
-  document.getElementById('tubeicee').style.display="block";
+  document.getElementById('tubedile').style.display="block";
+  document.getElementById('tube').style.display="none";
+  document.getElementById('icebucketbtn').disabled=false;
 }
 
 
@@ -181,7 +231,7 @@ function sample_dilutionE(){
 
 
 function ice_bucket(){
-  //document.getElementById('tube').style.display="block";
+  document.getElementById('icebucket').style.display="block";
   document.getElementById('tubeicea').style.display="block";
   document.getElementById('tubeiceb').style.display="block";
   document.getElementById('tubeicec').style.display="block";
@@ -199,20 +249,595 @@ function ice_bucket(){
   document.getElementById("proteinsample1").style.display="none";
   document.getElementById("dnastrand1").style.display="none";
   document.getElementById("emptytube").style.display="none";
-  document.getElementById("rungel").disabled=false;
+ // document.getElementById("rungel").disabled=false;
   document.getElementById("action").innerHTML="Incubating in ice for 20-30 minutes to allow the protein-DNA complex to form.";
+  document.getElementById("trisbuffertbtn").disabled = false;
+  document.getElementById('dilutesamplea').style.pointerEvents="none";
+  document.getElementById('dilutesampleb').style.pointerEvents="none";
+  document.getElementById('dilutesamplec').style.pointerEvents="none";
+  document.getElementById('dilutesampled').style.pointerEvents="none";
+  document.getElementById('dilutesamplee').style.pointerEvents="none";
+
 
 }
 
 function tris_buffer(){
   document.getElementById("trisbuffer").style.display="block";
+
 }
 
 
 function addtribuffer(){
+  document.getElementById("sampleload").disabled = false;
+  document.getElementById('loadsamplea').style.pointerEvents="auto";
+  document.getElementById("trisbufferbtn").disabled=true;
+  window.scrollBy(0,200);
+  /**side 1 */
+  canvaside1 = document.getElementById("addtbuffer");
+  ctxs1 = canvaside1.getContext("2d");
+  var posY = 150;
+  var speed = 0.5;
+
+  function drawLine() {
+
+    ctxs1.strokeStyle = '#EAF2F8  ';
+    ctxs1.globalAlpha = 0.04;
+    ctxs1.lineWidth = 600;
+    ctxs1.beginPath();
+    ctxs1.moveTo(0, posY); /*  0-130*/
+    ctxs1.lineTo(0, 150);
+    ctxs1.stroke();
+  }
+
+  function moveLine() {
+    posY += speed;
+
+    if (posY < 0 || posY > canvaside1.height) {
+      speed = speed * -1;
+    }
+  }
+
+  function loop() {
+    // clear old frame;
+    // ctx.clearRect(0,0,canvas.width, canvas.height);
+    moveLine();
+    drawLine();
+    cancelani = requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
 
 }
 
+
+function sample_sampleA(){
+  document.getElementById("peptitea").style.display="block";
+  document.getElementById("peptiteb").style.display="none";
+  document.getElementById("peptitec").style.display="none";
+  document.getElementById("peptited").style.display="none";
+  document.getElementById("peptitee").style.display="none";
+  document.getElementById('loadsampleb').style.pointerEvents="auto";
+
+  const canvassdrop1 = document.getElementById('myCanvass1');
+  const ctxsdrop1 = canvassdrop1.getContext('2d');
+ 
+  const imagepp = document.getElementById('peptitea');
+
+  let isDragging = false;
+
+  // Function to handle mouse/touch down event
+  function handleMouseDown(event) {
+    isDragging = true;
+    imagepp.style.cursor = 'pointer';
+    /*  imageppb.style.cursor = 'grabbing';
+     imageppc.style.cursor = 'grabbing';
+     imageppd.style.cursor = 'grabbing'; */
+
+    // Calculate the offset of the mouse/touch position relative to the image
+    const offsetX = event.clientX - imagepp.getBoundingClientRect().left;
+    const offsetY = event.clientY - imagepp.getBoundingClientRect().top;
+
+
+    // Function to handle mouse/touch move event
+    function handleMouseMove(event) {
+      if (isDragging) {
+        // Update the position of the image based on mouse/touch position
+        imagepp.style.left = event.clientX - offsetX + 'px';
+        imagepp.style.top = event.clientY - offsetY + 'px';
+
+
+
+        const imageRect = imagepp.getBoundingClientRect();
+        const canvasRect = canvassdrop1.getBoundingClientRect();
+        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
+         const canvasRect3 = canvassdrop3.getBoundingClientRect();
+         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
+
+        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+          // Change the canvas color when the image touches it
+          canvassdrop1.style.backgroundColor = '#7FA9FF';
+
+        }
+
+
+        /* else {
+          document.getElementById("gelrun").disabled = true;
+          // Reset the canvas color if the image is outside the canvas
+         canvassdrop1.style.backgroundColor = 'white';
+         
+        }  */
+      }
+    }
+
+    // Function to handle mouse/touch up event
+    function handleMouseUp() {
+      isDragging = false;
+      imagepp.style.cursor = 'pointer';
+      // Remove the event listeners when dragging is complete
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      imagepp.removeEventListener('touchmove', handleMouseMove);
+      imagepp.removeEventListener('touchend', handleMouseUp);
+
+    }
+
+    // Add event listeners for mouse/touch move and up events
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    imagepp.addEventListener('touchmove', handleMouseMove);
+    imagepp.addEventListener('touchend', handleMouseUp);
+  }
+
+  // Function to change the color when clicked/touched
+  function changeColor() {
+    imagepp.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  }
+
+  // Add event listeners for mouse/touch down and click/touch events
+  imagepp.addEventListener('mousedown', handleMouseDown);
+  imagepp.addEventListener('touchstart', handleMouseDown);
+  imagepp.addEventListener('click', changeColor);
+  imagepp.addEventListener('touchend', changeColor);
+
+
+}
+
+
+
+
+
+function sample_sampleB(){
+  document.getElementById('loadsamplec').style.pointerEvents="auto";
+  document.getElementById("peptiteb").style.display="block";
+  document.getElementById("peptitea").style.display="none";
+  document.getElementById("peptitec").style.display="none";
+  document.getElementById("peptited").style.display="none";
+  document.getElementById("peptitee").style.display="none";
+
+  const canvassdrop2 = document.getElementById('myCanvass2');
+  const ctxsdrop2 = canvassdrop2.getContext('2d');
+ 
+  const imagepp2 = document.getElementById('peptiteb');
+
+  let isDragging2 = false;
+
+  // Function to handle mouse/touch down event
+  function handleMouseDown(event) {
+    isDragging2 = true;
+    imagepp2.style.cursor = 'pointer';
+    /*  imageppb.style.cursor = 'grabbing';
+     imageppc.style.cursor = 'grabbing';
+     imageppd.style.cursor = 'grabbing'; */
+
+    // Calculate the offset of the mouse/touch position relative to the image
+    const offsetX = event.clientX - imagepp2.getBoundingClientRect().left;
+    const offsetY = event.clientY - imagepp2.getBoundingClientRect().top;
+
+
+    // Function to handle mouse/touch move event
+    function handleMouseMove(event) {
+      if (isDragging2) {
+        // Update the position of the image based on mouse/touch position
+        imagepp2.style.left = event.clientX - offsetX + 'px';
+        imagepp2.style.top = event.clientY - offsetY + 'px';
+
+
+
+        const imageRect = imagepp2.getBoundingClientRect();
+        const canvasRect = canvassdrop2.getBoundingClientRect();
+        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
+         const canvasRect3 = canvassdrop3.getBoundingClientRect();
+         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
+
+        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+          // Change the canvas color when the image touches it
+          canvassdrop2.style.backgroundColor = '#7FA9FF';
+
+        }
+
+
+        /* else {
+          document.getElementById("gelrun").disabled = true;
+          // Reset the canvas color if the image is outside the canvas
+         canvassdrop1.style.backgroundColor = 'white';
+         
+        }  */
+      }
+    }
+
+    // Function to handle mouse/touch up event
+    function handleMouseUp() {
+      isDragging2 = false;
+      imagepp2.style.cursor = 'pointer';
+      // Remove the event listeners when dragging is complete
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      imagepp2.removeEventListener('touchmove', handleMouseMove);
+      imagepp2.removeEventListener('touchend', handleMouseUp);
+
+    }
+
+    // Add event listeners for mouse/touch move and up events
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    imagepp2.addEventListener('touchmove', handleMouseMove);
+    imagepp2.addEventListener('touchend', handleMouseUp);
+  }
+
+  // Function to change the color when clicked/touched
+  function changeColor() {
+    imagepp2.style.filter = 'hue-rotate(20deg)'; // Change color  (90 degrees in hue rotation)
+  }
+
+  // Add event listeners for mouse/touch down and click/touch events
+  imagepp2.addEventListener('mousedown', handleMouseDown);
+  imagepp2.addEventListener('touchstart', handleMouseDown);
+  imagepp2.addEventListener('click', changeColor);
+  imagepp2.addEventListener('touchend', changeColor);
+}
+
+
+function sample_sampleC(){
+  document.getElementById('loadsampled').style.pointerEvents="auto";
+  document.getElementById("peptitec").style.display="block";
+  document.getElementById("peptitea").style.display="none";
+  document.getElementById("peptiteb").style.display="none";
+  document.getElementById("peptited").style.display="none";
+  document.getElementById("peptitee").style.display="none";
+
+
+ 
+  const canvassdrop3 = document.getElementById('myCanvass3');
+  const ctxsdrop3 = canvassdrop3.getContext('2d');
+
+  const imagepp3 = document.getElementById('peptitec');
+
+  let isDragging3 = false;
+
+  // Function to handle mouse/touch down event
+  function handleMouseDown(event) {
+    isDragging3 = true;
+    imagepp3.style.cursor = 'pointer';
+    /*  imageppb.style.cursor = 'grabbing';
+     imageppc.style.cursor = 'grabbing';
+     imageppd.style.cursor = 'grabbing'; */
+
+    // Calculate the offset of the mouse/touch position relative to the image
+    const offsetX = event.clientX - imagepp3.getBoundingClientRect().left;
+    const offsetY = event.clientY - imagepp3.getBoundingClientRect().top;
+
+
+    // Function to handle mouse/touch move event
+    function handleMouseMove(event) {
+      if (isDragging3) {
+        // Update the position of the image based on mouse/touch position
+        imagepp3.style.left = event.clientX - offsetX + 'px';
+        imagepp3.style.top = event.clientY - offsetY + 'px';
+
+
+
+        const imageRect = imagepp3.getBoundingClientRect();
+        const canvasRect = canvassdrop3.getBoundingClientRect();
+        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
+         const canvasRect3 = canvassdrop3.getBoundingClientRect();
+         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
+
+        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+          // Change the canvas color when the image touches it
+          canvassdrop3.style.backgroundColor = '#7FA9FF';
+
+        }
+
+
+        /* else {
+          document.getElementById("gelrun").disabled = true;
+          // Reset the canvas color if the image is outside the canvas
+         canvassdrop1.style.backgroundColor = 'white';
+         
+        }  */
+      }
+    }
+
+    // Function to handle mouse/touch up event
+    function handleMouseUp() {
+      isDragging3 = false;
+      imagepp3.style.cursor = 'pointer';
+      // Remove the event listeners when dragging is complete
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      imagepp3.removeEventListener('touchmove', handleMouseMove);
+      imagepp3.removeEventListener('touchend', handleMouseUp);
+
+    }
+
+    // Add event listeners for mouse/touch move and up events
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    imagepp3.addEventListener('touchmove', handleMouseMove);
+    imagepp3.addEventListener('touchend', handleMouseUp);
+  }
+
+  // Function to change the color when clicked/touched
+  function changeColor() {
+    imagepp3.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  }
+
+  // Add event listeners for mouse/touch down and click/touch events
+  imagepp3.addEventListener('mousedown', handleMouseDown);
+  imagepp3.addEventListener('touchstart', handleMouseDown);
+  imagepp3.addEventListener('click', changeColor);
+  imagepp3.addEventListener('touchend', changeColor);
+}
+
+
+
+function sample_sampleD(){
+  document.getElementById('loadsamplee').style.pointerEvents="auto";
+  document.getElementById("peptited").style.display="block";
+  document.getElementById("peptitea").style.display="none";
+  document.getElementById("peptitec").style.display="none";
+  document.getElementById("peptiteb").style.display="none";
+  document.getElementById("peptitee").style.display="none";
+
+  const canvassdrop4 = document.getElementById('myCanvass4');
+  const ctxsdrop4 = canvassdrop4.getContext('2d');
+ 
+  const imagepp4 = document.getElementById('peptited');
+
+  let isDragging4 = false;
+
+  // Function to handle mouse/touch down event
+  function handleMouseDown(event) {
+    isDragging4 = true;
+    imagepp4.style.cursor = 'pointer';
+    /*  imageppb.style.cursor = 'grabbing';
+     imageppc.style.cursor = 'grabbing';
+     imageppd.style.cursor = 'grabbing'; */
+
+    // Calculate the offset of the mouse/touch position relative to the image
+    const offsetX = event.clientX - imagepp4.getBoundingClientRect().left;
+    const offsetY = event.clientY - imagepp4.getBoundingClientRect().top;
+
+
+    // Function to handle mouse/touch move event
+    function handleMouseMove(event) {
+      if (isDragging4) {
+        // Update the position of the image based on mouse/touch position
+        imagepp4.style.left = event.clientX - offsetX + 'px';
+        imagepp4.style.top = event.clientY - offsetY + 'px';
+
+
+
+        const imageRect = imagepp4.getBoundingClientRect();
+        const canvasRect = canvassdrop4.getBoundingClientRect();
+        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
+         const canvasRect3 = canvassdrop3.getBoundingClientRect();
+         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
+
+        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+          // Change the canvas color when the image touches it
+          canvassdrop4.style.backgroundColor = '#7FA9FF';
+
+        }
+
+
+        /* else {
+          document.getElementById("gelrun").disabled = true;
+          // Reset the canvas color if the image is outside the canvas
+         canvassdrop1.style.backgroundColor = 'white';
+         
+        }  */
+      }
+    }
+
+    // Function to handle mouse/touch up event
+    function handleMouseUp() {
+      isDragging4 = false;
+      imagepp4.style.cursor = 'pointer';
+      // Remove the event listeners when dragging is complete
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      imagepp4.removeEventListener('touchmove', handleMouseMove);
+      imagepp4.removeEventListener('touchend', handleMouseUp);
+
+    }
+
+    // Add event listeners for mouse/touch move and up events
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    imagepp4.addEventListener('touchmove', handleMouseMove);
+    imagepp4.addEventListener('touchend', handleMouseUp);
+  }
+
+  // Function to change the color when clicked/touched
+  function changeColor() {
+    imagepp4.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  }
+
+  // Add event listeners for mouse/touch down and click/touch events
+  imagepp4.addEventListener('mousedown', handleMouseDown);
+  imagepp4.addEventListener('touchstart', handleMouseDown);
+  imagepp4.addEventListener('click', changeColor);
+  imagepp4.addEventListener('touchend', changeColor);
+
+}
+
+
+function sample_sampleE(){
+  document.getElementById("peptitee").style.display="block";
+  document.getElementById("peptitea").style.display="none";
+  document.getElementById("peptitec").style.display="none";
+  document.getElementById("peptited").style.display="none";
+  document.getElementById("peptiteb").style.display="none";
+  document.getElementById("rungel").disabled=false;
+
+  const canvassdrop5 = document.getElementById('myCanvass5');
+  const ctxsdrop5 = canvassdrop5.getContext('2d');
+ 
+  const imagepp5 = document.getElementById('peptitee');
+
+  let isDragging5 = false;
+
+  // Function to handle mouse/touch down event
+  function handleMouseDown(event) {
+    isDragging5 = true;
+    imagepp5.style.cursor = 'pointer';
+    /*  imageppb.style.cursor = 'grabbing';
+     imageppc.style.cursor = 'grabbing';
+     imageppd.style.cursor = 'grabbing'; */
+
+    // Calculate the offset of the mouse/touch position relative to the image
+    const offsetX = event.clientX - imagepp5.getBoundingClientRect().left;
+    const offsetY = event.clientY - imagepp5.getBoundingClientRect().top;
+
+
+    // Function to handle mouse/touch move event
+    function handleMouseMove(event) {
+      if (isDragging5) {
+        // Update the position of the image based on mouse/touch position
+        imagepp5.style.left = event.clientX - offsetX + 'px';
+        imagepp5.style.top = event.clientY - offsetY + 'px';
+
+
+
+        const imageRect = imagepp5.getBoundingClientRect();
+        const canvasRect = canvassdrop5.getBoundingClientRect();
+        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
+         const canvasRect3 = canvassdrop3.getBoundingClientRect();
+         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
+
+        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+          // Change the canvas color when the image touches it
+          canvassdrop5.style.backgroundColor = '#7FA9FF';
+
+        }
+
+
+        /* else {
+          document.getElementById("gelrun").disabled = true;
+          // Reset the canvas color if the image is outside the canvas
+         canvassdrop1.style.backgroundColor = 'white';
+         
+        }  */
+      }
+    }
+
+    // Function to handle mouse/touch up event
+    function handleMouseUp() {
+      isDragging5 = false;
+      imagepp5.style.cursor = 'pointer';
+      // Remove the event listeners when dragging is complete
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      imagepp5.removeEventListener('touchmove', handleMouseMove);
+      imagepp5.removeEventListener('touchend', handleMouseUp);
+
+    }
+
+    // Add event listeners for mouse/touch move and up events
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    imagepp5.addEventListener('touchmove', handleMouseMove);
+    imagepp5.addEventListener('touchend', handleMouseUp);
+  }
+
+  // Function to change the color when clicked/touched
+  function changeColor() {
+    imagepp5.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  }
+
+  // Add event listeners for mouse/touch down and click/touch events
+  imagepp5.addEventListener('mousedown', handleMouseDown);
+  imagepp5.addEventListener('touchstart', handleMouseDown);
+  imagepp5.addEventListener('click', changeColor);
+  imagepp5.addEventListener('touchend', changeColor);
+
+
+}
+
+var imgtopsetup = null;
+function putdowntop(){
+  var topsetup = document.getElementById("topcover");
+  
+
+  var topsetupt = 120; //initial  position
+  clearInterval(imgtopsetup);
+  //clearInterval(imgtbdown);
+  imgtopsetup = setInterval(frame, 15); /* frame is 10 denotes the speed of the movement*/
+
+  function frame() {
+    if (topsetupt == 130) {
+
+      clearInterval(imgtopsetup);
+
+
+      //imgtbdown = setInterval(frame, 20);
+
+
+    } else {
+
+      topsetupt++;
+      topsetup.style.top = topsetupt + '%';
+
+    }
+  }
+
+}
+
+var imgicetray = null;
+function putupicetray(){
+  var topsetup = document.getElementById("icetray");
+  document.getElementById("peptitea").style.display = "none";
+  document.getElementById("peptiteb").style.display = "none";
+  document.getElementById("peptitec").style.display = "none";
+  document.getElementById("peptited").style.display = "none";
+  document.getElementById("peptitee").style.display = "none";
+
+  var topsetupt = 250; //initial  position
+  clearInterval(imgtopsetup);
+  //clearInterval(imgtbdown);
+  imgtopsetup = setInterval(frame, 15); /* frame is 10 denotes the speed of the movement*/
+
+  function frame() {
+    if (topsetupt == 195) {
+
+      clearInterval(imgtopsetup);
+
+
+      //imgtbdown = setInterval(frame, 20);
+
+
+    } else {
+
+      topsetupt--;
+      topsetup.style.top = topsetupt + '%';
+
+    }
+  }
+}
+
+
+
+/* Setting up electrophoresis*/
 
 function run_gel(){
   document.getElementById("action").innerHTML="	Running the gel in electrophoresis buffer between 100 and 120 volts until the dye front reaches the bottom of the gel in dark conditions as DNA is fluorescently labelled.";
@@ -220,6 +845,21 @@ function run_gel(){
  
   document.getElementById('crun').style.display="block";
 
+  document.getElementById("peptitea").style.display = "none";
+  document.getElementById("peptiteb").style.display = "none";
+  document.getElementById("peptitec").style.display = "none";
+  document.getElementById("peptited").style.display = "none";
+  document.getElementById("peptitee").style.display = "none";
+
+  document.getElementById("icetray").setAttribute("onclick","putupicetray()");
+document.getElementById("topcover").setAttribute("onclick","putdowntop()");
+
+document.getElementById('tubeicea').style.display="none";
+document.getElementById('tubeiceb').style.display="none";
+document.getElementById('tubeicec').style.display="none";
+document.getElementById('tubeiced').style.display="none";
+document.getElementById('tubeicee').style.display="none";
+document.getElementById('icebucket').style.display="none";
 }
 
 function txtvolt(){
@@ -336,7 +976,11 @@ else{
   }
 
   function view_sample_UVlight(){
-
+    document.getElementById("myCanvass11").style.display="none";
+    document.getElementById("myCanvass21").style.display="none";
+    document.getElementById("myCanvass31").style.display="none";
+    document.getElementById("myCanvass41").style.display="none";
+    document.getElementById("myCanvass51").style.display="none";
 
     document.getElementById("action").innerHTML="Visualizing the protein-DNA complex under the fluorescence sensitive imaging system.";
     window.scrollBy(0,500);
@@ -621,7 +1265,7 @@ function loop5() {
 }
 requestAnimationFrame(loop5);
 
-/*sample 6 */
+/*sample 6 
 
 canvass61 = document.getElementById("myCanvass61");
 ctxgs61 = canvass61.getContext("2d");
@@ -646,7 +1290,7 @@ function drawLine6() {
  //ctxs1.fillRect(10,10,150,80);
  ctxgs61.lineWidth = 600;
  ctxgs61.beginPath();
- ctxgs61.moveTo(0, posY6); /*  */
+ ctxgs61.moveTo(0, posY6); 
  ctxgs61.lineTo(0, 0);
  ctxgs61.stroke();
 }
@@ -666,7 +1310,7 @@ function loop6() {
  drawLine6();
  cancelani = requestAnimationFrame(loop6);
 }
-requestAnimationFrame(loop6);
+requestAnimationFrame(loop6);*/
 
    
 }
