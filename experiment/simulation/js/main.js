@@ -144,7 +144,7 @@ var samplemix = document.getElementById("step3");
      document.getElementById("dnastrand").style.display="block";
      document.getElementById("dnastrand1").style.display="block";
      document.getElementById("tube").style.display="none";
-     document.getElementById("samplemix").disabled=false;
+     //document.getElementById("samplemix").disabled=false;
  
    }
 
@@ -223,6 +223,7 @@ function sample_dilutionE(){
   document.getElementById('tubedile').style.display="block";
   document.getElementById('tube').style.display="none";
   document.getElementById('icebucketbtn').disabled=false;
+  
 }
 
 
@@ -231,6 +232,7 @@ function sample_dilutionE(){
 
 
 function ice_bucket(){
+  document.getElementById("samplebprep").disabled = true;
   document.getElementById('icebucket').style.display="block";
   document.getElementById('tubeicea').style.display="block";
   document.getElementById('tubeiceb').style.display="block";
@@ -257,6 +259,7 @@ function ice_bucket(){
   document.getElementById('dilutesamplec').style.pointerEvents="none";
   document.getElementById('dilutesampled').style.pointerEvents="none";
   document.getElementById('dilutesamplee').style.pointerEvents="none";
+  document.getElementById("icebucketbtn").disabled = true;
 
 
 }
@@ -270,7 +273,8 @@ function tris_buffer(){
 function addtribuffer(){
   document.getElementById("sampleload").disabled = false;
   document.getElementById('loadsamplea').style.pointerEvents="auto";
-  document.getElementById("trisbufferbtn").disabled=true;
+  document.getElementById("trisbuffertbtn").disabled=true;
+  document.getElementById("trisbuffer").removeAttribute("onclick");
   window.scrollBy(0,200);
   /**side 1 */
   canvaside1 = document.getElementById("addtbuffer");
@@ -689,7 +693,8 @@ function sample_sampleE(){
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("rungel").disabled=false;
-
+  
+  
   const canvassdrop5 = document.getElementById('myCanvass5');
   const ctxsdrop5 = canvassdrop5.getContext('2d');
  
@@ -860,6 +865,7 @@ document.getElementById('tubeicec').style.display="none";
 document.getElementById('tubeiced').style.display="none";
 document.getElementById('tubeicee').style.display="none";
 document.getElementById('icebucket').style.display="none";
+document.getElementById("sampleload").disabled=true;
 }
 
 function txtvolt(){
@@ -1028,6 +1034,8 @@ else{
 
 
 function samplerun(){
+
+  document.getElementById("rungel").disabled=true;
    /** Sample 1 */
    canvass11 = document.getElementById("myCanvass11");
    ctxgs11 = canvass11.getContext("2d");
