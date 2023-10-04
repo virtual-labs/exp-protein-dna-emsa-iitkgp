@@ -205,6 +205,8 @@ function sample_dilutionA(){
   document.getElementById("dnastrand1").style.display="none";
   document.getElementById("emptytube").style.display="none";
   document.getElementById("action").innerHTML = "1x dilution is selected ";
+  document.getElementById("step3").disabled = false;
+ 
   
 }
 function sample_dilutionB(){
