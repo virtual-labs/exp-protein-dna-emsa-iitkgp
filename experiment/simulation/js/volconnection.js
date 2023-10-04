@@ -649,7 +649,7 @@ jsPlumb.ready(function () {
         // Delete all connections
         instance.deleteEveryConnection();
 
-        
+        document.getElementById("viewsample").disabled=false;
         const canvas = document.getElementById('textvoltimer');
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
