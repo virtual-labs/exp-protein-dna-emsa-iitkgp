@@ -293,8 +293,8 @@ function addtribuffer(){
 
   function drawLine() {
 
-    ctxs1.strokeStyle = '#EAF2F8  ';
-    ctxs1.globalAlpha = 0.04;
+    ctxs1.strokeStyle = '#DDE9FF ' //'#EAF2F8  ';
+    ctxs1.globalAlpha = 0.03;
     ctxs1.lineWidth = 600;
     ctxs1.beginPath();
     ctxs1.moveTo(0, posY); /*  0-130*/
@@ -911,8 +911,9 @@ function txtvolt(){
 
 /**************************************************** Increase voltage value **********************************************************************************/
 
-var volt = 10;
+var volt = 0;
 function txtvoltp(){
+  volt = volt + 10;
     const canvas = document.getElementById('textvoltimer');
 
     document.getElementById('cvn').style.display="block";
@@ -939,7 +940,7 @@ function txtvoltp(){
     // Draw the text on the canvas
     ctx.fillText(text, x, y);
   
-    volt = volt + 10;
+    
 }
 
 /**************************************************** Decrease voltage value **********************************************************************************/
