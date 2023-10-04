@@ -204,28 +204,34 @@ function sample_dilutionA(){
   document.getElementById("proteinsample1").style.display="none";
   document.getElementById("dnastrand1").style.display="none";
   document.getElementById("emptytube").style.display="none";
+  document.getElementById("action").innerHTML = "1x dilution is selected ";
+  document.getElementById("step3").disabled = false;
+ 
   
 }
 function sample_dilutionB(){
   document.getElementById('tubedilb').style.display="block";
   document.getElementById('tube').style.display="none";
   document.getElementById('dilutesamplec').style.pointerEvents="auto";
+  document.getElementById("action").innerHTML = "0.5x dilution is selected ";
 }
 function sample_dilutionC(){
   document.getElementById('tubedilc').style.display="block";
   document.getElementById('tube').style.display="none";
   document.getElementById('dilutesampled').style.pointerEvents="auto";
+  document.getElementById("action").innerHTML = "0.25x dilution is selected ";
 }
 function sample_dilutionD(){
   document.getElementById('tubedild').style.display="block";
   document.getElementById('tube').style.display="none";
   document.getElementById('dilutesamplee').style.pointerEvents="auto";
+  document.getElementById("action").innerHTML = "0.125x dilution is selected ";
 }
 function sample_dilutionE(){
   document.getElementById('tubedile').style.display="block";
   document.getElementById('tube').style.display="none";
   document.getElementById('icebucketbtn').disabled=false;
-  
+  document.getElementById("action").innerHTML = "0.0625x dilution is selected ";
 }
 
 

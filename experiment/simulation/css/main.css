@@ -249,9 +249,9 @@ Developer: Prakriti Dhang
 
 #emptytube{
     position: absolute;
-    width: 12%;
-    top:20%; /* 57 to 27 */
-    left: 44.1%;
+    width: 32%;
+    top:8%; /* 57 to 27 */
+    left: 35.3%;
     display:none;
 }
 
@@ -435,9 +435,9 @@ Developer: Prakriti Dhang
 }
 #output{
     position: absolute;
-    width: 10%;
-    top:185%;
-    left: 50%;
+    width: 20%;
+    top:175%;
+    left: 45%;
     z-index: 10;
 }
 
@@ -620,6 +620,17 @@ path,
     z-index: 10;
     cursor: pointer;
     display: none;
+}
+
+#cstop{
+    position: absolute;
+    width:1.5%;
+    height:10.5%;
+    top: 68%;
+    left: 12.2%;
+    z-index: 10;
+    cursor: pointer;
+    display: block;
 }
 
 #myCanvasuv1{
