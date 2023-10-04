@@ -988,7 +988,7 @@ else if((volt<100) || (volt>120)){
 else{
     samplerun();
 
-    document.getElementById("viewsample").disabled=false;
+    
 
   }
   }
