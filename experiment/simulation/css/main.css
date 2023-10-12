@@ -185,6 +185,7 @@ Developer: Prakriti Dhang
     left:82%;
     display: none;
     z-index: 2;
+    cursor: pointer;
     
 }
 
@@ -195,6 +196,7 @@ Developer: Prakriti Dhang
     left:84%;
     display: none;
     z-index: 2;
+    cursor: pointer;
    
     
 }
@@ -206,7 +208,7 @@ Developer: Prakriti Dhang
     left:86.2%;
     display: none;
     z-index: 2;
-    
+    cursor: pointer;
 }
 
 #peptited{
@@ -216,7 +218,7 @@ Developer: Prakriti Dhang
     left:88.2%;
     display: none;
     z-index: 2;
-    
+    cursor: pointer;
 }
 #peptitee{
     position: absolute;
@@ -225,7 +227,7 @@ Developer: Prakriti Dhang
     left:90.5%;
     display: none;
     z-index: 2;
-    
+    cursor: pointer;
 }
 
 #dna2{
