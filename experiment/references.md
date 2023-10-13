@@ -1,4 +1,4 @@
-## Refrences
+## References
 
 1.	[Electrophoretic Mobility Shift Assay (EMSA): Principle, Procedure, Application, Troubleshooting, Controls, and Limitations](https://thesciencenotes.com/electrophoretic-mobility-shift-assay-emsa-principle-procedure-application-troubleshooting-controls-limitations/)
 2.	[Gel Shift Assays–EMSA](https://www.thermofisher.com/in/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/gel-shift-assays-emsa.html)
