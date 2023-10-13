@@ -72,7 +72,7 @@ Developer: Prakriti Dhang
 #icetray {
     position: absolute;
     width: 40%;
-    top:250%; /* 250- 195 */
+    top:196%; /* 250- 196*/
     left: -5%;
     z-index: -10;
     cursor:pointer;
@@ -260,22 +260,23 @@ Developer: Prakriti Dhang
 #dnastrand{
     position: absolute;
     width: 2.5%;
-    top:50%;
+    top:90%;
     left: 49.5%;
     display:none;
+    rotate: 90deg;
 }
 
 #proteinsample{
     position: absolute;
-    width: 1.2%;
-    top:70%;
-    left: 49.5%;
+    width: 1%;
+    top:80%;
+    left: 50.5%;
     display:none;
 }
 
 #lbuffer{
     position: absolute;
-    width: 1%;
+    width: 0.8%;
     top:80%;
     left: 50%;
     display:none;
@@ -283,23 +284,23 @@ Developer: Prakriti Dhang
 
 #dnastrand1{
     position: absolute;
-    width: 2.5%;
-    top:65%;
+    width: 2.4%;
+    top:75%;
     left: 49.5%;
     display:none;
 }
 
 #proteinsample1{
     position: absolute;
-    width: 1.2%;
-    top:55%;
-    left: 50%;
+    width: 1%;
+    top:70.5%;
+    left: 49.5%;
     display:none;
 }
 
 #lbuffer1{
     position: absolute;
-    width: 1%;
+    width: 0.8%;
     top:70%;
     left: 51%;
     display:none;
@@ -341,7 +342,7 @@ Developer: Prakriti Dhang
     width: 1.5%;
     height: 4.5%;
     top:185%;
-    left: 11.4%;
+    left: 12%;
   
 }
 #myCanvass3{
@@ -349,21 +350,21 @@ Developer: Prakriti Dhang
     width: 1.5%;
     height: 4.5%;
     top:185%;
-    left: 13.2%;
+    left: 14.3%;
 }
 #myCanvass4{
     position: absolute;
     width: 1.5%;
     height: 4.5%;
     top:185%;
-    left: 15%;
+    left: 16.5%;
 }
 #myCanvass5{
     position: absolute;
     width: 1.5%;
     height: 4.5%;
     top:185%;
-    left: 16.8%;
+    left: 18.6%;
 }
 
 /* #myCanvass6{
@@ -389,7 +390,7 @@ Developer: Prakriti Dhang
     width: 1.5%;
     height: 70%;
     top:185%;
-    left: 11.4%;
+    left: 12%;
     z-index: 2;
 }
 #myCanvass31{
@@ -397,7 +398,7 @@ Developer: Prakriti Dhang
     width: 1.5%;
     height: 70%;
     top:185%;
-    left: 13.2%;
+    left: 14.3%;
     z-index: 2;
 }
 #myCanvass41{
@@ -405,7 +406,7 @@ Developer: Prakriti Dhang
     width: 1.5%;
     height: 70%;
     top:185%;
-    left: 15%;
+    left: 16.5%;
     z-index: 2;
 }
 #myCanvass51{
@@ -413,7 +414,7 @@ Developer: Prakriti Dhang
     width: 1.5%;
     height: 70%;
     top:185%;
-    left: 16.8%;
+    left: 18.6%;
     z-index: 2;
 }
 

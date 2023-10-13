@@ -41,7 +41,7 @@ function dna1() {
   if (checkBox1.checked == true){
     //image display block
     document.getElementById("dna2").style.display="block";
-    window.scrollBy(0,60);
+    window.scrollBy(0,100);
   } else {
     // image display "none";
     alert("Check the checkbox for Fluorescently-labelled single stranded DNA" );
@@ -55,7 +55,7 @@ function dna2() {
   if (checkBox2.checked == true){
     //image display block
     document.getElementById("dna1").style.display="block";
-    window.scrollBy(0,60);
+    window.scrollBy(0,100);
   } else {
     // image display "none";
     alert("Check the checkbox for Unlabelled single stranded DNA" );
@@ -71,7 +71,7 @@ function annealing_dna(){
 
   if((checkBox1.checked == true)&& (checkBox2.checked == true)){
   document.getElementById("action").innerHTML="The fluorescently-labelled DNA probe is prepared by annealing the complementary oligonucleotides in thermocycler. The probe is purified by gel electrophoresis and quantified by UV spectroscopy.";
- window.scrollBy(0,100);
+ window.scrollBy(0,500);
   var imgdnas1= document.getElementById("dna1");
   var orgtop = 57; /* initial position */
   clearInterval(imgdna1);
@@ -116,7 +116,7 @@ function buffer_prep(){
   var checkBox8 = document.getElementById("opt8");
 
   if((checkBox1.checked == true)&& (checkBox2.checked == true)&& (checkBox3.checked == true)&& (checkBox4.checked == true)&& (checkBox5.checked == true)&& (checkBox6.checked == true)){
-  document.getElementById("tube").style.display="block";
+  document.getElementById("emptytube").style.display="block";
   document.getElementById("dna1").style.display="none";
   document.getElementById("dna2").style.display="none";
   document.getElementById("action").innerHTML="Preparing the 1x binding buffer to the desired concentration.";
@@ -145,7 +145,7 @@ var samplemix = document.getElementById("step3");
      document.getElementById("emptytube").style.display="block";
      document.getElementById("dnastrand").style.display="block";
      document.getElementById("dnastrand1").style.display="block";
-     document.getElementById("tube").style.display="none";
+    // document.getElementById("tube").style.display="none";
      //document.getElementById("samplemix").disabled=false;
  
    }
@@ -156,27 +156,27 @@ var samplemix = document.getElementById("step3");
      document.getElementById("proteinsample").style.display="block";
      document.getElementById("emptytube").style.display="block";
      document.getElementById("proteinsample1").style.display="block";
-     document.getElementById("tube").style.display="none";
+    // document.getElementById("tube").style.display="none";
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 1) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the incorrect component  ";
-     document.getElementById("tube").style.display="none";
+    // document.getElementById("tube").style.display="none";
     
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 2) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the correct component  ";
-     document.getElementById("tube").style.display="none";
+   //  document.getElementById("tube").style.display="none";
      document.getElementById("emptytube").style.display="block";
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 5) {
     // document.getElementById("actionhead").innerHTML = "Action: Thawing the PCR reaction components on ice";
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the incorrect component  ";
-     document.getElementById("tube").style.display="none";
+   //  document.getElementById("tube").style.display="none";
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 6) {
@@ -185,7 +185,7 @@ var samplemix = document.getElementById("step3");
      document.getElementById("emptytube").style.display="block";
      document.getElementById("lbuffer").style.display="block";
      document.getElementById("lbuffer1").style.display="block";
-     document.getElementById("tube").style.display="none";
+    // document.getElementById("tube").style.display="none";
      document.getElementById("samplebprep").disabled = false;
  
    }
@@ -195,7 +195,7 @@ var samplemix = document.getElementById("step3");
  }
 function sample_dilutionA(){
   document.getElementById('tubedila').style.display="block";
-  document.getElementById('tube').style.display="none";
+ // document.getElementById('tube').style.display="none";
   document.getElementById('dilutesampleb').style.pointerEvents="auto";
   document.getElementById("lbuffer").style.display="none";
   document.getElementById("proteinsample").style.display="none";
@@ -211,25 +211,25 @@ function sample_dilutionA(){
 }
 function sample_dilutionB(){
   document.getElementById('tubedilb').style.display="block";
-  document.getElementById('tube').style.display="none";
+//  document.getElementById('tube').style.display="none";
   document.getElementById('dilutesamplec').style.pointerEvents="auto";
   document.getElementById("action").innerHTML = "0.5x dilution is selected ";
 }
 function sample_dilutionC(){
   document.getElementById('tubedilc').style.display="block";
-  document.getElementById('tube').style.display="none";
+ // document.getElementById('tube').style.display="none";
   document.getElementById('dilutesampled').style.pointerEvents="auto";
   document.getElementById("action").innerHTML = "0.25x dilution is selected ";
 }
 function sample_dilutionD(){
   document.getElementById('tubedild').style.display="block";
-  document.getElementById('tube').style.display="none";
+ // document.getElementById('tube').style.display="none";
   document.getElementById('dilutesamplee').style.pointerEvents="auto";
   document.getElementById("action").innerHTML = "0.125x dilution is selected ";
 }
 function sample_dilutionE(){
   document.getElementById('tubedile').style.display="block";
-  document.getElementById('tube').style.display="none";
+//  document.getElementById('tube').style.display="none";
   document.getElementById('icebucketbtn').disabled=false;
   document.getElementById("action").innerHTML = "0.0625x dilution is selected ";
 }
@@ -284,7 +284,7 @@ function addtribuffer(){
   document.getElementById('loadsamplea').style.pointerEvents="auto";
   document.getElementById("trisbuffertbtn").disabled=true;
   document.getElementById("trisbuffer").removeAttribute("onclick");
-  window.scrollBy(0,200);
+  window.scrollBy(0,800);
   /**side 1 */
   canvaside1 = document.getElementById("addtbuffer");
   ctxs1 = canvaside1.getContext("2d");
@@ -1284,6 +1284,14 @@ else{
     document.getElementById("myCanvass31").style.display="none";
     document.getElementById("myCanvass41").style.display="none";
     document.getElementById("myCanvass51").style.display="none";
+
+
+    document.getElementById("myCanvass1").style.display="none";
+    document.getElementById("myCanvass2").style.display="none";
+    document.getElementById("myCanvass3").style.display="none";
+    document.getElementById("myCanvass4").style.display="none";
+    document.getElementById("myCanvass5").style.display="none";
+
 
     document.getElementById("action").innerHTML="Visualizing the protein-DNA complex under the fluorescence sensitive imaging system.";
     window.scrollBy(0,500);
