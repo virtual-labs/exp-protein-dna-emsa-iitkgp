@@ -122,7 +122,7 @@ function buffer_prep(){
   document.getElementById("action").innerHTML="Preparing the 1x binding buffer to the desired concentration.";
   document.getElementById("step3").disabled=false;
   document.getElementById("buffer").disabled=true;
-
+  window.scrollBy(0,600);
   }
   else{
     alert("Check all the components to prepare 1x binding buffer");
@@ -145,9 +145,10 @@ var samplemix = document.getElementById("step3");
      document.getElementById("emptytube").style.display="block";
      document.getElementById("dnastrand").style.display="block";
      document.getElementById("dnastrand1").style.display="block";
+     window.scrollBy(0,600);
     // document.getElementById("tube").style.display="none";
      //document.getElementById("samplemix").disabled=false;
- 
+     
    }
 
    if (samplemix.options[samplemix.selectedIndex].value == 3) {
@@ -156,6 +157,7 @@ var samplemix = document.getElementById("step3");
      document.getElementById("proteinsample").style.display="block";
      document.getElementById("emptytube").style.display="block";
      document.getElementById("proteinsample1").style.display="block";
+     window.scrollBy(0,600);
     // document.getElementById("tube").style.display="none";
  
    }
@@ -171,6 +173,7 @@ var samplemix = document.getElementById("step3");
      document.getElementById("action").innerHTML = samplemix.options[samplemix.selectedIndex].text +" is the correct component  ";
    //  document.getElementById("tube").style.display="none";
      document.getElementById("emptytube").style.display="block";
+     window.scrollBy(0,600);
  
    }
    if (samplemix.options[samplemix.selectedIndex].value == 5) {
@@ -187,6 +190,7 @@ var samplemix = document.getElementById("step3");
      document.getElementById("lbuffer1").style.display="block";
     // document.getElementById("tube").style.display="none";
      document.getElementById("samplebprep").disabled = false;
+     window.scrollBy(0,600);
  
    }
    
@@ -206,7 +210,7 @@ function sample_dilutionA(){
   document.getElementById("emptytube").style.display="none";
   document.getElementById("action").innerHTML = "1x dilution is selected ";
   document.getElementById("step3").disabled = true;
- 
+  window.scrollBy(0,600);
   
 }
 function sample_dilutionB(){
@@ -214,24 +218,29 @@ function sample_dilutionB(){
 //  document.getElementById('tube').style.display="none";
   document.getElementById('dilutesamplec').style.pointerEvents="auto";
   document.getElementById("action").innerHTML = "0.5x dilution is selected ";
+  window.scrollBy(0,600);
 }
 function sample_dilutionC(){
   document.getElementById('tubedilc').style.display="block";
  // document.getElementById('tube').style.display="none";
   document.getElementById('dilutesampled').style.pointerEvents="auto";
   document.getElementById("action").innerHTML = "0.25x dilution is selected ";
+  window.scrollBy(0,600);
 }
 function sample_dilutionD(){
   document.getElementById('tubedild').style.display="block";
  // document.getElementById('tube').style.display="none";
   document.getElementById('dilutesamplee').style.pointerEvents="auto";
   document.getElementById("action").innerHTML = "0.125x dilution is selected ";
+  window.scrollBy(0,600);
+  window.scrollBy(0,600);
 }
 function sample_dilutionE(){
   document.getElementById('tubedile').style.display="block";
 //  document.getElementById('tube').style.display="none";
   document.getElementById('icebucketbtn').disabled=false;
   document.getElementById("action").innerHTML = "0.0625x dilution is selected ";
+  window.scrollBy(0,600);
 }
 
 
@@ -240,6 +249,7 @@ function sample_dilutionE(){
 
 
 function ice_bucket(){
+  window.scrollBy(0,600);
   document.getElementById("samplebprep").disabled = true;
   document.getElementById('icebucket').style.display="block";
   document.getElementById('tubeicea').style.display="block";
@@ -275,6 +285,7 @@ function ice_bucket(){
 function tris_buffer(){
   document.getElementById("trisbuffer").style.display="block";
   document.getElementById("action").innerHTML="Filling up the electrophoresis chamber with Tris-borate ETDA buffer.";
+  window.scrollBy(0,500);
 
 }
 
@@ -1294,7 +1305,7 @@ else{
 
 
     document.getElementById("action").innerHTML="Visualizing the protein-DNA complex under the fluorescence sensitive imaging system.";
-    window.scrollBy(0,500);
+    window.scrollBy(0,800);
     document.getElementById("output").style.display="block";
     canvasuv1 = document.getElementById("myCanvasuv1");
   ctxuv1 = canvasuv1.getContext("2d");
