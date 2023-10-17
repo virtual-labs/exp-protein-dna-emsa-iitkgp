@@ -41,7 +41,7 @@ function dna1() {
   if (checkBox1.checked == true){
     //image display block
     document.getElementById("dna2").style.display="block";
-    window.scrollBy(0,100);
+    window.scrollBy(0,700);
   } else {
     // image display "none";
     alert("Check the checkbox for Fluorescently-labelled single stranded DNA" );
@@ -55,7 +55,7 @@ function dna2() {
   if (checkBox2.checked == true){
     //image display block
     document.getElementById("dna1").style.display="block";
-    window.scrollBy(0,100);
+    window.scrollBy(0,700);
   } else {
     // image display "none";
     alert("Check the checkbox for Unlabelled single stranded DNA" );
@@ -71,7 +71,7 @@ function annealing_dna(){
 
   if((checkBox1.checked == true)&& (checkBox2.checked == true)){
   document.getElementById("action").innerHTML="The fluorescently-labelled DNA probe is prepared by annealing the complementary oligonucleotides in thermocycler. The probe is purified by gel electrophoresis and quantified by UV spectroscopy.";
- window.scrollBy(0,500);
+ window.scrollBy(0,700);
   var imgdnas1= document.getElementById("dna1");
   var orgtop = 57; /* initial position */
   clearInterval(imgdna1);
@@ -122,7 +122,7 @@ function buffer_prep(){
   document.getElementById("action").innerHTML="Preparing the 1x binding buffer to the desired concentration.";
   document.getElementById("step3").disabled=false;
   document.getElementById("buffer").disabled=true;
-  window.scrollBy(0,600);
+  window.scrollBy(0,700);
   }
   else{
     alert("Check all the components to prepare 1x binding buffer");
@@ -341,7 +341,7 @@ function sample_sampleA(){
   document.getElementById("peptitee").style.display="none";
   document.getElementById('loadsampleb').style.pointerEvents="auto";
   document.getElementById("action").innerHTML="Loading sample A to the first well.";
-
+  window.scrollBy(0,600);
   const canvassdrop1 = document.getElementById('myCanvass1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
  
@@ -494,7 +494,7 @@ function sample_sampleB(){
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample B to the second well.";
-
+  window.scrollBy(0,600);
   const canvassdrop2 = document.getElementById('myCanvass2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
  
@@ -647,7 +647,7 @@ function sample_sampleC(){
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample C to the third well.";
-
+  window.scrollBy(0,600);
  
   const canvassdrop3 = document.getElementById('myCanvass3');
   const ctxsdrop3 = canvassdrop3.getContext('2d');
@@ -798,7 +798,7 @@ function sample_sampleD(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample D to the fourth well.";
-
+  window.scrollBy(0,600);
   const canvassdrop4 = document.getElementById('myCanvass4');
   const ctxsdrop4 = canvassdrop4.getContext('2d');
  
@@ -947,7 +947,7 @@ function sample_sampleE(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("rungel").disabled=false;
   document.getElementById("action").innerHTML="Loading sample E to the fifth well.";
-  
+  window.scrollBy(0,600);
   const canvassdrop5 = document.getElementById('myCanvass5');
   const ctxsdrop5 = canvassdrop5.getContext('2d');
  

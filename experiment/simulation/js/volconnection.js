@@ -647,7 +647,7 @@ jsPlumb.ready(function () {
 
     document.getElementById('cstop').addEventListener('click', function () {
         // Delete all connections
-        instance.deleteEveryConnection();
+       // instance.deleteEveryConnection();
 
         document.getElementById("viewsample").disabled=false;
         const canvas = document.getElementById('textvoltimer');
