@@ -184,7 +184,7 @@ Developer: Prakriti Dhang
     top:1%;
     left:82%;
     display: none;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
     
 }
@@ -195,7 +195,7 @@ Developer: Prakriti Dhang
     top:1%;
     left:84%;
     display: none;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
    
     
@@ -207,7 +207,7 @@ Developer: Prakriti Dhang
     top:1%;
     left:86.2%;
     display: none;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
 }
 
@@ -217,7 +217,7 @@ Developer: Prakriti Dhang
     top:1%;
     left:88.2%;
     display: none;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
 }
 #peptitee{
@@ -226,7 +226,7 @@ Developer: Prakriti Dhang
     top:1%;
     left:90.5%;
     display: none;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
 }
 
