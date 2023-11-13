@@ -1,13 +1,486 @@
+<!--
+Lab name: Experimental Biochemistry
+Exp name: EMSA
+File name: index.html
+Developer: Prakriti Dhang
+-->
+
+
+
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+	<div class="container-fluid p-2 mt-2 ">
+
+
+
+		<div class="row ">
+			<div class="col-md-5">
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">
+						Instructions
+					</div>
+
+					<div class="card-body">
+						<ol id="inst1">
+							<li>Click on "Start the Experiment" button.</li>
+							<li> Next click on checkboxes of step 1 and click "Annealing fluorescently-labelled DNA
+								probe" button. </li>
+								<li>Select all the component for preparing 1 x binding buffer and click the below button in step 2</li>
+						
+							<li>Now, select the required components from the dropdown for mixing protein sample.</li>
+							<li>Now to prepare diluted sample, click on the dropdown and consider all the sample (from A to E). </li>
+							<li>Next, click on "Incubate in ice bucket" button.</li>
+							<li>Click on "Tris-borate-ETDA buffer" button to load in the electophoresis chamber.</li>
+							<li>Now, Click on the "Sample Loading" dropdown and select "Load Sample A". Click on the pipette A and drag the pipette near the first well to load it. Repeat for sample B, C, D and E. </li>
+							<li>Next click on "Setting up Electrophoresis" button. Click on the top of the electrophoresis to close it. </li>
+							<li>Now to connect, click on the negative of electrophorersis
+								chamber, drag to negative of voltage meter. Next click on the
+								positive of electrophorersis chamber and drag to positive of voltage meter. (For any wrong connection, click on the wire to disconnect.)</li>
+							<li>Now click on "V" sign of the voltage meter to switch on. And "+" sign of the voltage meter to set the voltage between 100 V and 120 V.</li>
+							<li> Click on the run icon button to run the gel. The dye front will reaches the bottom of
+								the gel in dark conditions. Click on stop icon button to switch off the power.</li>
+							<li> Click on "Visualize the protein-DNA" button to visualize under Fluorescein channel.</li>
+
+							
+						</ol>
+						<b>Note:</b> To repeat the experiment, click on the "Re-Do the Experiment" button.
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">
+						Actions
+					</div>
+
+					<div class="card-body">
+						<p class="fs-6" id="action"> </p>
+					</div>
+				</div>
+			</div>
+			<!--/div>
+
+		<div class="row "-->
+			<div class="col-md-7">
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">
+						Input Panels
+					</div>
+
+					<div class="card-body p-1">
+						<div class="table-responsive">
+						<table class="table table-bordered">
+							<tr>
+								<td colspan="2">
+									<button class="btn btn-success" type="button" id="start" data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										Start the Experiment</button>
+									<button class="btn btn-warning" type="button" id="start" style="float: right;"
+										onclick="restartexp()" >Re-Do the Experiment</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="fs-6">Step 1</td>
+
+								<td>
+
+									<div id="opta" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt11" disabled
+											onclick="dna1()">
+										<label class="form-check-label" for="opt11">
+											Fluorescently-labelled DNA
+										</label>
+									</div>
+									<div id="optb" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt12" disabled
+											onclick="dna2()">
+										<label class="form-check-label" for="opt12">
+											Unlabelled DNA
+										</label>
+									</div><button class="btn btn-primary " type="button" id="anneal"
+										onclick="annealing_dna()" disabled>
+										Annealing fluorescently-labelled DNA probe </button>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="fs-6">Step 2 </td>
+								<td><label class="fs-6"> Select all the component for preparing 1 x binding buffer: </label>
+									<br>
+									<div id="opta" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt1" disabled>
+										<label class="form-check-label" for="opt1">
+											10 mM Tris (pH 7.8)
+										</label>
+									</div>
+									<div id="optb" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt2" disabled>
+										<label class="form-check-label" for="opt2">
+											100 mM KCl
+										</label>
+									</div>
+									<div id="optc" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt3" disabled>
+										<label class="form-check-label" for="opt3">
+											6 mM MgCl2
+										</label>
+									</div>
+									<div id="optd" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt4" disabled>
+										<label class="form-check-label" for="opt4">
+											1 mM EDTA
+										</label>
+									</div>
+
+									<div id="opte" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt5" disabled>
+										<label class="form-check-label" for="opt5">
+											50% glycerol
+										</label>
+									</div>
+									<div id="optf" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt6" disabled>
+										<label class="form-check-label" for="opt6">
+											2 mM BME
+										</label>
+									</div>
+
+									<div id="optg" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt7" disabled>
+										<label class="form-check-label" for="opt7">
+											0.01 mg/ml BSA
+										</label>
+									</div>
+									<div id="opth" class="form-check form-check-inline fs-6">
+										<input class="form-check-input" type="checkbox" value="" id="opt8" disabled>
+										<label class="form-check-label" for="opt8">
+											0.02% NP-40
+										</label>
+									</div>
+
+									<br>
+
+
+									<button class="btn btn-primary " type="button" id="buffer" onclick="buffer_prep()"
+										disabled>
+										1x Binding Buffer Done</button>
+
+
+								</td>
+							</tr>
+							<tr>
+								<td class="fs-6">Step 3</td>
+								<td>
+									<select id="step3" class="form-select m-2 fs-6 " aria-label="Default select example"
+										onchange="sample_mix()" disabled>
+										<option value="0" selected>Mixing of protein sample </option>
+										<option value="1">10 X Binding buffer</option>
+										<option value="2">1 X Binding buffer</option>
+										<option value="3">Protein of interest</option>
+										<option value="4">Fluorescently labelled DNA</option>
+										<option value="5">DNase or RNase</option>
+										<option value="6">Loading buffer</option>
+
+
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="fs-6">Step 4</td>
+								<td>
+
+									<div class="dropdown div-inline">
+										<button class="btn btn-primary dropdown-toggle" id="samplebprep" type="button"
+											data-bs-toggle="dropdown" disabled>
+											Prepare Protien Sample with different dilution
+										</button>
+										<ul class="dropdown-menu">
+											<!--li><a class="dropdown-item" onclick="sample_load()">Buffer</a></li-->
+											<li><a class="dropdown-item" id="dilutesamplea"
+													onclick="sample_dilutionA()" style="cursor: pointer;">Dilution A: 1x
+												</a></li>
+											<li><a class="dropdown-item" id="dilutesampleb"
+													onclick="sample_dilutionB()" style="cursor: pointer;">Dilution B: 0.5x
+												</a></li>
+											<li><a class="dropdown-item" id="dilutesamplec"
+													onclick="sample_dilutionC()" style="cursor: pointer;">Dilution C: 0.25x
+												</a></li>
+											<li><a class="dropdown-item" id="dilutesampled"
+													onclick="sample_dilutionD()" style="cursor: pointer;">Dilution D: 0.125x
+												</a></li>
+											<li><a class="dropdown-item" id="dilutesamplee"
+													onclick="sample_dilutionE()" style="cursor: pointer;">Dilution E: 0.0625x
+												</a></li>
+											
+										</ul>
+									</div>
+									<!--button class="btn btn-primary " type="button" id="samplebprep"
+										onclick="sample_prep()" disabled>
+										Prepare Protien Sample with different dilution</button-->
+
+									<button class="btn btn-primary " type="button" id="icebucketbtn"
+										onclick="ice_bucket()" disabled >
+										Incubate in ice bucket</button>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="fs-6">Step 5</td>
+								<td>
+									<button class="btn btn-primary " type="button" id="trisbuffertbtn"
+										onclick="tris_buffer()" disabled>
+										Tris-borate-EDTA buffer</button>
+
+									<div class="dropdown div-inline">
+										<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
+											data-bs-toggle="dropdown" disabled>
+											Sample Loading
+										</button>
+										<ul class="dropdown-menu">
+											<!--li><a class="dropdown-item" onclick="sample_load()">Buffer</a></li-->
+											<li><a class="dropdown-item" id="loadsamplea"
+													onclick="sample_sampleA()" style="cursor: pointer;">Sample Load A
+												</a></li>
+											<li><a class="dropdown-item" id="loadsampleb"
+													onclick="sample_sampleB()" style="cursor: pointer;">Sample Load B
+												</a></li>
+											<li><a class="dropdown-item" id="loadsamplec"
+													onclick="sample_sampleC()" style="cursor: pointer;">Sample Load C
+												</a></li>
+											<li><a class="dropdown-item" id="loadsampled"
+													onclick="sample_sampleD()" style="cursor: pointer;">Sample Load D
+												</a></li>
+											<li><a class="dropdown-item" id="loadsamplee"
+													onclick="sample_sampleE()" style="cursor: pointer;">Sample Load E
+												</a></li>
+										
+										</ul>
+									</div>
+
+									
+								</td>
+							</tr>
+
+							<tr>
+								<td class="fs-6">Step 6</td>
+								<td>
+									<button class="btn btn-primary " type="button" id="rungel" onclick="run_gel()" disabled >
+										Setting up Electrophoresis</button>
+									
+
+								</td>
+							</tr>
+							<tr>
+								<td>Step 7</td>
+								<td><button class="btn btn-primary" type="button" id="viewsample"
+									onclick="view_sample_UVlight()" disabled> Visualize the protein-DNA </button></td>
+							</tr>
+						</table>
+
+					</div>
+
+
+
+
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+
+
+
+		<div class="row ">
+			<div class="col-md-12">
+				<div class="card card-body border border-0">
+					<!-- <div class="card-header fs-5 fw-bold">
+						Experimental Setup
+					</div>
+					<div class=""> -->
+					<div class="img-container">
+
+						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
+						<!--img src="./images/setup.png" class="img-fluid" id="setup"-->
+						<img src="./images/top-cover.png" class="img-fluid" id="topcover" >
+						<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
+						<img src="./images/ice_tray.png" class="img-fluid" id="icetray" >
+						<img src="./images/protein.png" class="img-fluid" id="protein" style="display: none;">
+						<img src="./images/ice_bucket.png" class="img-fluid" id="icebucket">
+						<!--img src="./images/tube.png" class="img-fluid" id="tube"-->
+
+
+						<img src="./images/dna2.png" class="img-fluid" id="dna2">
+						<img src="./images/dna1.png" class="img-fluid" id="dna1">
+						<img src="./images/xbuffer.png" class="img-fluid" id="emptytube">
+
+						<img src="./images/dnastrand.png" class="img-fluid" id="dnastrand">
+						<img src="./images/proteinsample.png" class="img-fluid" id="proteinsample">
+						<img src="./images/lbuffer.png" class="img-fluid" id="lbuffer">
+						<img src="./images/dnastrand.png" class="img-fluid" id="dnastrand1">
+						<img src="./images/proteinsample.png" class="img-fluid" id="proteinsample1">
+						<img src="./images/lbuffer.png" class="img-fluid" id="lbuffer1">
+
+						<img src="./images/buffer.png" class="img-fluid" id="trisbuffer" onclick="addtribuffer()">
+
+						<!-- diluation sample -->
+
+						<img src="./images/tubedila.png" class="img-fluid" id="tubedila">
+						<img src="./images/tubedilb.png" class="img-fluid" id="tubedilb">
+
+						<img src="./images/tubedilc.png" class="img-fluid" id="tubedilc">
+
+						<img src="./images/tubedild.png" class="img-fluid" id="tubedild">
+
+						<img src="./images/tubedile.png" class="img-fluid" id="tubedile">
+
+						
+
+						<!--incubatein ice-->
+
+						<img src="./images/tubedila.png" class="img-fluid" id="tubeicea">
+						<img src="./images/tubedilb.png" class="img-fluid" id="tubeiceb">
+
+						<img src="./images/tubedilc.png" class="img-fluid" id="tubeicec">
+
+						<img src="./images/tubedild.png" class="img-fluid" id="tubeiced">
+
+						<img src="./images/tubedile.png" class="img-fluid" id="tubeicee">
+
+						<!--pipete-->
+						<img src="./images/peptitea.png" class="img-fluid" id="peptitea">
+						<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
+						<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
+						<img src="./images/peptited.png" class="img-fluid" id="peptited">
+						<img src="./images/peptitee.png" class="img-fluid" id="peptitee">
+
+
+
+						<!--img src="./images/tubedilf.png" class="img-fluid" id="tubeicef"-->
+
+						<div id="cd1"></div>
+						<div id="cd2"></div>
+						<div id="cd3"></div>
+						<div id="cd4"></div>
+						<div id="cd5"></div>
+						<div id="cd6"></div>
+						<div id="cd7"></div>
+						<div id="cd8"></div>
+						<div id="cd9"></div>
+						<div id="cd10"></div>
+
+						<canvas id="myCanvass1" style="border:1px solid #999999;"></canvas>
+						<canvas id="myCanvass2" style="border:1px solid #999999;"></canvas>
+						<canvas id="myCanvass3" style="border:1px solid #999999;"></canvas>
+						<canvas id="myCanvass4" style="border:1px solid #999999;"></canvas>
+						<canvas id="myCanvass5" style="border:1px solid #999999;"></canvas>
+						<!--canvas id="myCanvass6" style="border:1px solid #999999;"></canvas-->
+
+						<canvas id="myCanvass11" style="border:0px solid #999999;"></canvas>
+						<canvas id="myCanvass21" style="border:0px solid #999999;"></canvas>
+						<canvas id="myCanvass31" style="border:0px solid #999999;"></canvas>
+						<canvas id="myCanvass41" style="border:0px solid #999999;"></canvas>
+						<canvas id="myCanvass51" style="border:0px solid #999999;"></canvas>
+						<!--canvas id="myCanvass61" style="border:0px solid #999999;"></canvas-->
+
+						<canvas id="addtbuffer" style="border:0px solid #080808;"></canvas>
+
+						<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
+						<canvas id="cvt" style="border:0px solid black;" onclick="txtvolt()"></canvas>
+						<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
+						<canvas id="cvn" style="border: 0px solid black;" onclick="txtvoltd()"></canvas>
+						<canvas id="crun" style="border: 0px solid black;" onclick="rungel()"></canvas>
+						<canvas id="cstop" style="border: 0px solid black;" onclick="stopgel()"></canvas>
+
+						<img src="./images/uv-machine.png" class="img-fluid" id="uvmachine">
+						<img src="./images/output.png" class="img-fluid" id="output" style="display: none;">
+						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
+
+					</div>
+					<!-- </div> -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Alert message: Viewing experience</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>A desktop or laptop is the preferred choice for an enhanced viewing experience.</p>
+					<p> When using a phone, it is recommended to enable the auto-rotate feature for an improved viewing
+						experience.</p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-warning" onclick="start()" data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/jsplumb.js"></script>
+	<script src="./js/volconnection.js"></script>
+
+	<script>
+		// Get a reference to the canvas element
+		const canvas = document.getElementById('textvoltimer');
+
+		// Check if the browser supports the canvas element
+		if (canvas.getContext) {
+			// Get the 2D drawing context
+			const ctx = canvas.getContext('2d');
+
+			// Set font properties
+			ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+
+			// Set text properties
+			ctx.fillStyle = 'black'; // Text color
+			ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+			ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+
+			// Define the text to be displayed
+			const text = '';
+
+			// Get the position to place the text (in this case, centered on the canvas)
+			const x = canvas.width / 2;
+			const y = canvas.height / 2;
+
+			// Draw the text on the canvas
+			ctx.fillText(text, x, y);
+		} else {
+			// Canvas not supported, provide a fallback or error message
+			console.log('Canvas is not supported in this browser.');
+		}
+
+
+
+
+
+
+	</script>
 </body>
+
 </html>

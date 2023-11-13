@@ -1,1 +1,659 @@
-/* You CSS goes in here */
+/* 
+
+Lab name: Experimental Biochemistry
+Exp name: Protein-DNA interaction analysis by electrophoretic mobilty shift assay (EMSA)
+File name: main.css
+Developer: Prakriti Dhang
+
+
+*/
+
+.card{
+    margin-bottom: 10px;
+}
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.div-inline{
+    display: inline;
+}
+
+#voltagetimer {
+    position: relative;
+    width: 25%;
+    top: 5%;
+    left: 5%
+}
+
+
+/* #setup {
+    position: absolute;
+    width: 20%;
+    top:120%;
+    left: 5%;
+}    */
+
+
+#topcover {
+    position: absolute;
+    width: 21%;
+    top:120%; /* 120 - 130*/
+    left: 4.6%;
+    cursor:pointer;
+
+} 
+
+#bottomsetup {
+    position: absolute;
+    width: 20%;
+    top:180%;
+    left: 5%;
+} 
+
+#icebucket {
+    position: absolute;
+    width: 22%;
+    top: 30%;
+    left: 76%;
+    display:none;
+}
+
+
+#tube{
+    position: absolute;
+    width: 8%;
+    top:10%;
+    left:50%;
+    display: none;
+}
+
+#icetray {
+    position: absolute;
+    width: 40%;
+    top:196%; /* 250- 196*/
+    left: -5%;
+    z-index: -10;
+    cursor:pointer;
+
+}
+#trisbuffer{
+    position: absolute;
+    width: 5%;
+    top:11.5%;
+    left:50%;
+    display: none;
+    cursor:pointer;
+}
+
+#tubedila{
+    position: absolute;
+    width: 2.8%;
+    top:50%;
+    left:40%;
+    display: none;
+}
+
+#tubedilb{
+    position: absolute;
+    width: 2.8%;
+    top:50%;
+    left:44%;
+    display: none;
+}
+
+
+#tubedilc{
+    position: absolute;
+    width: 2.8%;
+    top:50%;
+    left:48%;
+    display: none;
+}
+#tubedild{
+    position: absolute;
+    width: 2.8%;
+    top:50%;
+    left:52%;
+    display: none;
+}
+#tubedile{
+    position: absolute;
+    width: 2.8%;
+    top:50%;
+    left:56%;
+    display: none;
+}
+
+/* #tubedilf{
+    position: absolute;
+    width: 3.5%;
+    top:50%;
+    left:60%;
+    display: none;
+} */
+
+/* incubate in ice*/
+
+#tubeicea{
+    position: absolute;
+    width:2.8%;
+    top:44%;
+    left:81.2%;
+    display: none;
+}
+
+#tubeiceb{
+    position: absolute;
+    width: 2.8%;
+    top:47%;
+    left:83.3%;
+    display: none;
+}
+
+#tubeicec{
+    position: absolute;
+    width: 2.8%;
+    top:44%;
+    left:85.4%;
+    display: none;
+}
+#tubeiced{
+    position: absolute;
+    width: 2.8%;
+    top:47%;
+    left:87.6%;
+    display: none;
+}
+
+#tubeicee{
+    position: absolute;
+    width: 2.8%;
+    top:44%;
+    left:89.7%;
+    display: none;
+}
+
+
+
+
+#peptitea{
+    position: absolute;
+    width:  2%;
+    top:1%;
+    left:82%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+    
+}
+
+#peptiteb{
+    position: absolute;
+    width:  2%;
+    top:1%;
+    left:84%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+   
+    
+}
+
+#peptitec{
+    position: absolute;
+    width:  2%;
+    top:1%;
+    left:86.2%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+
+#peptited{
+    position: absolute;
+    width:  2%;
+    top:1%;
+    left:88.2%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+#peptitee{
+    position: absolute;
+    width:  2%;
+    top:1%;
+    left:90.5%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+
+#dna2{
+    position: absolute;
+    width: 20%;
+    top:10%;
+    left: 40%;
+    display:none;
+}
+
+
+#dna1{
+    position: absolute;
+    width: 16.7%;
+    top:57%; /* 57 to 27 */
+    left: 44.1%;
+    display:none;
+}
+
+
+
+#emptytube{
+    position: absolute;
+    width: 32%;
+    top:8%; /* 57 to 27 */
+    left: 35.3%;
+    display:none;
+}
+
+#dnastrand{
+    position: absolute;
+    width: 2.5%;
+    top:90%;
+    left: 49.5%;
+    display:none;
+    rotate: 90deg;
+}
+
+#proteinsample{
+    position: absolute;
+    width: 1%;
+    top:80%;
+    left: 50.5%;
+    display:none;
+}
+
+#lbuffer{
+    position: absolute;
+    width: 0.8%;
+    top:80%;
+    left: 50%;
+    display:none;
+}
+
+#dnastrand1{
+    position: absolute;
+    width: 2.4%;
+    top:75%;
+    left: 49.5%;
+    display:none;
+}
+
+#proteinsample1{
+    position: absolute;
+    width: 1%;
+    top:70.5%;
+    left: 49.5%;
+    display:none;
+}
+
+#lbuffer1{
+    position: absolute;
+    width: 0.8%;
+    top:70%;
+    left: 51%;
+    display:none;
+}
+
+
+#addtbuffer{
+    position: absolute;
+    width: 11.7%;
+    height: 80%;
+    top:185%;
+    left: 9%;
+    display:block;
+    
+}
+
+
+#protein{
+
+    position: absolute;
+    width: 28%;
+    top:10%;
+    left:50%;
+   
+
+}
+#myCanvass1{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:185%;
+    left: 9.6%;
+    z-index: 2;
+    
+}
+
+#myCanvass2{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:185%;
+    left: 12%;
+    z-index: 2;
+}
+#myCanvass3{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:185%;
+    left: 14.3%;
+    z-index: 2;
+}
+#myCanvass4{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:185%;
+    left: 16.5%;
+    z-index: 2;
+}
+#myCanvass5{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:185%;
+    left: 18.6%;
+    z-index: 2;
+}
+
+/* #myCanvass6{
+    position: absolute;
+    width: 1.5%;
+    height: 4.5%;
+    top:169%;
+    left: 18.6%;
+} */
+
+
+#myCanvass11{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:185%;
+    left: 9.6%;
+    z-index: 2;
+}
+
+#myCanvass21{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:185%;
+    left: 12%;
+    z-index: 2;
+}
+#myCanvass31{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:185%;
+    left: 14.3%;
+    z-index: 2;
+}
+#myCanvass41{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:185%;
+    left: 16.5%;
+    z-index: 2;
+}
+#myCanvass51{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:185%;
+    left: 18.6%;
+    z-index: 2;
+}
+
+/* #myCanvass61{
+    position: absolute;
+    width: 1.5%;
+    height: 70%;
+    top:185%;
+    left: 18.6%;
+} */
+
+
+
+
+
+#uvmachine{
+    position: absolute;
+    width: 30%;
+    top:130%;
+    left: 40%;
+}
+#output{
+    position: absolute;
+    width: 20%;
+    top:175%;
+    left: 45%;
+    z-index: 10;
+}
+
+/* Connect negative -negative  , positive-positive*/
+
+.demo {
+    /* for IE10+ touch devices */
+    touch-action: none;
+}
+
+
+
+.jtk-overlay {
+    z-index: 51;
+}
+
+.jtk-endpoint {
+    z-index: 50;
+    cursor: move;
+}
+
+.jtk-connector {
+    z-index: 1;
+}
+
+
+.littledot {
+    cursor: pointer;
+    width:0.5%;
+    height: 0.5%;
+    z-index: 5;
+    position: absolute;
+    border-radius: 2%;
+
+}
+
+.littledot-hover-hover {
+    border: 2px solid orange;
+}
+
+.dropHover {
+    border: 1px solid orange;
+}
+
+
+
+#cd1 {
+    position: absolute;
+    width: 0.8%;
+    top: 140%;
+    left: 6.6%;
+}
+
+#cd2 {
+    position: absolute;
+    width: 0.8%;
+    top: 140%;
+    left: 22.8%;
+}
+
+
+#cd3 {
+    position: absolute;
+    width: 1%;
+    top: 30.5%;
+    left: 7.3%;
+}
+
+#cd4 {
+    position: absolute;
+    width: 1%;
+    top:30.5%;
+    left: 9.5%;
+
+}
+ #cd5 {
+    position: absolute;
+    width: 0.8%;
+    top: 69.5%;
+    left: 7.4%;
+}
+
+#cd6 {
+    position: absolute;
+    width: 0.8%;
+    top: 69.5%;
+    left: 9.5%;
+}
+
+#cd7 {
+    position: absolute;
+    width: 1%;
+    top: 30.5%;
+    left: 24.3%;
+}
+
+#cd8 {
+    position: absolute;
+    width: 1%;
+    top:30.5%;
+    left: 26.5%;
+
+}
+
+#cd9 {
+    position: absolute;
+    width: 0.8%;
+    top: 69.5%;
+    left: 24.4%;
+}
+
+#cd10 {
+    position: absolute;
+    width: 0.8%;
+    top: 69.5%;
+    left: 26.6%;
+}
+
+path,
+.jtk-endpoint {
+    cursor: pointer;
+}
+
+.cmdLink detach {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+#textvoltimer{
+    position: absolute;
+    width:4.8%;
+    top: 27.5%;
+    left: 15%;
+    z-index: 10;
+}
+
+
+#cvt{
+    position: absolute;
+    width:1.5%;
+    height:10.5%;
+    top: 28%;
+    left: 12%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#cvp{
+    position: absolute;
+    width:1.5%;
+    height:10.5%;
+    top: 25%;
+    left: 21.52%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+
+#cvn{
+    position: absolute;
+    width:1.5%;
+    height:10.5%;
+    top: 41%;
+    left: 21.5%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#crun{
+    position: absolute;
+    width:1.5%;
+    height:10.5%;
+    top: 68%;
+    left: 15.2%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#cstop{
+    position: absolute;
+    width:1.5%;
+    height:10.5%;
+    top: 68%;
+    left: 12.2%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#myCanvasuv1{
+    position: absolute;
+    width: 15%;
+    height:120%;
+    top: 163%;
+    left: 41%;
+    display: block;
+}
+#myCanvasuv2 {
+    position: absolute;
+    width: 14%;
+    height:120%;
+    top: 163%;
+    left: 55%;
+    display: block;
+    rotate:180deg;
+}
+

@@ -2,37 +2,123 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. In an EMSA experiment sample runs from",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Cathode to anode",
+        "b": "Anode to cathode",
+        "c": "Both a and b",
+        "d": "None of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. In EMSA the percentage of the gel should be chosen according to ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Charge of the protein",
+        "b": "Molecular weight of the target DNA",
+        "c": "Size and number of the protein",
+        "d": "All of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Bromophenol blue is used in EMSA ",
+      "answers": {
+        "a": "As a tracking dye",
+        "b": "To label protein",
+        "c": "To label DNA",
+        "d": "None of the above"
       },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. In EMSA DNA probe can be",
+      "answers": {
+        "a": "Radiolabeled",
+        "b": "Fluorescent labeled",
+        "c": "Both a and b ",
+        "d": "None of the above"
+      },
+      
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. In EMSA low ionic strength buffer is used",
+      "answers": {
+        "a": "To stabilize transient interactions",
+        "b": "To break transient interactions",
+        "c": "To inhibit hydrophobic interactions between protein-nucleic acid",
+        "d": "None of the above"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Factors that affect the strength and specificity of the protein–DNA interactions under study include",
+      "answers": {
+        "a": "The ionic strength and pH of the binding buffer",
+        "b": "Presence of glycerol or carrier proteins (e.g., BSA)",
+        "c": "The presence/absence of divalent cations (e.g., Mg<sup>2+</sup> or Zn<sup>2+</sup>)",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Before a binding reaction is performed, gels are pre-run at a constant voltage (30-90 minutes) in a cold room or using other methods to keep the gel cool ",
+      "answers": {
+        "a": "to remove all traces of ammonium persulfate  ",
+        "b": "to ensure a constant gel temperature",
+        "c": "to equilibrate any special stabilizing factors or ions that were added to the electrophoresis buffer",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. Method alternative to Electrophoretic Mobility Shift Assay (EMSA) for studying protein-DNA interactions",
+      "answers": {
+        "a": "Chromatin Immunoprecipitation (ChIP)",
+        "b": "DNA Footprinting",
+        "c": "Surface Plasmon Resonance (SPR)",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. Why sometimes there are multiple bands in EMSA",
+      "answers": {
+        "a": "Because of the dissociation occurs during electrophoresis ",
+        "b": "A single DNA molecule has multiple binding sites for an individual protein",
+        "c": "Both a and b ",
+        "d": "None of the above"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "10. EMSA is important for ",
+      "answers": {
+        "a": "Studying the affinity of protein-DNA interactions ",
+        "b": "Studying the specificity of protein-DNA interactions",
+        "c": "Identifying DNA-binding proteins",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]

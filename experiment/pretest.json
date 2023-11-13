@@ -2,37 +2,123 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. How many types of nucleic acid polymers are present in the living systems?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which of the following most accurately describes the central dogma of biology?",
+      "answers": {
+        "a": "DNA to protein to RNA",
+        "b": "Protein to RNA to DNA",
+        "c": "RNA to protein to DNA",
+        "d": "DNA to RNA to protein"
       },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Fill in the blanks, DNA is _______stranded while RNA is _______stranded",
+      "answers": {
+        "a": "Single, single",
+        "b": "Single, double",
+        "c": "Double, single",
+        "d": "Double, double"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. DNA is the genetic material of the living systems that",
+      "answers": {
+        "a": "Stores information and passes to next generation",
+        "b": "It is more stable than RNA",
+        "c": "It has deoxyribose sugar",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. How many components are present in the basic unit of DNA?",
+      "answers": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. EMSA stands for?",
+      "answers": {
+        "a": "Electrophoretic mobility shift assay",
+        "b": "Electrophoresis mobility shift assay",
+        "c": "Electrophoretic mobilization shift assay",
+        "d": "Electrophoresis mobilization shift assay"
+      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "7. EMSA technique used for the interaction of the ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "DNA with the proteins",
+        "b": "RNA with the proteins",
+        "c": "Nucleic acids with the nucleic acid binding proteins",
+        "d": "None of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+      
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. EMSA can determine the",
+      "answers": {
+        "a": "Binding affinity of the nucleic acid-protein",
+        "b": "Can determine sequence specificity of the nucleic acid-protein interaction sites",
+        "c": "Help in determination of kinetic and thermodynamic parameters",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. For performing EMSA what type of gel should be used?",
+      "answers": {
+        "a": "Non-denaturing SDS-PAGE",
+        "b": "Denaturing SDS-PAGE",
+        "c": "NATIVE",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "10. In an EMSA experiment free DNA is separated from the protein-DNA complexes in a native gel by which following principle?",
+      "answers": {
+        "a": "Molecular weight",
+        "b": "Charge",
+        "c": "DNA digestion with DNAse",
+        "d": "Antibody immunoprecipitation"
+      },
+      
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]

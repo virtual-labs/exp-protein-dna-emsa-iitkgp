@@ -1,1 +1,1 @@
-## Experiment name
+## Protein-DNA interaction analysis by electrophoretic mobilty shift assay (EMSA)
