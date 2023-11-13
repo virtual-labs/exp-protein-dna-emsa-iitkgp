@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. How many types of nucleic acids are present in the living systems?",
+      "question": "1. How many types of nucleic acid polymers are present in the living systems?",
       "answers": {
         "a": "One",
         "b": "Two",
