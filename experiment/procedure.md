@@ -11,11 +11,11 @@
 ### Steps to perform the experiment:
 1.	Prepare the fluorescently-labelled DNA probe by annealing the complementary oligonucleotides in thermocycler. The probe should be purified by gel electrophoresis and quantified by UV spectroscopy.
 <div align="center">
-<img src="images/dna.png" width="40%">
+<img src="images/dna.png" class="img-fluid">
 </div>
 2.	Prepare the protein sample by diluting it in binding buffer to the desired concentration. 
 <div align="center">
-<img src="images/reaction.png" width="40%">
+<img src="images/reaction.png" class="img-fluid">
 </div>
 
 3.	Mix the protein sample with the fluorescently-labelled DNA probe and incubate in ice for 20-30 minutes to allow the protein-DNA complex to form. 
@@ -25,12 +25,12 @@
 5.	Mix the protein-DNA complex with loading buffer and load onto the gel.
 6.	Run the gel in electrophoresis buffer at 100-120 volts until the dye front reaches the bottom of the gel in dark conditions as DNA is fluorescently labelled.
 <div align="center">
-<img src="images/loadsamp.png" width="40%">
+<img src="images/loadsamp.png" class="img-fluid">
 </div>
 7.	Visualize the protein-DNA complex under the fluorescence sensitive imaging system.
 <div align="center">
-<img src="images/detectdna.png" width="40%">
+<img src="images/detectdna.png" class="img-fluid">
 </div>
 <div align="center">
-<img src="images/output.png" width="40%">
+<img src="images/output.png" class="img-fluid">
 </div>
