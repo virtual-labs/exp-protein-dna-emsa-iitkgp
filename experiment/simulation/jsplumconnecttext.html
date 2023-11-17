@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/jsplumb.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--script src="path/to/jsplumb-dom.js"></script-->
+  <!-- Include other dependencies if needed -->
+  <title>Move Element Example</title>
+</head>
+<body>
+ <div id="source" style="position: absolute; left: 50px; top: 50px; width: 50px; height: 50px; background-color: #66ccff;"></div>
+  <div id="target" style="position: absolute; left: 150px; top: 150px; width: 50px; height: 50px; background-color: #ff6666;"></div>
+  <button id="startConnectionButton">Start Connection</button>
+  <button id="moveButton">Move Up</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initialize jsPlumb
+      jsPlumb.ready(function () {
+        // Assuming you have two elements with ids 'source' and 'target'
+        var source = document.getElementById('source');
+        var target = document.getElementById('target');
+
+        // Initialize jsPlumb instance
+        var instance = jsPlumb.getInstance();
+
+        // Variable to track whether the connection is started
+        var isConnectionStarted = false;
+
+        // Attach event listener to the start connection button
+        document.getElementById('startConnectionButton').addEventListener('click', function () {
+          if (!isConnectionStarted) {
+            // Allow the user to connect from the source to target
+            instance.makeSource(source, { anchor: 'Continuous' });
+            instance.makeTarget(target, { anchor: 'Continuous' });
+
+            isConnectionStarted = true;
+          }
+        });
+
+        // Attach event listener to the move button
+        document.getElementById('moveButton').addEventListener('click', function () {
+          if (isConnectionStarted) {
+            // Move the target element (and connected elements) upwards by 10 pixels
+            target.style.top = (parseFloat(target.style.top) - 10) + 'px';
+
+            // Repaint the connections
+            instance.repaintEverything();
+          }
+        });
+      });
+    });
+  </script>
+
+
+</body>
+</html>

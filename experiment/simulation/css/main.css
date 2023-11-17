@@ -493,7 +493,7 @@ Developer: Prakriti Dhang
 #cd1 {
     position: absolute;
     width: 0.8%;
-    top: 140%;
+    top: 140%; /*140 - 130 */
     left: 6.6%;
 }
 

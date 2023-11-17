@@ -32,6 +32,7 @@ document.getElementById('dilutesampleb').style.pointerEvents="none";
   document.getElementById('loadsamplec').style.pointerEvents="none";
   document.getElementById('loadsampled').style.pointerEvents="none";
   document.getElementById('loadsamplee').style.pointerEvents="none";
+  
 }
 
 
@@ -1100,7 +1101,7 @@ function putdowntop(){
     if (topsetupt == 130) {
 
       clearInterval(imgtopsetup);
-
+      document.getElementById("topcover").removeAttribute("onclick","putdowntop()");
 
       //imgtbdown = setInterval(frame, 20);
 
@@ -1133,7 +1134,7 @@ function putupicetray(){
     if (topsetupt == 195) {
 
       clearInterval(imgtopsetup);
-
+      
 
       //imgtbdown = setInterval(frame, 20);
 
@@ -1163,7 +1164,7 @@ function run_gel(){
   document.getElementById("peptited").style.display = "none";
   document.getElementById("peptitee").style.display = "none";
 
-  document.getElementById("icetray").setAttribute("onclick","putupicetray()");
+  //document.getElementById("icetray").setAttribute("onclick","putupicetray()");
 document.getElementById("topcover").setAttribute("onclick","putdowntop()");
 
 document.getElementById('tubeicea').style.display="none";
@@ -1173,6 +1174,8 @@ document.getElementById('tubeiced').style.display="none";
 document.getElementById('tubeicee').style.display="none";
 document.getElementById('icebucket').style.display="none";
 document.getElementById("sampleload").disabled=true;
+//document.getElementById("cd1").style.top = "140%";
+//document.getElementById("cd2").style.top = "140%";
 }
 
 function txtvolt(){
@@ -1287,6 +1290,46 @@ else{
     
 
   }
+  }
+
+
+  var imgtopsetup1=null;
+  function puttopup(){
+
+
+    var topsetup1 = document.getElementById("topcover");
+  
+
+    var topsetupt1 = 130; //initial  position
+    clearInterval(imgtopsetup1);
+    //clearInterval(imgtbdown);
+    imgtopsetup1 = setInterval(frame, 15); /* frame is 10 denotes the speed of the movement*/
+  
+    function frame() {
+      if (topsetupt1 == 120) {
+  
+        clearInterval(imgtopsetup1);
+        document.getElementById("viewsample").disabled=false;
+        document.getElementById("topcover").removeAttribute("onclick","puttopup()");
+        //imgtbdown = setInterval(frame, 20);
+      //  document.getElementById("cd1").style.top= 130 + '%';
+        //document.getElementById("cd2").style.top= 130 + '%';
+      //  var cd1s= document.getElementById("cd1");
+      //  var cd2s= document.getElementById("cd2");
+      //  cd1s.style.top = 130 + '%';
+       // cd2s.style.top = 130 + '%';
+      
+  
+      } else {
+  
+        topsetupt1--;
+        topsetup1.style.top = topsetupt1 + '%';
+  
+      }
+    }
+  
+
+
   }
 
   function view_sample_UVlight(){
