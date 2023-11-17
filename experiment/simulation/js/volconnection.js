@@ -1,5 +1,6 @@
+document.addEventListener("DOMContentLoaded", function () {
 jsPlumb.ready(function () {
-
+   
     var instance,
         discs = [],
 
@@ -158,8 +159,9 @@ jsPlumb.ready(function () {
         instance.bind("click", function (connection, originalEvent) {
 
             if ((((connection.sourceId == 'cd1' && (connection.targetId == 'cd4')||connection.targetId == 'cd6' || connection.targetId == 'cd8' ||connection.targetId == 'cd10') || (connection.sourceId == 'cd4' && connection.targetId == 'cd1')) && alert("Delete positive connection ?"))) {
+            
                 instance.deleteConnection(connection);
-
+               
             }
             else if ((((connection.sourceId == 'cd2' && (connection.targetId == 'cd3'|| connection.targetId == 'cd5' || connection.targetId == 'cd7' ||connection.targetId == 'cd9')) || (connection.sourceId == 'cd3' && connection.targetId == 'cd2')) && alert("Delete negative connection?"))) {
                 instance.deleteConnection(connection);
@@ -181,6 +183,14 @@ jsPlumb.ready(function () {
 
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
     //jsPlumb.fire("jsPlumbDemoLoaded", instance1);
+    var is_connected_1_4 = false;
+    var is_connected_1_6 = false;
+    var is_connected_1_8 = false;
+    var is_connected_1_10 = false;
+    var is_connected_2_3 = false;
+    var is_connected_2_5 = false;
+    var is_connected_2_7 = false;
+    var is_connected_2_9 = false;
 
     document.getElementById("cvt").addEventListener("click", function () {
         //var d = instance.exportData();
@@ -386,14 +396,7 @@ jsPlumb.ready(function () {
 
         var actual_connections = instance.getAllConnections();
 
-        var is_connected_1_4 = false;
-        var is_connected_1_6 = false;
-        var is_connected_1_8 = false;
-        var is_connected_1_10 = false;
-        var is_connected_2_3 = false;
-        var is_connected_2_5 = false;
-        var is_connected_2_7 = false;
-        var is_connected_2_9 = false;
+       // conection false statements
 
         var unallowed_connection_present = false;
         var count = 0; // counts number of connection
@@ -409,7 +412,10 @@ jsPlumb.ready(function () {
             if (!is_connected_1_4) {
                 is_connected_1_4 = correct_connections_1_4.find(function (connection) {
                     return connection.source === this_connection.source && connection.target === this_connection.target;
+                    
+                    
                 });
+                is_connected_1_4 = true;
             }
 
             if (!unallowed_connection_present) {
@@ -645,11 +651,16 @@ jsPlumb.ready(function () {
 
     });
 
+   
+
     document.getElementById('cstop').addEventListener('click', function () {
         // Delete all connections
        // instance.deleteEveryConnection();
-
-        document.getElementById("viewsample").disabled=false;
+     
+       document.getElementById("topcover").setAttribute("onclick","puttopup()");
+    
+   
+    //   document.getElementById("viewsample").disabled=false;
         const canvas = document.getElementById('textvoltimer');
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -673,9 +684,28 @@ jsPlumb.ready(function () {
                   return;
 
 
+                 
+
+    });
+
+    document.getElementById('topcover').addEventListener('click', function () {
+
+        var cd1s = document.getElementById('cd1');
+        var cd2s= document.getElementById("cd2");
+         if ((is_connected_1_4)|| (is_connected_1_6)||(is_connected_1_8)||(is_connected_1_10) && (is_connected_2_3)|| (is_connected_2_5)||(is_connected_2_7)||(is_connected_2_9)
+         ) {
+          // Move the target element (and connected elements) upwards 
+          
+          cd1s.style.top =  130 + '%';
+          cd2s.style.top =  130 + '%';
+  
+          // Repaint the connections
+          instance.repaintEverything();
+        }   
     });
 });
 
+});
 
 
 
