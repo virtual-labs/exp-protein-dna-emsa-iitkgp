@@ -587,7 +587,9 @@ jsPlumb.ready(function () {
         if (((is_connected_1_4 && is_connected_2_3) || (is_connected_1_6 && is_connected_2_5) ||(is_connected_1_8 && is_connected_2_7)||(is_connected_1_10 && is_connected_2_9))&& !unallowed_connection_present) {
 
 
-            alert("RIGHT CONNECTION.");
+            $('#alertModal').modal('show');
+            $('.modal-body').text('Connection is correct');
+                
             const canvas = document.getElementById('textvoltimer');
     document.getElementById('cvp').style.display="block";
   
@@ -617,7 +619,9 @@ jsPlumb.ready(function () {
             
             //document.getElementById("samplerun").disabled = true;
         } else {
-            alert("WRONG CONNECTION");
+           
+            $('#alertModal').modal('show');
+            $('.modal-body').text('Connection is wrong');
             const canvas = document.getElementById('textvoltimer');
     document.getElementById('cvp').style.display="block";
   
