@@ -45,7 +45,8 @@ function dna1() {
     window.scrollBy(0,700);
   } else {
     // image display "none";
-    alert("Check the checkbox for Fluorescently-labelled single stranded DNA" );
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Check the checkbox for Fluorescently-labelled single stranded DNA');
     document.getElementById("dna2").style.display="none";
   }
 }
@@ -59,7 +60,11 @@ function dna2() {
     window.scrollBy(0,700);
   } else {
     // image display "none";
-    alert("Check the checkbox for Unlabelled single stranded DNA" );
+    
+
+
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Check the checkbox for Unlabelled single stranded DNA');
     document.getElementById("dna1").style.display="none";
   }
 }
@@ -102,7 +107,9 @@ function annealing_dna(){
   }
 }
 else{
-  alert("Check both the checkboxes");
+  $('#alertModal').modal('show');
+    $('.modal-body').text('Check both the checkboxes');
+  
 }
 }
 
@@ -126,7 +133,10 @@ function buffer_prep(){
   window.scrollBy(0,700);
   }
   else{
-    alert("Check all the components to prepare 1x binding buffer");
+    
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Check all the components to prepare 1x binding buffer');
+    
   }
 }
 
@@ -1278,11 +1288,16 @@ function txtvoltd() {
 
 
 if(volt == null){
-  alert("Voltage is empty");
+ 
+  $('#alertModal').modal('show');
+  $('.modal-body').text('Voltage should be between 100 V and 120 V');
+	  
 
 }
 else if((volt<100) || (volt>120)){
-  alert("Voltage should be between 100 V and 120 V");
+  $('#alertModal').modal('show');
+  $('.modal-body').text('Voltage should be between 100 V and 120 V');
+	  
 }
 else{
     samplerun();
@@ -1291,6 +1306,15 @@ else{
 
   }
   }
+
+
+
+  
+  function cancelmsg() {
+    document.getElementById("alertModal").style.display = "none";
+    document.getElementById("alertModal").classList.remove("show");
+  }
+
 
 
   var imgtopsetup1=null;
