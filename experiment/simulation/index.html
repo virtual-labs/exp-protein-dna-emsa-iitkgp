@@ -48,14 +48,13 @@ Developer: Prakriti Dhang
 								and E. </li>
 							<li>Next click on "Setting up Electrophoresis" button. Click on the top cover of the
 								electrophoresis to close it. </li>
-							<li>Now to connect, click on the negative of electrophorersis
-								chamber, drag to negative of voltage meter. Next click on the
-								positive of electrophorersis chamber and drag to positive of voltage meter. (For any
-								wrong connection, click on the wire to disconnect.)</li>
-							<li>Now click on "V" sign of the voltage meter to switch on. And "+" sign of the voltage
-								meter to set the voltage between 100 V and 120 V.</li>
+							<li>Now to connect, click on the negative electrode of electrophorersis
+								chamber, drag to negative electrode of power supply. Next click on the
+								positive electrode of electrophorersis chamber and drag to positive electrode of power supply. For any
+								wrong connection, click on the wire to disconnect. (The positive electrode is usually colored red, whereas the negative electrode is colored black.)</li>
+							<li>Now click on "V" sign of the power supply to switch ON. And "+" sign of the power supply to set the voltage between 100 V and 120 V.</li>
 							<li> Click on the run icon button to run the gel. The dye front will reaches the bottom of
-								the gel in dark conditions. Click on stop icon button to switch off the power and
+								the gel in dark conditions. Click on stop icon button to switch OFF the power and
 								disconnect the wires (click on the wire to disconnect).</li>
 							<li> Click on the top cover of the electrophoresis to open it. </li>
 							<li> Click on "Visualize the protein-DNA" button to visualize under Fluorescein channel.
@@ -330,13 +329,13 @@ Developer: Prakriti Dhang
 					<div class=""> -->
 					<div class="img-container">
 
-						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
+						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer" data-toggle="tooltip" data-placement="top" title="Power supply">
 						<!--img src="./images/setup.png" class="img-fluid" id="setup"-->
-						<img src="./images/top-cover.png" class="img-fluid" id="topcover">
-						<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
-						<img src="./images/ice_tray.png" class="img-fluid" id="icetray">
+						<img src="./images/top-cover.png" class="img-fluid" id="topcover" data-toggle="tooltip" data-placement="top" title="Top cover of electophoresis">
+						<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup" data-toggle="tooltip" data-placement="top" title="Bottom of electophoresis">
+						<img src="./images/ice_tray.png" class="img-fluid" id="icetray" >
 						<img src="./images/protein.png" class="img-fluid" id="protein" style="display: none;">
-						<img src="./images/ice_bucket.png" class="img-fluid" id="icebucket">
+						<img src="./images/ice_bucket.png" class="img-fluid" id="icebucket" data-toggle="tooltip" data-placement="top" title="Ice bucket">
 						<!--img src="./images/tube.png" class="img-fluid" id="tube"-->
 
 
@@ -422,10 +421,10 @@ Developer: Prakriti Dhang
 						<canvas id="crun" style="border: 0px solid black;" onclick="rungel()"></canvas>
 						<canvas id="cstop" style="border: 0px solid black;"></canvas>
 
-						<img src="./images/uv-machine.png" class="img-fluid" id="uvmachine">
+						<img src="./images/uv-machine.png" class="img-fluid" id="uvmachine" data-toggle="tooltip" data-placement="top" title="Fluorescence sensitive imaging system.">
 						<img src="./images/output.png" class="img-fluid" id="output" style="display: none;">
-						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;" data-toggle="tooltip" data-placement="top" title="Fluorescein channel"></canvas>
+						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;" data-toggle="tooltip" data-placement="top" title="Fluorescein channel"></canvas>
 
 					</div>
 					<!-- </div> -->
@@ -519,7 +518,9 @@ Developer: Prakriti Dhang
 
 
 
-
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 	</script>
 </body>
