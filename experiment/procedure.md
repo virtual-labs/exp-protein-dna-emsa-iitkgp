@@ -16,7 +16,7 @@
 
 2. Prepare the protein sample by diluting it in binding buffer to the desired concentration. 
 <div align="center">
-<img src="images/reaction.png" class="img-fluid">
+<img src="images/samplprep.png" class="img-fluid">
 </div>
 
 3.	Mix the protein sample with the fluorescently-labelled DNA probe and incubate in ice for 20-30 minutes to allow the protein-DNA complex to form. 
