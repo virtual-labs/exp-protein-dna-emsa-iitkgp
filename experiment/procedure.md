@@ -21,20 +21,35 @@
 
 3.	Mix the protein sample with the fluorescently-labelled DNA probe and incubate in ice for 20-30 minutes to allow the protein-DNA complex to form. 
 
+<div align="center">
+<img src="images/sampleice.png" class="img-fluid">
+</div>
 
 4.	Prepare a polyacrylamide gel and pre-run it in electrophoresis buffer for 30-40 minutes.
 5.	Mix the protein-DNA complex with loading buffer and load onto the gel.
+
+<div align="center">
+<img src="images/sampleloading.png" class="img-fluid">
+</div>
 6.	Run the gel in electrophoresis buffer at 100-120 volts until the dye front reaches the bottom of the gel in dark conditions as DNA is fluorescently labelled.
 
 <div align="center">
-<img src="images/loadsamp.png" class="img-fluid">
+<img src="images/initial.png" class="img-fluid">
+</div>
+<br>
+<div align="center">
+<img src="images/final.png" class="img-fluid">
 </div>
 
 7.	Visualize the protein-DNA complex under the fluorescence sensitive imaging system.
 
 <div align="center">
+<img src="images/uv.png" class="img-fluid">
+</div>
+
+<!--div align="center">
 <img src="images/detectdna.png" class="img-fluid">
 </div>
 <div align="center">
 <img src="images/output.png" class="img-fluid">
-</div>
+</div-->
