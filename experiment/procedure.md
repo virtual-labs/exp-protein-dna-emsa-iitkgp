@@ -31,14 +31,15 @@
 <div align="center">
 <img src="images/sampleloading.png" class="img-fluid">
 </div>
+
 6.	Run the gel in electrophoresis buffer at 100-120 volts until the dye front reaches the bottom of the gel in dark conditions as DNA is fluorescently labelled.
 
 <div align="center">
 <img src="images/initial.png" class="img-fluid">
 </div>
-<br>
+
 <div align="center">
-<img src="images/final.png" class="img-fluid">
+<img src="images/f.png" class="img-fluid">
 </div>
 
 7.	Visualize the protein-DNA complex under the fluorescence sensitive imaging system.
