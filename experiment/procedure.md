@@ -39,7 +39,7 @@
 </div>
 
 <div align="center">
-<img src="images/f.png" class="img-fluid">
+<img src="images/final.png" class="img-fluid">
 </div>
 
 7.	Visualize the protein-DNA complex under the fluorescence sensitive imaging system.
