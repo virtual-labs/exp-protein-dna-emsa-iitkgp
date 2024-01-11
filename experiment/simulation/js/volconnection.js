@@ -662,7 +662,11 @@ jsPlumb.ready(function () {
        // instance.deleteEveryConnection();
      
        document.getElementById("topcover").setAttribute("onclick","puttopup()");
-    
+       cancelAnimationFrame(cancelani1);
+       cancelAnimationFrame(cancelani2);
+       cancelAnimationFrame(cancelani3);
+       cancelAnimationFrame(cancelani4);
+       cancelAnimationFrame(cancelani5);
    
     //   document.getElementById("viewsample").disabled=false;
         const canvas = document.getElementById('textvoltimer');
@@ -698,13 +702,44 @@ jsPlumb.ready(function () {
         var cd2s= document.getElementById("cd2");
          if ((is_connected_1_4)|| (is_connected_1_6)||(is_connected_1_8)||(is_connected_1_10) && (is_connected_2_3)|| (is_connected_2_5)||(is_connected_2_7)||(is_connected_2_9)
          ) {
-          // Move the target element (and connected elements) upwards 
-          
-          cd1s.style.top =  130 + '%';
-          cd2s.style.top =  130 + '%';
-  
-          // Repaint the connections
-          instance.repaintEverything();
+            var imgobjdivld1 = null;
+            var imgobjdivld2 = null;
+           
+            var currentltopld1 = 140;
+            var currentltopld2 = 140;
+           
+            clearInterval(imgobjdivld1);
+         
+            imgobjdivld1 = setInterval(frameld1, 15);
+            imgobjdivld2 = setInterval(frameld2, 15);
+
+            function frameld1() {
+                if (currentltopld1 == 130) {
+                    clearInterval(imgobjdivld1);
+
+                }
+                else {
+                    currentltopld1--;
+                    cd1s.style.top = currentltopld1 + '%';
+                   
+                    instance.repaintEverything();
+
+                }
+            }
+            function frameld2() {
+                if (currentltopld2 == 130) {
+                    clearInterval(imgobjdivld2);
+
+                }
+                else {
+                    currentltopld2--;
+                    cd2s.style.top = currentltopld2 + '%';
+                   
+                    instance.repaintEverything();
+
+                }
+            }
+
         }   
     });
 });

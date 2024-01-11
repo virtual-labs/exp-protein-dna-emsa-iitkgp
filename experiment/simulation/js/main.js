@@ -1302,7 +1302,7 @@ else if((volt<100) || (volt>120)){
 else{
     samplerun();
     document.getElementById("cstop").style.display="block";
-    
+    document.getElementById("topcover").removeAttribute("onclick","puttopup()");
 
   }
   }
@@ -1461,7 +1461,7 @@ function samplerun(){
      // ctx.clearRect(0,0,canvas.width, canvas.height);
      moveLine();
      drawLine();
-     cancelani = requestAnimationFrame(loop);
+     cancelani1 = requestAnimationFrame(loop);
    }
    requestAnimationFrame(loop);
  
@@ -1510,7 +1510,7 @@ function samplerun(){
      // ctx.clearRect(0,0,canvas.width, canvas.height);
      moveLine2();
      drawLine2();
-     cancelani = requestAnimationFrame(loop2);
+     cancelani2 = requestAnimationFrame(loop2);
    }
    requestAnimationFrame(loop2);
  
@@ -1558,7 +1558,7 @@ function samplerun(){
    // ctx.clearRect(0,0,canvas.width, canvas.height);
    moveLine3();
    drawLine3();
-   cancelani = requestAnimationFrame(loop3);
+   cancelani3 = requestAnimationFrame(loop3);
  }
  requestAnimationFrame(loop3);
 
@@ -1605,7 +1605,7 @@ function loop4() {
  // ctx.clearRect(0,0,canvas.width, canvas.height);
  moveLine4();
  drawLine4();
- cancelani = requestAnimationFrame(loop4);
+ cancelani4 = requestAnimationFrame(loop4);
 }
 requestAnimationFrame(loop4);
 
@@ -1652,7 +1652,7 @@ function loop5() {
  // ctx.clearRect(0,0,canvas.width, canvas.height);
  moveLine5();
  drawLine5();
- cancelani = requestAnimationFrame(loop5);
+ cancelani5 = requestAnimationFrame(loop5);
 }
 requestAnimationFrame(loop5);
 
