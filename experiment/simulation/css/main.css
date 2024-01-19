@@ -24,7 +24,8 @@ Developer: Prakriti Dhang
     position: relative;
     width: 25%;
     top: 5%;
-    left: 5%
+    left: 5%;
+    cursor: pointer;
 }
 
 
@@ -438,6 +439,7 @@ Developer: Prakriti Dhang
     width: 30%;
     top:130%;
     left: 40%;
+    cursor: pointer;
 }
 #output{
     position: absolute;
@@ -647,6 +649,7 @@ path,
     top: 163%;
     left: 41%;
     display: block;
+    cursor: pointer;
 }
 #myCanvasuv2 {
     position: absolute;
@@ -656,5 +659,6 @@ path,
     left: 55%;
     display: block;
     rotate:180deg;
+    cursor: pointer;
 }
 
