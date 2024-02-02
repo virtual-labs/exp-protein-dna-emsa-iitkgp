@@ -145,6 +145,7 @@ Developer: Prakriti Dhang
     top:44%;
     left:81.2%;
     display: none;
+    z-index: 5;
 }
 
 #tubeiceb{
@@ -153,6 +154,7 @@ Developer: Prakriti Dhang
     top:47%;
     left:83.3%;
     display: none;
+    z-index: 5;
 }
 
 #tubeicec{
@@ -161,6 +163,7 @@ Developer: Prakriti Dhang
     top:44%;
     left:85.4%;
     display: none;
+    z-index: 5;
 }
 #tubeiced{
     position: absolute;
@@ -168,6 +171,7 @@ Developer: Prakriti Dhang
     top:47%;
     left:87.6%;
     display: none;
+    z-index: 5;
 }
 
 #tubeicee{
@@ -176,6 +180,7 @@ Developer: Prakriti Dhang
     top:44%;
     left:89.7%;
     display: none;
+    z-index: 5;
 }
 
 
@@ -183,8 +188,8 @@ Developer: Prakriti Dhang
 
 #peptitea{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
     left:82%;
     display: none;
     z-index: 4;
@@ -192,10 +197,33 @@ Developer: Prakriti Dhang
     
 }
 
+#peptitea1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
+    left:82%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+    
+}
+
+
 #peptiteb{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
+    left:84%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+   
+    
+}
+#peptiteb1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
     left:84%;
     display: none;
     z-index: 4;
@@ -206,8 +234,17 @@ Developer: Prakriti Dhang
 
 #peptitec{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
+    left:86.2%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+#peptitec1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
     left:86.2%;
     display: none;
     z-index: 4;
@@ -216,17 +253,37 @@ Developer: Prakriti Dhang
 
 #peptited{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
     left:88.2%;
     display: none;
     z-index: 4;
     cursor: pointer;
 }
+#peptited1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
+    left:88.2%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+
+
 #peptitee{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
+    left:90.5%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+#peptitee1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
     left:90.5%;
     display: none;
     z-index: 4;
