@@ -588,7 +588,7 @@ jsPlumb.ready(function () {
 
 
             $('#alertModal').modal('show');
-            $('.modal-body').html('Connection is correct. <br> Click on "V" sign of the power supply to switch ON. And "+" sign of the power supply to set the voltage between 100 V and 120 V.');
+            $('.modal-body').html('Connection is correct. <br> Click "+" sign of the power supply to set the voltage between 100 V and 120 V.');
                 
             const canvas = document.getElementById('textvoltimer');
     document.getElementById('cvp').style.display="block";
