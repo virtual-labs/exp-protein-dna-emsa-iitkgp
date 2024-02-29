@@ -24,7 +24,8 @@ Developer: Prakriti Dhang
     position: relative;
     width: 25%;
     top: 5%;
-    left: 5%
+    left: 5%;
+    cursor: pointer;
 }
 
 
@@ -50,6 +51,7 @@ Developer: Prakriti Dhang
     width: 20%;
     top:180%;
     left: 5%;
+    cursor:pointer;
 } 
 
 #icebucket {
@@ -58,6 +60,7 @@ Developer: Prakriti Dhang
     top: 30%;
     left: 76%;
     display:none;
+    cursor:pointer;
 }
 
 
@@ -71,10 +74,10 @@ Developer: Prakriti Dhang
 
 #icetray {
     position: absolute;
-    width: 40%;
-    top:196%; /* 250- 196*/
-    left: -5%;
-    z-index: -10;
+    width: 28%;
+    top:255%; /* 250- 196*/
+    left: 1%;
+    z-index: -2;
     cursor:pointer;
 
 }
@@ -142,6 +145,7 @@ Developer: Prakriti Dhang
     top:44%;
     left:81.2%;
     display: none;
+    z-index: 5;
 }
 
 #tubeiceb{
@@ -150,6 +154,7 @@ Developer: Prakriti Dhang
     top:47%;
     left:83.3%;
     display: none;
+    z-index: 5;
 }
 
 #tubeicec{
@@ -158,6 +163,7 @@ Developer: Prakriti Dhang
     top:44%;
     left:85.4%;
     display: none;
+    z-index: 5;
 }
 #tubeiced{
     position: absolute;
@@ -165,6 +171,7 @@ Developer: Prakriti Dhang
     top:47%;
     left:87.6%;
     display: none;
+    z-index: 5;
 }
 
 #tubeicee{
@@ -173,6 +180,7 @@ Developer: Prakriti Dhang
     top:44%;
     left:89.7%;
     display: none;
+    z-index: 5;
 }
 
 
@@ -180,8 +188,8 @@ Developer: Prakriti Dhang
 
 #peptitea{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
     left:82%;
     display: none;
     z-index: 4;
@@ -189,10 +197,33 @@ Developer: Prakriti Dhang
     
 }
 
+#peptitea1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
+    left:82%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+    
+}
+
+
 #peptiteb{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
+    left:84%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+   
+    
+}
+#peptiteb1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
     left:84%;
     display: none;
     z-index: 4;
@@ -203,8 +234,17 @@ Developer: Prakriti Dhang
 
 #peptitec{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
+    left:86.2%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+#peptitec1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
     left:86.2%;
     display: none;
     z-index: 4;
@@ -213,17 +253,37 @@ Developer: Prakriti Dhang
 
 #peptited{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
     left:88.2%;
     display: none;
     z-index: 4;
     cursor: pointer;
 }
+#peptited1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
+    left:88.2%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+
+
 #peptitee{
     position: absolute;
-    width:  2%;
-    top:1%;
+    width:  1.8%;
+    top:-15%;
+    left:90.5%;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+#peptitee1{
+    position: absolute;
+    width:  1.8%;
+    top:-15%;
     left:90.5%;
     display: none;
     z-index: 4;
@@ -438,6 +498,7 @@ Developer: Prakriti Dhang
     width: 30%;
     top:130%;
     left: 40%;
+    cursor: pointer;
 }
 #output{
     position: absolute;
@@ -445,6 +506,7 @@ Developer: Prakriti Dhang
     top:175%;
     left: 45%;
     z-index: 10;
+    opacity: 65%;
 }
 
 /* Connect negative -negative  , positive-positive*/
@@ -646,6 +708,7 @@ path,
     top: 163%;
     left: 41%;
     display: block;
+    cursor: pointer;
 }
 #myCanvasuv2 {
     position: absolute;
@@ -655,5 +718,6 @@ path,
     left: 55%;
     display: block;
     rotate:180deg;
+    cursor: pointer;
 }
 

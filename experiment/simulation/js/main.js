@@ -45,7 +45,8 @@ function dna1() {
     window.scrollBy(0,700);
   } else {
     // image display "none";
-    alert("Check the checkbox for Fluorescently-labelled single stranded DNA" );
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Check the checkbox for Fluorescently-labelled single stranded DNA');
     document.getElementById("dna2").style.display="none";
   }
 }
@@ -59,7 +60,11 @@ function dna2() {
     window.scrollBy(0,700);
   } else {
     // image display "none";
-    alert("Check the checkbox for Unlabelled single stranded DNA" );
+    
+
+
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Check the checkbox for Unlabelled single stranded DNA');
     document.getElementById("dna1").style.display="none";
   }
 }
@@ -102,7 +107,9 @@ function annealing_dna(){
   }
 }
 else{
-  alert("Check both the checkboxes");
+  $('#alertModal').modal('show');
+    $('.modal-body').text('Check both the checkboxes');
+  
 }
 }
 
@@ -126,7 +133,10 @@ function buffer_prep(){
   window.scrollBy(0,700);
   }
   else{
-    alert("Check all the components to prepare 1x binding buffer");
+    
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Check all the components to prepare 1x binding buffer');
+    
   }
 }
 
@@ -342,7 +352,7 @@ function sample_sampleA(){
   document.getElementById("peptitee").style.display="none";
   document.getElementById('loadsampleb').style.pointerEvents="auto";
   document.getElementById("action").innerHTML="Loading sample A to the first well.";
-  window.scrollBy(0,600);
+  window.scrollBy(0,300);
   const canvassdrop1 = document.getElementById('myCanvass1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
  
@@ -381,7 +391,7 @@ function sample_sampleA(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop1.style.backgroundColor = '#7FA9FF';
-
+          clearInterval(clearmpcnge1);
         }
 
 
@@ -415,7 +425,14 @@ function sample_sampleA(){
 
   // Function to change the color when clicked/touched
   function changeColor() {
-    imagepp.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+    document.getElementById("peptitea").style.display = "none";
+    document.getElementById("peptitea1").style.display = "block";
+    clearmpcnge1 = setInterval(changemp1, 300);
+
+    function changemp1() {
+      document.getElementById("peptitea").style.display = "block";
+      document.getElementById("peptitea1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
@@ -465,7 +482,7 @@ function sample_sampleA(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop1.style.backgroundColor = '#7FA9FF';
-  
+          clearInterval(clearmpcnge1);
         }
     }
   }
@@ -495,7 +512,7 @@ function sample_sampleB(){
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample B to the second well.";
-  window.scrollBy(0,600);
+  window.scrollBy(0,300);
   const canvassdrop2 = document.getElementById('myCanvass2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
  
@@ -534,7 +551,7 @@ function sample_sampleB(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop2.style.backgroundColor = '#7FA9FF';
-
+          clearInterval(clearmpcnge2);
         }
 
 
@@ -568,7 +585,14 @@ function sample_sampleB(){
 
   // Function to change the color when clicked/touched
   function changeColor() {
-    imagepp2.style.filter = 'hue-rotate(20deg)'; // Change color  (90 degrees in hue rotation)
+    document.getElementById("peptiteb").style.display = "none";
+    document.getElementById("peptiteb1").style.display = "block";
+    clearmpcnge2 = setInterval(changemp2, 300);
+
+    function changemp2() {
+      document.getElementById("peptiteb").style.display = "block";
+      document.getElementById("peptiteb1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
@@ -620,7 +644,7 @@ function sample_sampleB(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop2.style.backgroundColor = '#7FA9FF';
-  
+          clearInterval(clearmpcnge2);
         }
     }
   }
@@ -648,7 +672,7 @@ function sample_sampleC(){
   document.getElementById("peptited").style.display="none";
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample C to the third well.";
-  window.scrollBy(0,600);
+  window.scrollBy(0,300);
  
   const canvassdrop3 = document.getElementById('myCanvass3');
   const ctxsdrop3 = canvassdrop3.getContext('2d');
@@ -685,7 +709,7 @@ function sample_sampleC(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop3.style.backgroundColor = '#7FA9FF';
-
+          clearInterval(clearmpcnge3);
         }
 
 
@@ -718,15 +742,22 @@ function sample_sampleC(){
   }
 
   // Function to change the color when clicked/touched
-  function changeColor() {
-    imagepp3.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  function changeColor3() {
+    document.getElementById("peptitec").style.display = "none";
+    document.getElementById("peptitec1").style.display = "block";
+    clearmpcnge3 = setInterval(changemp3, 300);
+
+    function changemp3() {
+      document.getElementById("peptitec").style.display = "block";
+      document.getElementById("peptitec1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp3.addEventListener('mousedown', handleMouseDown);
   //imagepp3.addEventListener('touchstart', handleMouseDown);
-  imagepp3.addEventListener('click', changeColor);
-  imagepp3.addEventListener('touchend', changeColor);
+  imagepp3.addEventListener('click', changeColor3);
+  imagepp3.addEventListener('touchend', changeColor3);
 
   /**************************************************** Touch c*************************************************/
   function handleTouchStart(event) {
@@ -769,7 +800,7 @@ function sample_sampleC(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop3.style.backgroundColor = '#7FA9FF';
-  
+          clearInterval(clearmpcnge3);
         }
     }
   }
@@ -799,7 +830,7 @@ function sample_sampleD(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample D to the fourth well.";
-  window.scrollBy(0,600);
+  window.scrollBy(0,300);
   const canvassdrop4 = document.getElementById('myCanvass4');
   const ctxsdrop4 = canvassdrop4.getContext('2d');
  
@@ -835,7 +866,7 @@ function sample_sampleD(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop4.style.backgroundColor = '#7FA9FF';
-
+          clearInterval(clearmpcnge4);
         }
 
 
@@ -868,15 +899,22 @@ function sample_sampleD(){
   }
 
   // Function to change the color when clicked/touched
-  function changeColor() {
-    imagepp4.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  function changeColor4() {
+    document.getElementById("peptited").style.display = "none";
+    document.getElementById("peptited1").style.display = "block";
+    clearmpcnge4 = setInterval(changemp4, 300);
+
+    function changemp4() {
+      document.getElementById("peptited").style.display = "block";
+      document.getElementById("peptited1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp4.addEventListener('mousedown', handleMouseDown);
   //imagepp4.addEventListener('touchstart', handleMouseDown);
-  imagepp4.addEventListener('click', changeColor);
-  imagepp4.addEventListener('touchend', changeColor);
+  imagepp4.addEventListener('click', changeColor4);
+  imagepp4.addEventListener('touchend', changeColor4);
 
   /************************************************** Touch sample d*************************************************************/
 
@@ -920,7 +958,7 @@ function sample_sampleD(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop4.style.backgroundColor = '#7FA9FF';
-  
+          clearInterval(clearmpcnge4);
         }
     }
   }
@@ -948,7 +986,7 @@ function sample_sampleE(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("rungel").disabled=false;
   document.getElementById("action").innerHTML="Loading sample E to the fifth well.";
-  window.scrollBy(0,600);
+  window.scrollBy(0,300);
   const canvassdrop5 = document.getElementById('myCanvass5');
   const ctxsdrop5 = canvassdrop5.getContext('2d');
  
@@ -984,7 +1022,7 @@ function sample_sampleE(){
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop5.style.backgroundColor = '#7FA9FF';
-
+          clearInterval(clearmpcnge5);
         }
 
 
@@ -1017,15 +1055,22 @@ function sample_sampleE(){
   }
 
   // Function to change the color when clicked/touched
-  function changeColor() {
-    imagepp5.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  function changeColor5() {
+    document.getElementById("peptitee").style.display = "none";
+    document.getElementById("peptitee1").style.display = "block";
+    clearmpcnge5 = setInterval(changemp5, 300);
+
+    function changemp5() {
+      document.getElementById("peptitee").style.display = "block";
+      document.getElementById("peptitee1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp5.addEventListener('mousedown', handleMouseDown);
   //imagepp5.addEventListener('touchstart', handleMouseDown);
-  imagepp5.addEventListener('click', changeColor);
-  imagepp5.addEventListener('touchend', changeColor);
+  imagepp5.addEventListener('click', changeColor5);
+  imagepp5.addEventListener('touchend', changeColor5);
 
 /************************************************************* Touch sample e****************************************************************/
 
@@ -1069,7 +1114,7 @@ function handleTouchMove(event) {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop5.style.backgroundColor = '#7FA9FF';
-
+        clearInterval(clearmpcnge5);
       }
   }
 }
@@ -1278,19 +1323,33 @@ function txtvoltd() {
 
 
 if(volt == null){
-  alert("Voltage is empty");
+ 
+  $('#alertModal').modal('show');
+  $('.modal-body').text('Voltage should be between 100 V and 120 V');
+	  
 
 }
 else if((volt<100) || (volt>120)){
-  alert("Voltage should be between 100 V and 120 V");
+  $('#alertModal').modal('show');
+  $('.modal-body').text('Voltage should be between 100 V and 120 V');
+	  
 }
 else{
     samplerun();
     document.getElementById("cstop").style.display="block";
-    
+    document.getElementById("topcover").removeAttribute("onclick","puttopup()");
 
   }
   }
+
+
+
+  
+  function cancelmsg() {
+    document.getElementById("alertModal").style.display = "none";
+    document.getElementById("alertModal").classList.remove("show");
+  }
+
 
 
   var imgtopsetup1=null;
@@ -1437,7 +1496,7 @@ function samplerun(){
      // ctx.clearRect(0,0,canvas.width, canvas.height);
      moveLine();
      drawLine();
-     cancelani = requestAnimationFrame(loop);
+     cancelani1 = requestAnimationFrame(loop);
    }
    requestAnimationFrame(loop);
  
@@ -1486,7 +1545,7 @@ function samplerun(){
      // ctx.clearRect(0,0,canvas.width, canvas.height);
      moveLine2();
      drawLine2();
-     cancelani = requestAnimationFrame(loop2);
+     cancelani2 = requestAnimationFrame(loop2);
    }
    requestAnimationFrame(loop2);
  
@@ -1534,7 +1593,7 @@ function samplerun(){
    // ctx.clearRect(0,0,canvas.width, canvas.height);
    moveLine3();
    drawLine3();
-   cancelani = requestAnimationFrame(loop3);
+   cancelani3 = requestAnimationFrame(loop3);
  }
  requestAnimationFrame(loop3);
 
@@ -1581,7 +1640,7 @@ function loop4() {
  // ctx.clearRect(0,0,canvas.width, canvas.height);
  moveLine4();
  drawLine4();
- cancelani = requestAnimationFrame(loop4);
+ cancelani4 = requestAnimationFrame(loop4);
 }
 requestAnimationFrame(loop4);
 
@@ -1628,7 +1687,7 @@ function loop5() {
  // ctx.clearRect(0,0,canvas.width, canvas.height);
  moveLine5();
  drawLine5();
- cancelani = requestAnimationFrame(loop5);
+ cancelani5 = requestAnimationFrame(loop5);
 }
 requestAnimationFrame(loop5);
 

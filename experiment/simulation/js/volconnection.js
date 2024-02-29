@@ -158,12 +158,12 @@ jsPlumb.ready(function () {
         //delete clicked connection
         instance.bind("click", function (connection, originalEvent) {
 
-            if ((((connection.sourceId == 'cd1' && (connection.targetId == 'cd4')||connection.targetId == 'cd6' || connection.targetId == 'cd8' ||connection.targetId == 'cd10') || (connection.sourceId == 'cd4' && connection.targetId == 'cd1')) && alert("Delete positive connection ?"))) {
+            if ((((connection.sourceId == 'cd1' && (connection.targetId == 'cd4')||connection.targetId == 'cd6' || connection.targetId == 'cd8' ||connection.targetId == 'cd10') || (connection.sourceId == 'cd4' && connection.targetId == 'cd1')) )) {
             
                 instance.deleteConnection(connection);
                
             }
-            else if ((((connection.sourceId == 'cd2' && (connection.targetId == 'cd3'|| connection.targetId == 'cd5' || connection.targetId == 'cd7' ||connection.targetId == 'cd9')) || (connection.sourceId == 'cd3' && connection.targetId == 'cd2')) && alert("Delete negative connection?"))) {
+            else if ((((connection.sourceId == 'cd2' && (connection.targetId == 'cd3'|| connection.targetId == 'cd5' || connection.targetId == 'cd7' ||connection.targetId == 'cd9')) || (connection.sourceId == 'cd3' && connection.targetId == 'cd2')) )) {
                 instance.deleteConnection(connection);
 
             }
@@ -587,7 +587,9 @@ jsPlumb.ready(function () {
         if (((is_connected_1_4 && is_connected_2_3) || (is_connected_1_6 && is_connected_2_5) ||(is_connected_1_8 && is_connected_2_7)||(is_connected_1_10 && is_connected_2_9))&& !unallowed_connection_present) {
 
 
-            alert("RIGHT CONNECTION.");
+            $('#alertModal').modal('show');
+            $('.modal-body').html('Connection is correct. <br> Click "+" sign of the power supply to set the voltage between 100 V and 120 V.');
+                
             const canvas = document.getElementById('textvoltimer');
     document.getElementById('cvp').style.display="block";
   
@@ -617,7 +619,9 @@ jsPlumb.ready(function () {
             
             //document.getElementById("samplerun").disabled = true;
         } else {
-            alert("WRONG CONNECTION");
+           
+            $('#alertModal').modal('show');
+            $('.modal-body').text('Connection is wrong');
             const canvas = document.getElementById('textvoltimer');
     document.getElementById('cvp').style.display="block";
   
@@ -658,7 +662,11 @@ jsPlumb.ready(function () {
        // instance.deleteEveryConnection();
      
        document.getElementById("topcover").setAttribute("onclick","puttopup()");
-    
+       cancelAnimationFrame(cancelani1);
+       cancelAnimationFrame(cancelani2);
+       cancelAnimationFrame(cancelani3);
+       cancelAnimationFrame(cancelani4);
+       cancelAnimationFrame(cancelani5);
    
     //   document.getElementById("viewsample").disabled=false;
         const canvas = document.getElementById('textvoltimer');
@@ -694,13 +702,44 @@ jsPlumb.ready(function () {
         var cd2s= document.getElementById("cd2");
          if ((is_connected_1_4)|| (is_connected_1_6)||(is_connected_1_8)||(is_connected_1_10) && (is_connected_2_3)|| (is_connected_2_5)||(is_connected_2_7)||(is_connected_2_9)
          ) {
-          // Move the target element (and connected elements) upwards 
-          
-          cd1s.style.top =  130 + '%';
-          cd2s.style.top =  130 + '%';
-  
-          // Repaint the connections
-          instance.repaintEverything();
+            var imgobjdivld1 = null;
+            var imgobjdivld2 = null;
+           
+            var currentltopld1 = 140;
+            var currentltopld2 = 140;
+           
+            clearInterval(imgobjdivld1);
+         
+            imgobjdivld1 = setInterval(frameld1, 15);
+            imgobjdivld2 = setInterval(frameld2, 15);
+
+            function frameld1() {
+                if (currentltopld1 == 130) {
+                    clearInterval(imgobjdivld1);
+
+                }
+                else {
+                    currentltopld1--;
+                    cd1s.style.top = currentltopld1 + '%';
+                   
+                    instance.repaintEverything();
+
+                }
+            }
+            function frameld2() {
+                if (currentltopld2 == 130) {
+                    clearInterval(imgobjdivld2);
+
+                }
+                else {
+                    currentltopld2--;
+                    cd2s.style.top = currentltopld2 + '%';
+                   
+                    instance.repaintEverything();
+
+                }
+            }
+
         }   
     });
 });

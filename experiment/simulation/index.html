@@ -24,7 +24,7 @@ Developer: Prakriti Dhang
 
 
 		<div class="row ">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Instructions
@@ -35,7 +35,7 @@ Developer: Prakriti Dhang
 							<li>Click on "Start the Experiment" button.</li>
 							<li> Next click on checkboxes of step 1 and click "Annealing fluorescently-labelled DNA
 								probe" button. </li>
-							<li>Select all the component for preparing 1 x binding buffer and click the below button in
+							<li>Select all the component for preparing 1 x binding buffer and click the button "1 x Binding Buffer Done" in
 								step 2</li>
 
 							<li>Now, select the required components from the dropdown for mixing protein sample.</li>
@@ -44,18 +44,17 @@ Developer: Prakriti Dhang
 							<li>Next, click on "Incubate in ice bucket" button.</li>
 							<li>Click on "Tris-borate-ETDA buffer" button to load in the electophoresis chamber.</li>
 							<li>Now, Click on the "Sample Loading" dropdown and select "Load Sample A". Click on the
-								pipette A and drag the pipette near the first well to load it. Repeat for sample B, C, D
+								pipette and drag the pipette near the first well to load it. Repeat for sample B, C, D
 								and E. </li>
 							<li>Next click on "Setting up Electrophoresis" button. Click on the top cover of the
 								electrophoresis to close it. </li>
-							<li>Now to connect, click on the negative of electrophorersis
-								chamber, drag to negative of voltage meter. Next click on the
-								positive of electrophorersis chamber and drag to positive of voltage meter. (For any
-								wrong connection, click on the wire to disconnect.)</li>
-							<li>Now click on "V" sign of the voltage meter to switch on. And "+" sign of the voltage
-								meter to set the voltage between 100 V and 120 V.</li>
+							<li>Now to connect, click on the negative connector of electrophorersis
+								chamber, drag to negative connector of power supply. Next click on the
+								positive connector of electrophorersis chamber and drag to positive connector of power supply. For any
+								wrong connection, click on the wire to disconnect. (The positive connector is colored red, whereas the negative connector is colored black.)</li>
+							<li>Now click on "V" sign of the power supply to switch ON. And click on "+" sign of the power supply to set the voltage between 100 V and 120 V.</li>
 							<li> Click on the run icon button to run the gel. The dye front will reaches the bottom of
-								the gel in dark conditions. Click on stop icon button to switch off the power and
+								the gel in dark conditions. Click on stop icon button to switch OFF the power and
 								disconnect the wires (click on the wire to disconnect).</li>
 							<li> Click on the top cover of the electrophoresis to open it. </li>
 							<li> Click on "Visualize the protein-DNA" button to visualize under Fluorescein channel.
@@ -69,9 +68,9 @@ Developer: Prakriti Dhang
 				<!--action-->
 			</div>
 		
-
-		<!--div class="row "-->
-			<div class="col-md-6">
+</div>
+		<div class="row ">
+			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Input Panels
@@ -330,13 +329,13 @@ Developer: Prakriti Dhang
 					<div class=""> -->
 					<div class="img-container">
 
-						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
+						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer" data-toggle="tooltip" data-placement="top" title="Power supply">
 						<!--img src="./images/setup.png" class="img-fluid" id="setup"-->
-						<img src="./images/top-cover.png" class="img-fluid" id="topcover">
-						<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
-						<img src="./images/ice_tray.png" class="img-fluid" id="icetray">
+						<img src="./images/top-cover.png" class="img-fluid" id="topcover" data-toggle="tooltip" data-placement="top" title="Top cover of electophoresis">
+						<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup" data-toggle="tooltip" data-placement="top" title="Bottom of electophoresis">
+						<img src="./images/ice_tray.png" class="img-fluid" id="icetray" data-toggle="tooltip" data-placement="top" title="Ice tray" >
 						<img src="./images/protein.png" class="img-fluid" id="protein" style="display: none;">
-						<img src="./images/ice_bucket.png" class="img-fluid" id="icebucket">
+						<img src="./images/ice_bucket.png" class="img-fluid" id="icebucket" data-toggle="tooltip" data-placement="top" title="Ice bucket">
 						<!--img src="./images/tube.png" class="img-fluid" id="tube"-->
 
 
@@ -378,11 +377,20 @@ Developer: Prakriti Dhang
 						<img src="./images/tubedile.png" class="img-fluid" id="tubeicee">
 
 						<!--pipete-->
-						<img src="./images/peptitea.png" class="img-fluid" id="peptitea">
-						<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
-						<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
-						<img src="./images/peptited.png" class="img-fluid" id="peptited">
-						<img src="./images/peptitee.png" class="img-fluid" id="peptitee">
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptitea">
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptitea1">
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptiteb">
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptiteb1">
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptitec">
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptitec1">
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptited">
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptited1">
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptitee">
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptitee1">
 
 
 
@@ -422,10 +430,10 @@ Developer: Prakriti Dhang
 						<canvas id="crun" style="border: 0px solid black;" onclick="rungel()"></canvas>
 						<canvas id="cstop" style="border: 0px solid black;"></canvas>
 
-						<img src="./images/uv-machine.png" class="img-fluid" id="uvmachine">
+						<img src="./images/uv-machine.png" class="img-fluid" id="uvmachine" data-toggle="tooltip" data-placement="top" title="Fluorescence sensitive imaging system.">
 						<img src="./images/output.png" class="img-fluid" id="output" style="display: none;">
-						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;" data-toggle="tooltip" data-placement="top" title="Fluorescein channel"></canvas>
+						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;" data-toggle="tooltip" data-placement="top" title="Fluorescein channel"></canvas>
 
 					</div>
 					<!-- </div> -->
@@ -455,6 +463,27 @@ Developer: Prakriti Dhang
 			</div>
 		</div>
 	</div>
+
+
+	<div class="modal" id="alertModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Alert message</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-warning" onclick="cancelmsg()" data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -498,7 +527,9 @@ Developer: Prakriti Dhang
 
 
 
-
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 	</script>
 </body>
