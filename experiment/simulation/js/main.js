@@ -260,7 +260,7 @@ function sample_dilutionE(){
 
 
 function ice_bucket(){
-  window.scrollBy(0,600);
+  window.scrollBy(0,500);
   document.getElementById("samplebprep").disabled = true;
   document.getElementById('icebucket').style.display="block";
   document.getElementById('tubeicea').style.display="block";
