@@ -343,7 +343,7 @@ function addtribuffer(){
 
 }
 
-
+var canvassdrop1, ctxsdrop1;
 function sample_sampleA(){
   document.getElementById("peptitea").style.display="block";
   document.getElementById("peptiteb").style.display="none";
@@ -353,155 +353,61 @@ function sample_sampleA(){
   document.getElementById('loadsampleb').style.pointerEvents="auto";
   document.getElementById("action").innerHTML="Loading sample A to the first well.";
   window.scrollBy(0,300);
-  const canvassdrop1 = document.getElementById('myCanvass1');
-  const ctxsdrop1 = canvassdrop1.getContext('2d');
  
-  const imagepp = document.getElementById('peptitea');
-
-  let isDragging = false;
-
-  // Function to handle mouse/touch down event
-  function handleMouseDown(event) {
-    isDragging = true;
-    imagepp.style.cursor = 'grabbing';
-    /*  imageppb.style.cursor = 'grabbing';
-     imageppc.style.cursor = 'grabbing';
-     imageppd.style.cursor = 'grabbing'; */
-
-    // Calculate the offset of the mouse/touch position relative to the image
-    const offsetX = event.clientX - imagepp.getBoundingClientRect().left;
-    const offsetY = event.clientY - imagepp.getBoundingClientRect().top;
-
-
-    // Function to handle mouse/touch move event
-    function handleMouseMove(event) {
-      if (isDragging) {
-        // Update the position of the image based on mouse/touch position
-        imagepp.style.left = event.clientX - offsetX + 'px';
-        imagepp.style.top = event.clientY - offsetY + 'px';
-
-
-
-        const imageRect = imagepp.getBoundingClientRect();
-        const canvasRect = canvassdrop1.getBoundingClientRect();
-        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
-         const canvasRect3 = canvassdrop3.getBoundingClientRect();
-         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
-
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop1.style.backgroundColor = '#7FA9FF';
-         // clearInterval(clearmpcnge1);
-        }
-
-
-        /* else {
-          document.getElementById("gelrun").disabled = true;
-          // Reset the canvas color if the image is outside the canvas
-         canvassdrop1.style.backgroundColor = 'white';
-         
-        }  */
-      }
-    }
-
-    // Function to handle mouse/touch up event
-    function handleMouseUp() {
-      isDragging = false;
-      imagepp.style.cursor = 'grabbing';
-      // Remove the event listeners when dragging is complete
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-     // imagepp.removeEventListener('touchmove', handleMouseMove);
-     // imagepp.removeEventListener('touchend', handleMouseUp);
-
-    }
-
-    // Add event listeners for mouse/touch move and up events
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-    //imagepp.addEventListener('touchmove', handleMouseMove);
-    //imagepp.addEventListener('touchend', handleMouseUp);
-  }
-
-  // Function to change the color when clicked/touched
-  
-
-  // Add event listeners for mouse/touch down and click/touch events
-  imagepp.addEventListener('mousedown', handleMouseDown);
- // imagepp.addEventListener('touchstart', handleMouseDown);
-  //imagepp.addEventListener('click', changeColor);
+  document.getElementById("peptitea").setAttribute("onclick", "p1()");
  
-
-  /*************************************** Touch sample a*************************************************/
-  function handleTouchStart(event) {
-   
-    const touch = event.touches[0];
-    const boundingRect = imagepp.getBoundingClientRect();
-  
-    isDragging = true;
-  
-    // Store the initial touch coordinates as properties on the image element
-    imagepp.initialTouchX = touch.clientX;
-    imagepp.initialTouchY = touch.clientY;
-  
-    // Calculate the offset of the touch point relative to the image
-    imagepp.offsetX = touch.clientX - boundingRect.left;
-    imagepp.offsetY = touch.clientY - boundingRect.top;
-  
-    // Add a touchmove and touchend event listener
-    window.addEventListener('touchmove', handleTouchMove);
-    window.addEventListener('touchend', handleTouchEnd);
-  }
-  
-  function handleTouchMove(event) {
-  
-    const touch = event.touches[0];
-  
-    if (isDragging) {
-        // Use the stored initial touch coordinates to calculate the image position
-        const imageX = touch.clientX - imagepp.offsetX;
-        const imageY = touch.clientY - imagepp.offsetY;
-  
-        // Update the position of the image based on touch position
-        imagepp.style.left = imageX + 'px';
-        imagepp.style.top = imageY + 'px';
-  
-        const imageRect = imagepp.getBoundingClientRect();
-        const canvasRect = canvassdrop1.getBoundingClientRect();
-     
-  
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop1.style.backgroundColor = '#7FA9FF';
-          //clearInterval(clearmpcnge1);
-        }
-    }
-  }
-  
-  function handleTouchEnd() {
-   
-    isDragging = false;
-  
-    // Remove the touchmove and touchend event listeners when dragging is complete
-    window.removeEventListener('touchmove', handleTouchMove);
-    window.removeEventListener('touchend', handleTouchEnd);
-  }
-
-  /* function changeColor() {
-    document.getElementById("peptitea").style.display = "none";
-    document.getElementById("peptitea1").style.display = "block";
-    clearmpcnge1 = setInterval(changemp1, 300);
-
-    function changemp1() {
-      document.getElementById("peptitea").style.display = "block";
-      document.getElementById("peptitea1").style.display = "none";
-    }
-  } */
-  
-  imagepp.addEventListener('touchstart', handleTouchStart);
- // imagepp.addEventListener('touchend', changeColor);
 }
 
+function p1() {
+  clearp1 = setInterval(changep1, 200);
+  document.getElementById("peptitea").removeAttribute("onclick", "p1()");
+}
+
+function changep1() {
+  clearInterval(clearp1);
+  document.getElementById("peptitea").style.display = "none";
+  document.getElementById("peptitea1").style.display = "block";
+  clearmpcnge1 = setInterval(changemp1, 300);
+
+  function changemp1() {
+    document.getElementById("peptitea").style.display = "block";
+    document.getElementById("peptitea1").style.display = "none";
+    clearmovep1 = setInterval(movep1, 300);
+  }
+}
+
+function movep1() {
+  clearInterval(clearmpcnge1);
+  clearInterval(clearmovep1);
+  document.getElementById("peptitea").style.top = 97 + "%";
+  document.getElementById("peptitea").style.left = 9.5 + "%";
+  document.getElementById("peptitea1").style.top = 100 + "%";
+  document.getElementById("peptitea1").style.left = 9.5 + "%";
+  document.getElementById("peptitea").setAttribute("onclick", "p11()");
+}
+
+function p11() {
+
+  clearp11 = setInterval(changep11, 200);
+  document.getElementById("peptitea").removeAttribute("onclick", "p11()");
+}
+
+function changep11() {
+
+  clearInterval(clearp11);
+  document.getElementById("peptitea").style.display = "none";
+  document.getElementById("peptitea1").style.display = "block";
+  clearmpcnge11 = setInterval(changemp11, 300);
+
+  function changemp11() {
+    canvassdrop1 = document.getElementById('myCanvass1');
+    ctxsdrop1 = canvassdrop1.getContext('2d');
+    document.getElementById("peptitea").style.display = "block";
+    document.getElementById("peptitea1").style.display = "none";
+    canvassdrop1.style.backgroundColor = '#7FA9FF';
+    clearInterval(clearmpcnge11);
+  }
+}
 
 
 
@@ -515,155 +421,60 @@ function sample_sampleB(){
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample B to the second well.";
   window.scrollBy(0,300);
-  const canvassdrop2 = document.getElementById('myCanvass2');
-  const ctxsdrop2 = canvassdrop2.getContext('2d');
- 
-  const imagepp2 = document.getElementById('peptiteb');
-
-  let isDragging2 = false;
-
-  // Function to handle mouse/touch down event
-  function handleMouseDown(event) {
-    isDragging2 = true;
-    imagepp2.style.cursor = 'grabbing';
-    /*  imageppb.style.cursor = 'grabbing';
-     imageppc.style.cursor = 'grabbing';
-     imageppd.style.cursor = 'grabbing'; */
-
-    // Calculate the offset of the mouse/touch position relative to the image
-    const offsetX = event.clientX - imagepp2.getBoundingClientRect().left;
-    const offsetY = event.clientY - imagepp2.getBoundingClientRect().top;
+  document.getElementById("peptiteb").setAttribute("onclick", "p2()");
 
 
-    // Function to handle mouse/touch move event
-    function handleMouseMove(event) {
-      if (isDragging2) {
-        // Update the position of the image based on mouse/touch position
-        imagepp2.style.left = event.clientX - offsetX + 'px';
-        imagepp2.style.top = event.clientY - offsetY + 'px';
+}
 
+function p2() {
+  clearp2 = setInterval(changep2, 200);
+  document.getElementById("peptiteb").removeAttribute("onclick", "p2()");
+}
 
+function changep2() {
+  clearInterval(clearp2);
+  document.getElementById("peptiteb").style.display = "none";
+  document.getElementById("peptiteb1").style.display = "block";
+  clearmpcnge2 = setInterval(changemp2, 300);
 
-        const imageRect = imagepp2.getBoundingClientRect();
-        const canvasRect = canvassdrop2.getBoundingClientRect();
-        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
-         const canvasRect3 = canvassdrop3.getBoundingClientRect();
-         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
-
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop2.style.backgroundColor = '#7FA9FF';
-          //clearInterval(clearmpcnge2);
-        }
-
-
-        /* else {
-          document.getElementById("gelrun").disabled = true;
-          // Reset the canvas color if the image is outside the canvas
-         canvassdrop1.style.backgroundColor = 'white';
-         
-        }  */
-      }
-    }
-
-    // Function to handle mouse/touch up event
-    function handleMouseUp() {
-      isDragging2 = false;
-      imagepp2.style.cursor = 'grabbing';
-      // Remove the event listeners when dragging is complete
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-     // imagepp2.removeEventListener('touchmove', handleMouseMove);
-     // imagepp2.removeEventListener('touchend', handleMouseUp);
-
-    }
-
-    // Add event listeners for mouse/touch move and up events
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-   // imagepp2.addEventListener('touchmove', handleMouseMove);
-   // imagepp2.addEventListener('touchend', handleMouseUp);
+  function changemp2() {
+    document.getElementById("peptiteb").style.display = "block";
+    document.getElementById("peptiteb1").style.display = "none";
+    clearmovep2 = setInterval(movep2, 300);
   }
+}
 
-  // Function to change the color when clicked/touched
-  function changeColor() {
-    document.getElementById("peptiteb").style.display = "none";
-    document.getElementById("peptiteb1").style.display = "block";
-    clearmpcnge2 = setInterval(changemp2, 300);
+function movep2() {
+  clearInterval(clearmpcnge2);
+  clearInterval(clearmovep2);
+  document.getElementById("peptiteb").style.top = 97 + "%";
+  document.getElementById("peptiteb").style.left = 12 + "%";
+  document.getElementById("peptiteb1").style.top = 100 + "%";
+  document.getElementById("peptiteb1").style.left = 12 + "%";
+  document.getElementById("peptiteb").setAttribute("onclick", "p22()");
+}
 
-    function changemp2() {
-      document.getElementById("peptiteb").style.display = "block";
-      document.getElementById("peptiteb1").style.display = "none";
-    }
+function p22() {
+
+  clearp22 = setInterval(changep22, 200);
+  document.getElementById("peptiteb").removeAttribute("onclick", "p22()");
+}
+
+function changep22() {
+
+  clearInterval(clearp22);
+  document.getElementById("peptiteb").style.display = "none";
+  document.getElementById("peptiteb1").style.display = "block";
+  clearmpcnge22 = setInterval(changemp22, 300);
+
+  function changemp22() {
+    var canvassdrop2 = document.getElementById('myCanvass2');
+    var ctxsdrop2 = canvassdrop2.getContext('2d');
+    document.getElementById("peptiteb").style.display = "block";
+    document.getElementById("peptiteb1").style.display = "none";
+    canvassdrop2.style.backgroundColor = '#7FA9FF';
+    clearInterval(clearmpcnge22);
   }
-
-  // Add event listeners for mouse/touch down and click/touch events
-  imagepp2.addEventListener('mousedown', handleMouseDown);
-  //imagepp2.addEventListener('touchstart', handleMouseDown);
-  //imagepp2.addEventListener('click', changeColor);
-  //imagepp2.addEventListener('touchend', changeColort);
-
-  /*********************************************************** Touch sample b*************************************************************************************/
-
-
-  function handleTouchStart(event) {
-    console.log('Touchstart event triggered');
-    const touch = event.touches[0];
-    const boundingRect = imagepp2.getBoundingClientRect();
-  
-    isDragging2 = true;
-  
-    // Store the initial touch coordinates as properties on the image element
-    imagepp2.initialTouchX = touch.clientX;
-    imagepp2.initialTouchY = touch.clientY;
-  
-    // Calculate the offset of the touch point relative to the image
-    imagepp2.offsetX = touch.clientX - boundingRect.left;
-    imagepp2.offsetY = touch.clientY - boundingRect.top;
-  
-    // Add a touchmove and touchend event listener
-    window.addEventListener('touchmove', handleTouchMove);
-    window.addEventListener('touchend', handleTouchEnd);
-  }
-  
-  function handleTouchMove(event) {
-    console.log('Touchmove event triggered');
-    const touch = event.touches[0];
-  
-    if (isDragging2) {
-        // Use the stored initial touch coordinates to calculate the image position
-        const imageX = touch.clientX - imagepp2.offsetX;
-        const imageY = touch.clientY - imagepp2.offsetY;
-  
-        // Update the position of the image based on touch position
-        imagepp2.style.left = imageX + 'px';
-        imagepp2.style.top = imageY + 'px';
-  
-        const imageRect = imagepp2.getBoundingClientRect();
-        const canvasRect = canvassdrop2.getBoundingClientRect();
-     
-  
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop2.style.backgroundColor = '#7FA9FF';
-          //clearInterval(clearmpcnget2);
-        }
-    }
-  }
-  
-  function handleTouchEnd() {
-    console.log('Touchend event triggered');
-    isDragging2 = false;
-  
-    // Remove the touchmove and touchend event listeners when dragging is complete
-    window.removeEventListener('touchmove', handleTouchMove);
-    window.removeEventListener('touchend', handleTouchEnd);
-  }
-  
-  
-  imagepp2.addEventListener('touchstart', handleTouchStart);
-
-
 }
 
 
@@ -676,153 +487,60 @@ function sample_sampleC(){
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample C to the third well.";
   window.scrollBy(0,300);
- 
-  const canvassdrop3 = document.getElementById('myCanvass3');
-  const ctxsdrop3 = canvassdrop3.getContext('2d');
-
-  const imagepp3 = document.getElementById('peptitec');
-
-  let isDragging3 = false;
-
-  // Function to handle mouse/touch down event
-  function handleMouseDown(event) {
-    isDragging3 = true;
-    imagepp3.style.cursor = 'grabbing';
-   
-    // Calculate the offset of the mouse/touch position relative to the image
-    const offsetX = event.clientX - imagepp3.getBoundingClientRect().left;
-    const offsetY = event.clientY - imagepp3.getBoundingClientRect().top;
-
-
-    // Function to handle mouse/touch move event
-    function handleMouseMove(event) {
-      if (isDragging3) {
-        // Update the position of the image based on mouse/touch position
-        imagepp3.style.left = event.clientX - offsetX + 'px';
-        imagepp3.style.top = event.clientY - offsetY + 'px';
-
-
-
-        const imageRect = imagepp3.getBoundingClientRect();
-        const canvasRect = canvassdrop3.getBoundingClientRect();
-        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
-         const canvasRect3 = canvassdrop3.getBoundingClientRect();
-         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
-
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop3.style.backgroundColor = '#7FA9FF';
-         // clearInterval(clearmpcnge3);
-        }
-
-
-        /* else {
-          document.getElementById("gelrun").disabled = true;
-          // Reset the canvas color if the image is outside the canvas
-         canvassdrop1.style.backgroundColor = 'white';
-         
-        }  */
-      }
-    }
-
-    // Function to handle mouse/touch up event
-    function handleMouseUp() {
-      isDragging3 = false;
-      imagepp3.style.cursor = 'grabbing';
-      // Remove the event listeners when dragging is complete
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-      //imagepp3.removeEventListener('touchmove', handleMouseMove);
-     // imagepp3.removeEventListener('touchend', handleMouseUp);
-
-    }
-
-    // Add event listeners for mouse/touch move and up events
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-    //imagepp3.addEventListener('touchmove', handleMouseMove);
-    //imagepp3.addEventListener('touchend', handleMouseUp);
-  }
-
-  // Function to change the color when clicked/touched
-  /* function changeColor3() {
-    document.getElementById("peptitec").style.display = "none";
-    document.getElementById("peptitec1").style.display = "block";
-    clearmpcnge3 = setInterval(changemp3, 300);
-
-    function changemp3() {
-      document.getElementById("peptitec").style.display = "block";
-      document.getElementById("peptitec1").style.display = "none";
-    }
-  } */
-
-  // Add event listeners for mouse/touch down and click/touch events
-  imagepp3.addEventListener('mousedown', handleMouseDown);
-  //imagepp3.addEventListener('touchstart', handleMouseDown);
-  //imagepp3.addEventListener('click', changeColor3);
-  //imagepp3.addEventListener('touchend', changeColor3);
-
-  /**************************************************** Touch c*************************************************/
-  function handleTouchStart(event) {
-    console.log('Touchstart event triggered');
-    const touch = event.touches[0];
-    const boundingRect = imagepp3.getBoundingClientRect();
+ document.getElementById("peptitec").setAttribute("onclick", "p3()");
   
-    isDragging3 = true;
-  
-    // Store the initial touch coordinates as properties on the image element
-    imagepp3.initialTouchX = touch.clientX;
-    imagepp3.initialTouchY = touch.clientY;
-  
-    // Calculate the offset of the touch point relative to the image
-    imagepp3.offsetX = touch.clientX - boundingRect.left;
-    imagepp3.offsetY = touch.clientY - boundingRect.top;
-  
-    // Add a touchmove and touchend event listener
-    window.addEventListener('touchmove', handleTouchMove);
-    window.addEventListener('touchend', handleTouchEnd);
-  }
-  
-  function handleTouchMove(event) {
-    console.log('Touchmove event triggered');
-    const touch = event.touches[0];
-  
-    if (isDragging3) {
-        // Use the stored initial touch coordinates to calculate the image position
-        const imageX = touch.clientX - imagepp3.offsetX;
-        const imageY = touch.clientY - imagepp3.offsetY;
-  
-        // Update the position of the image based on touch position
-        imagepp3.style.left = imageX + 'px';
-        imagepp3.style.top = imageY + 'px';
-  
-        const imageRect = imagepp3.getBoundingClientRect();
-        const canvasRect = canvassdrop3.getBoundingClientRect();
-     
-  
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop3.style.backgroundColor = '#7FA9FF';
-          //clearInterval(clearmpcnge3);
-        }
-    }
-  }
-  
-  function handleTouchEnd() {
-    console.log('Touchend event triggered');
-    isDragging3 = false;
-  
-    // Remove the touchmove and touchend event listeners when dragging is complete
-    window.removeEventListener('touchmove', handleTouchMove);
-    window.removeEventListener('touchend', handleTouchEnd);
-  }
-  
-  imagepp3.addEventListener('touchstart', handleTouchStart);
-
-  
-
 }
 
+function p3() {
+  clearp3 = setInterval(changep3, 200);
+  document.getElementById("peptitec").removeAttribute("onclick", "pc()");
+}
+
+function changep3() {
+  clearInterval(clearp3);
+  document.getElementById("peptitec").style.display = "none";
+  document.getElementById("peptitec1").style.display = "block";
+  clearmpcnge3 = setInterval(changemp3, 300);
+
+  function changemp3() {
+    document.getElementById("peptitec").style.display = "block";
+    document.getElementById("peptitec1").style.display = "none";
+    clearmovep3 = setInterval(movep3, 300);
+  }
+}
+
+function movep3() {
+  clearInterval(clearmpcnge3);
+  clearInterval(clearmovep3);
+  document.getElementById("peptitec").style.top = 97 + "%";
+  document.getElementById("peptitec").style.left = 14.5 + "%";
+  document.getElementById("peptitec1").style.top = 100 + "%";
+  document.getElementById("peptitec1").style.left = 14.5 + "%";
+  document.getElementById("peptitec").setAttribute("onclick", "p33()");
+}
+
+function p33() {
+
+  clearp33 = setInterval(changep33, 200);
+  document.getElementById("peptitec").removeAttribute("onclick", "p33()");
+}
+
+function changep33() {
+
+  clearInterval(clearp33);
+  document.getElementById("peptitec").style.display = "none";
+  document.getElementById("peptitec1").style.display = "block";
+  clearmpcnge33 = setInterval(changemp33, 300);
+
+  function changemp33() {
+    var canvassdrop3 = document.getElementById('myCanvass3');
+    var ctxsdrop3 = canvassdrop3.getContext('2d');
+    document.getElementById("peptitec").style.display = "block";
+    document.getElementById("peptitec1").style.display = "none";
+    canvassdrop3.style.backgroundColor = '#7FA9FF';
+    clearInterval(clearmpcnge33);
+  }
+}
 
 
 function sample_sampleD(){
@@ -834,152 +552,61 @@ function sample_sampleD(){
   document.getElementById("peptitee").style.display="none";
   document.getElementById("action").innerHTML="Loading sample D to the fourth well.";
   window.scrollBy(0,300);
-  const canvassdrop4 = document.getElementById('myCanvass4');
-  const ctxsdrop4 = canvassdrop4.getContext('2d');
- 
-  const imagepp4 = document.getElementById('peptited');
-
-  let isDragging4 = false;
-
-  // Function to handle mouse/touch down event
-  function handleMouseDown(event) {
-    isDragging4 = true;
-    imagepp4.style.cursor = 'grabbing';
   
-    // Calculate the offset of the mouse/touch position relative to the image
-    const offsetX = event.clientX - imagepp4.getBoundingClientRect().left;
-    const offsetY = event.clientY - imagepp4.getBoundingClientRect().top;
-
-
-    // Function to handle mouse/touch move event
-    function handleMouseMove(event) {
-      if (isDragging4) {
-        // Update the position of the image based on mouse/touch position
-        imagepp4.style.left = event.clientX - offsetX + 'px';
-        imagepp4.style.top = event.clientY - offsetY + 'px';
-
-
-
-        const imageRect = imagepp4.getBoundingClientRect();
-        const canvasRect = canvassdrop4.getBoundingClientRect();
-        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
-         const canvasRect3 = canvassdrop3.getBoundingClientRect();
-         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
-
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop4.style.backgroundColor = '#7FA9FF';
-          //clearInterval(clearmpcnge4);
-        }
-
-
-        /* else {
-          document.getElementById("gelrun").disabled = true;
-          // Reset the canvas color if the image is outside the canvas
-         canvassdrop1.style.backgroundColor = 'white';
-         
-        }  */
-      }
-    }
-
-    // Function to handle mouse/touch up event
-    function handleMouseUp() {
-      isDragging4 = false;
-      imagepp4.style.cursor = 'grabbing';
-      // Remove the event listeners when dragging is complete
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-     // imagepp4.removeEventListener('touchmove', handleMouseMove);
-     // imagepp4.removeEventListener('touchend', handleMouseUp);
-
-    }
-
-    // Add event listeners for mouse/touch move and up events
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-   // imagepp4.addEventListener('touchmove', handleMouseMove);
-   // imagepp4.addEventListener('touchend', handleMouseUp);
-  }
-
-  // Function to change the color when clicked/touched
- /*  function changeColor4() {
-    document.getElementById("peptited").style.display = "none";
-    document.getElementById("peptited1").style.display = "block";
-    clearmpcnge4 = setInterval(changemp4, 300);
-
-    function changemp4() {
-      document.getElementById("peptited").style.display = "block";
-      document.getElementById("peptited1").style.display = "none";
-    }
-  } */
-
-  // Add event listeners for mouse/touch down and click/touch events
-  imagepp4.addEventListener('mousedown', handleMouseDown);
-  //imagepp4.addEventListener('touchstart', handleMouseDown);
- // imagepp4.addEventListener('click', changeColor4);
-  //imagepp4.addEventListener('touchend', changeColor4);
-
-  /************************************************** Touch sample d*************************************************************/
-
-  function handleTouchStart(event) {
-    console.log('Touchstart event triggered');
-    const touch = event.touches[0];
-    const boundingRect = imagepp4.getBoundingClientRect();
-  
-    isDragging4 = true;
-  
-    // Store the initial touch coordinates as properties on the image element
-    imagepp4.initialTouchX = touch.clientX;
-    imagepp4.initialTouchY = touch.clientY;
-  
-    // Calculate the offset of the touch point relative to the image
-    imagepp4.offsetX = touch.clientX - boundingRect.left;
-    imagepp4.offsetY = touch.clientY - boundingRect.top;
-  
-    // Add a touchmove and touchend event listener
-    window.addEventListener('touchmove', handleTouchMove);
-    window.addEventListener('touchend', handleTouchEnd);
-  }
-  
-  function handleTouchMove(event) {
-    console.log('Touchmove event triggered');
-    const touch = event.touches[0];
-  
-    if (isDragging4) {
-        // Use the stored initial touch coordinates to calculate the image position
-        const imageX = touch.clientX - imagepp4.offsetX;
-        const imageY = touch.clientY - imagepp4.offsetY;
-  
-        // Update the position of the image based on touch position
-        imagepp4.style.left = imageX + 'px';
-        imagepp4.style.top = imageY + 'px';
-  
-        const imageRect = imagepp4.getBoundingClientRect();
-        const canvasRect = canvassdrop4.getBoundingClientRect();
-     
-  
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop4.style.backgroundColor = '#7FA9FF';
-          //clearInterval(clearmpcnge4);
-        }
-    }
-  }
-  
-  function handleTouchEnd() {
-    console.log('Touchend event triggered');
-    isDragging4 = false;
-  
-    // Remove the touchmove and touchend event listeners when dragging is complete
-    window.removeEventListener('touchmove', handleTouchMove);
-    window.removeEventListener('touchend', handleTouchEnd);
-  }
-  
-  imagepp4.addEventListener('touchstart', handleTouchStart);
-
+document.getElementById("peptited").setAttribute("onclick", "p4()");
 
 }
 
+function p4() {
+  clearp4 = setInterval(changep4, 200);
+  document.getElementById("peptited").removeAttribute("onclick", "p4()");
+}
+
+function changep4() {
+  clearInterval(clearp4);
+  document.getElementById("peptited").style.display = "none";
+  document.getElementById("peptited1").style.display = "block";
+  clearmpcnge4 = setInterval(changemp4, 300);
+
+  function changemp4() {
+    document.getElementById("peptited").style.display = "block";
+    document.getElementById("peptited1").style.display = "none";
+    clearmovep4 = setInterval(movep4, 300);
+  }
+}
+
+function movep4() {
+  clearInterval(clearmpcnge4);
+  clearInterval(clearmovep4);
+  document.getElementById("peptited").style.top = 97 + "%";
+  document.getElementById("peptited").style.left = 16.5 + "%";
+  document.getElementById("peptited1").style.top = 100 + "%";
+  document.getElementById("peptited1").style.left = 16.5 + "%";
+  document.getElementById("peptited").setAttribute("onclick", "p44()");
+}
+
+function p44() {
+
+  clearp44 = setInterval(changep44, 200);
+  document.getElementById("peptited").removeAttribute("onclick", "p44()");
+}
+
+function changep44() {
+
+  clearInterval(clearp44);
+  document.getElementById("peptited").style.display = "none";
+  document.getElementById("peptited1").style.display = "block";
+  clearmpcnge44 = setInterval(changemp44, 300);
+
+  function changemp44() {
+    var canvassdrop4 = document.getElementById('myCanvass4');
+    var ctxsdrop4 = canvassdrop4.getContext('2d');
+    document.getElementById("peptited").style.display = "block";
+    document.getElementById("peptited1").style.display = "none";
+    canvassdrop4.style.backgroundColor = '#7FA9FF';
+    clearInterval(clearmpcnge44);
+  }
+}
 
 function sample_sampleE(){
   document.getElementById("peptitee").style.display="block";
@@ -990,178 +617,59 @@ function sample_sampleE(){
   document.getElementById("rungel").disabled=false;
   document.getElementById("action").innerHTML="Loading sample E to the fifth well.";
   window.scrollBy(0,300);
-  const canvassdrop5 = document.getElementById('myCanvass5');
-  const ctxsdrop5 = canvassdrop5.getContext('2d');
- 
-  const imagepp5 = document.getElementById('peptitee');
-
-  let isDragging5 = false;
-
-  // Function to handle mouse/touch down event
-  function handleMouseDown(event) {
-    isDragging5 = true;
-    imagepp5.style.cursor = 'grabbing';
-  
-    // Calculate the offset of the mouse/touch position relative to the image
-    const offsetX = event.clientX - imagepp5.getBoundingClientRect().left;
-    const offsetY = event.clientY - imagepp5.getBoundingClientRect().top;
-
-
-    // Function to handle mouse/touch move event
-    function handleMouseMove(event) {
-      if (isDragging5) {
-        // Update the position of the image based on mouse/touch position
-        imagepp5.style.left = event.clientX - offsetX + 'px';
-        imagepp5.style.top = event.clientY - offsetY + 'px';
-
-
-
-        const imageRect = imagepp5.getBoundingClientRect();
-        const canvasRect = canvassdrop5.getBoundingClientRect();
-        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
-         const canvasRect3 = canvassdrop3.getBoundingClientRect();
-         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
-
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop5.style.backgroundColor = '#7FA9FF';
-          //clearInterval(clearmpcnge5);
-        }
-
-
-        /* else {
-          document.getElementById("gelrun").disabled = true;
-          // Reset the canvas color if the image is outside the canvas
-         canvassdrop1.style.backgroundColor = 'white';
-         
-        }  */
-      }
-    }
-
-    // Function to handle mouse/touch up event
-    function handleMouseUp() {
-      isDragging5 = false;
-      imagepp5.style.cursor = 'grabbing';
-      // Remove the event listeners when dragging is complete
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-     // imagepp5.removeEventListener('touchmove', handleMouseMove);
-    //  imagepp5.removeEventListener('touchend', handleMouseUp);
-
-    }
-
-    // Add event listeners for mouse/touch move and up events
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-   // imagepp5.addEventListener('touchmove', handleMouseMove);
-   // imagepp5.addEventListener('touchend', handleMouseUp);
-  }
-
-  // Function to change the color when clicked/touched
-  /* function changeColor5() {
-    document.getElementById("peptitee").style.display = "none";
-    document.getElementById("peptitee1").style.display = "block";
-    clearmpcnge5 = setInterval(changemp5, 300);
-
-    function changemp5() {
-      document.getElementById("peptitee").style.display = "block";
-      document.getElementById("peptitee1").style.display = "none";
-    }
-  }
- */
-  // Add event listeners for mouse/touch down and click/touch events
-  imagepp5.addEventListener('mousedown', handleMouseDown);
-  //imagepp5.addEventListener('touchstart', handleMouseDown);
-  //imagepp5.addEventListener('click', changeColor5);
-  //imagepp5.addEventListener('touchend', changeColor5);
-
-/************************************************************* Touch sample e****************************************************************/
-
-function handleTouchStart(event) {
-  console.log('Touchstart event triggered');
-  const touch = event.touches[0];
-  const boundingRect = imagepp5.getBoundingClientRect();
-
-  isDragging5 = true;
-
-  // Store the initial touch coordinates as properties on the image element
-  imagepp5.initialTouchX = touch.clientX;
-  imagepp5.initialTouchY = touch.clientY;
-
-  // Calculate the offset of the touch point relative to the image
-  imagepp5.offsetX = touch.clientX - boundingRect.left;
-  imagepp5.offsetY = touch.clientY - boundingRect.top;
-
-  // Add a touchmove and touchend event listener
-  window.addEventListener('touchmove', handleTouchMove);
-  window.addEventListener('touchend', handleTouchEnd);
-}
-
-function handleTouchMove(event) {
-  console.log('Touchmove event triggered');
-  const touch = event.touches[0];
-
-  if (isDragging5) {
-      // Use the stored initial touch coordinates to calculate the image position
-      const imageX = touch.clientX - imagepp5.offsetX;
-      const imageY = touch.clientY - imagepp5.offsetY;
-
-      // Update the position of the image based on touch position
-      imagepp5.style.left = imageX + 'px';
-      imagepp5.style.top = imageY + 'px';
-
-      const imageRect = imagepp5.getBoundingClientRect();
-      const canvasRect = canvassdrop5.getBoundingClientRect();
-   
-
-      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-        // Change the canvas color when the image touches it
-        canvassdrop5.style.backgroundColor = '#7FA9FF';
-       // clearInterval(clearmpcnge5);
-      }
-  }
-}
-
-function handleTouchEnd() {
-  console.log('Touchend event triggered');
-  isDragging5 = false;
-
-  // Remove the touchmove and touchend event listeners when dragging is complete
-  window.removeEventListener('touchmove', handleTouchMove);
-  window.removeEventListener('touchend', handleTouchEnd);
-}
-
-imagepp5.addEventListener('touchstart', handleTouchStart);
+  document.getElementById("peptitee").setAttribute("onclick", "p5()");
 
 }
 
-var imgtopsetup = null;
-function putdowntop(){
-  var topsetup = document.getElementById("topcover");
-  
+function p5() {
+  clearp5 = setInterval(changep5, 200);
+  document.getElementById("peptitee").removeAttribute("onclick", "p5()");
+}
 
-  var topsetupt = 120; //initial  position
-  clearInterval(imgtopsetup);
-  //clearInterval(imgtbdown);
-  imgtopsetup = setInterval(frame, 15); /* frame is 10 denotes the speed of the movement*/
+function changep5() {
+  clearInterval(clearp5);
+  document.getElementById("peptitee").style.display = "none";
+  document.getElementById("peptitee1").style.display = "block";
+  clearmpcnge5 = setInterval(changemp5, 300);
 
-  function frame() {
-    if (topsetupt == 130) {
-
-      clearInterval(imgtopsetup);
-      document.getElementById("topcover").removeAttribute("onclick","putdowntop()");
-
-      //imgtbdown = setInterval(frame, 20);
-
-
-    } else {
-
-      topsetupt++;
-      topsetup.style.top = topsetupt + '%';
-
-    }
+  function changemp5() {
+    document.getElementById("peptitee").style.display = "block";
+    document.getElementById("peptitee1").style.display = "none";
+    clearmovep5= setInterval(movep5, 300);
   }
+}
 
+function movep5() {
+  clearInterval(clearmpcnge5);
+  clearInterval(clearmovep5);
+  document.getElementById("peptitee").style.top = 97 + "%";
+  document.getElementById("peptitee").style.left = 18.5 + "%";
+  document.getElementById("peptitee1").style.top = 100 + "%";
+  document.getElementById("peptitee1").style.left = 18.5 + "%";
+  document.getElementById("peptitee").setAttribute("onclick", "p55()");
+}
+
+function p55() {
+
+  clearp55 = setInterval(changep55, 200);
+  document.getElementById("peptitee").removeAttribute("onclick", "p55()");
+}
+
+function changep55() {
+
+  clearInterval(clearp55);
+  document.getElementById("peptitee").style.display = "none";
+  document.getElementById("peptitee1").style.display = "block";
+  clearmpcnge55 = setInterval(changemp55, 300);
+
+  function changemp55() {
+    var canvassdrop5 = document.getElementById('myCanvass5');
+    var ctxsdrop5 = canvassdrop5.getContext('2d');
+    document.getElementById("peptitee").style.display = "block";
+    document.getElementById("peptitee1").style.display = "none";
+    canvassdrop5.style.backgroundColor = '#7FA9FF';
+    clearInterval(clearmpcnge55);
+  }
 }
 
 var imgicetray = null;
