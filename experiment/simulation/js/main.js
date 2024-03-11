@@ -672,6 +672,36 @@ function changep55() {
   }
 }
 
+
+var imgtopsetup = null;
+function putdowntop(){
+  var topsetup = document.getElementById("topcover");
+  
+
+  var topsetupt = 120; //initial  position
+  clearInterval(imgtopsetup);
+  //clearInterval(imgtbdown);
+  imgtopsetup = setInterval(frame, 15); /* frame is 10 denotes the speed of the movement*/
+
+  function frame() {
+    if (topsetupt == 130) {
+
+      clearInterval(imgtopsetup);
+      document.getElementById("topcover").removeAttribute("onclick","putdowntop()");
+
+      //imgtbdown = setInterval(frame, 20);
+
+
+    } else {
+
+      topsetupt++;
+      topsetup.style.top = topsetupt + '%';
+
+    }
+  }
+
+}
+
 var imgicetray = null;
 function putupicetray(){
   var topsetup = document.getElementById("icetray");
