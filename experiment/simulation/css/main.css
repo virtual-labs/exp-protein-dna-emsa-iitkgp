@@ -56,9 +56,10 @@ Developer: Prakriti Dhang
 
 #icebucket {
     position: absolute;
-    width: 22%;
-    top: 30%;
-    left: 76%;
+    width: 20%;
+    height:80%;
+    top: 43.5%;
+    left: 77%;
     display:none;
     cursor:pointer;
 }
@@ -141,56 +142,100 @@ Developer: Prakriti Dhang
 
 #tubeicea{
     position: absolute;
-    width:2.8%;
-    top:44%;
-    left:81.2%;
+    width:3%;
+    top:20%;
+    left:79%;
     display: none;
     z-index: 5;
 }
 
 #tubeiceb{
     position: absolute;
-    width: 2.8%;
-    top:47%;
-    left:83.3%;
+    width: 3%;
+    top:20%;
+    left:82.5%;
     display: none;
     z-index: 5;
 }
 
 #tubeicec{
     position: absolute;
-    width: 2.8%;
-    top:44%;
-    left:85.4%;
+    width: 3%;
+    top:23.5%;
+    left:86%;
     display: none;
     z-index: 5;
 }
 #tubeiced{
     position: absolute;
-    width: 2.8%;
-    top:47%;
-    left:87.6%;
+    width: 3%;
+    top:21%;
+    left:89%;
     display: none;
     z-index: 5;
 }
 
 #tubeicee{
     position: absolute;
-    width: 2.8%;
-    top:44%;
-    left:89.7%;
+    width: 3%;
+    top:18%;
+    left:92.5%;
+    display: none;
+    z-index: 5;
+}
+
+/* incubate in ice open tube*/
+
+#tubeiceao{
+    position: absolute;
+    width:5.4%;
+    top:3%;
+    left:77%;
+    display: none;
+    z-index: 5;
+}
+
+#tubeicebo{
+    position: absolute;
+    width: 5.4%;
+    top:4%;
+    left:80.2%;
+    display: none;
+    z-index: 5;
+}
+
+#tubeiceco{
+    position: absolute;
+    width: 5.4%;
+    top:7%;
+    left:83.6%;
+    display: none;
+    z-index: 5;
+}
+#tubeicedo{
+    position: absolute;
+    width: 5.4%;
+    top:5.8%;
+    left:86.7%;
+    display: none;
+    z-index: 5;
+}
+
+#tubeiceeo{
+    position: absolute;
+    width: 5.4%;
+    top:2%;
+    left:90.1%;
     display: none;
     z-index: 5;
 }
 
 
-
-
 #peptitea{
     position: absolute;
     width:  1.8%;
-    top:-15%;
-    left:82%;
+    top:-30%;
+    left:80%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -200,8 +245,8 @@ Developer: Prakriti Dhang
 #peptitea1{
     position: absolute;
     width:  1.8%;
-    top:-12%;
-    left:82%;
+    top:-27%;
+    left:80%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -212,8 +257,8 @@ Developer: Prakriti Dhang
 #peptiteb{
     position: absolute;
     width:  1.8%;
-    top:-15%;
-    left:84%;
+    top:-30%;
+    left:83.5%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -223,8 +268,8 @@ Developer: Prakriti Dhang
 #peptiteb1{
     position: absolute;
     width:  1.8%;
-    top:-12%;
-    left:84%;
+    top:-27%;
+    left:83.5%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -235,8 +280,8 @@ Developer: Prakriti Dhang
 #peptitec{
     position: absolute;
     width:  1.8%;
-    top:-15%;
-    left:86.2%;
+    top:-30%;
+    left:87%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -244,8 +289,8 @@ Developer: Prakriti Dhang
 #peptitec1{
     position: absolute;
     width:  1.8%;
-    top:-12%;
-    left:86.2%;
+    top:-27%;
+    left:87%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -254,8 +299,8 @@ Developer: Prakriti Dhang
 #peptited{
     position: absolute;
     width:  1.8%;
-    top:-15%;
-    left:88.2%;
+    top:-30%;
+    left:90%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -263,8 +308,8 @@ Developer: Prakriti Dhang
 #peptited1{
     position: absolute;
     width:  1.8%;
-    top:-12%;
-    left:88.2%;
+    top:-27%;
+    left:90%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -274,8 +319,8 @@ Developer: Prakriti Dhang
 #peptitee{
     position: absolute;
     width:  1.8%;
-    top:-15%;
-    left:90.5%;
+    top:-30%;
+    left:93.6%;
     display: none;
     z-index: 4;
     cursor: pointer;
@@ -283,8 +328,8 @@ Developer: Prakriti Dhang
 #peptitee1{
     position: absolute;
     width:  1.8%;
-    top:-12%;
-    left:90.5%;
+    top:-27%;
+    left:93.6%;
     display: none;
     z-index: 4;
     cursor: pointer;
