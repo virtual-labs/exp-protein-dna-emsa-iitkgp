@@ -22,7 +22,7 @@
 3.	Mix the protein sample with the fluorescently-labelled DNA probe and incubate in ice for 20-30 minutes to allow the protein-DNA complex to form. 
 
 <div align="center">
-<img src="images/sampleiceb.png" class="img-fluid">
+<img src="images/icebucketdil.png" class="img-fluid">
 </div>
 
 4.	Prepare a polyacrylamide gel and pre-run it in electrophoresis buffer for 30-40 minutes.
