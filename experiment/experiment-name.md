@@ -1,1 +1,1 @@
-## Protein-DNA interaction analysis by electrophoretic mobilty shift assay (EMSA)
+## Protein-DNA interaction analysis by electrophoretic mobility shift assay (EMSA)
