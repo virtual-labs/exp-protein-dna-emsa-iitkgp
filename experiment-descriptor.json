@@ -23,6 +23,14 @@
     },
     
     {
+      "target": "application.html",
+      "source": "application.md",
+      "label": "Applications",
+      "unit-type": "task",
+      "content-type": "text"
+    },
+
+    {
       "target": "pretest.html",
       "source": "pretest.json",
       "label": "Pretest",
